@@ -6,7 +6,7 @@
   <link href="http://zxc-fubug.github.io/atom.xml" rel="self"/>
   
   <link href="http://zxc-fubug.github.io/"/>
-  <updated>2020-08-30T05:58:02.670Z</updated>
+  <updated>2020-08-31T15:15:05.408Z</updated>
   <id>http://zxc-fubug.github.io/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python</title>
+    <link href="http://zxc-fubug.github.io/2020/08/31/Python%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://zxc-fubug.github.io/2020/08/31/Python%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/</id>
+    <published>2020-08-31T15:06:30.000Z</published>
+    <updated>2020-08-31T15:15:05.408Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;一.python基本数据类型&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;​        1. int ==&amp;gt;  整数. 主要用来进行数学运算 &lt;/p&gt;
+&lt;p&gt;​         2. str ==&amp;gt; 字符串, 可以保存少量数据并进行相应的操作</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python基本数据类型" scheme="http://zxc-fubug.github.io/tags/Python%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python</title>
+    <link href="http://zxc-fubug.github.io/2020/08/31/Python/"/>
+    <id>http://zxc-fubug.github.io/2020/08/31/Python/</id>
+    <published>2020-08-31T14:40:08.000Z</published>
+    <updated>2020-08-31T15:04:20.508Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一     上次课内容回顾&lt;br&gt;二     作业&lt;br&gt;三    本次课主要内容&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 1. 计算机是什么
+     基本组成:
+         主板+cpu+内存
+         cpu: 主频, 核数（16） 
+        </summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python介绍" scheme="http://zxc-fubug.github.io/tags/Python%E4%BB%8B%E7%BB%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

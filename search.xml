@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>Python</title>
+      <link href="/2020/08/31/Python%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/"/>
+      <url>/2020/08/31/Python%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/</url>
+      
+        <content type="html"><![CDATA[<p><strong>一.python基本数据类型</strong> </p><p>​        1. int ==&gt;  整数. 主要用来进行数学运算 </p><p>​         2. str ==&gt; 字符串, 可以保存少量数据并进行相应的操作 </p><p>​         3. bool==&gt;判断真假, True, False</p><p>​         4. list==&gt; 存储大量数据.⽤用[ ]表示 </p><p>​         5. tuple=&gt; 元组, 不可以发⽣生改变 用( )表示</p><p>​         6. dict==&gt; 字典, 保存键值对, 一样可以保存⼤大量量数据 </p><p>​         7.set==&gt; 集合, 保存大量数据.  不可以重复. 其实就是不保存value的dict</p><p><strong>二.  整数(int)</strong>    在python3中所有的整数都是int类型. 但在python2中如果数据量比较⼤大. 会使用long类型. 在python3中不存在long类型</p><p>​    <strong>整数可以进行的操作:</strong> </p><p><strong>bit_length()</strong>. 计算整数在内存中占⽤用的二进制码的长度</p><p><strong>三. 布尔值(bool)</strong>    </p><p>取值只有True, False. bool值没有操作</p><p>.     转换问题:         str =&gt; int       int(str)        int =&gt; str       str(int)        int =&gt; bool    bool(int). </p><p> <strong>0是False 非0是True</strong>        </p><p>​        bool=&gt;int      int(bool)   True是1, False是0        str =&gt; bool    bool(str)  </p><p><strong>空</strong></p><p>​    *字符串是False,  不空是True        bool =&gt; str    str(bool)  把bool值转换成相应的”值”** </p><p><strong>四. 字符串(str)</strong>    </p><p>​    把字符连成串. 在python中用’, “, ‘’’, “””引起来的内容被称为字符串.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python基本数据类型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python</title>
+      <link href="/2020/08/31/Python/"/>
+      <url>/2020/08/31/Python/</url>
+      
+        <content type="html"><![CDATA[<p>一     上次课内容回顾<br>二     作业<br>三    本次课主要内容</p><pre><code> 1. 计算机是什么     基本组成:         主板+cpu+内存         cpu: 主频, 核数（16）          内存：大小(8G, 16G, 32G) 型号: DDR3, DDR4, DDR5,  主频(海盗船，玩家国度)         显卡:　显存。型号(N-GTX 1080 TI, A)。位宽 240显卡(512MB) 210 105         硬盘: 西数。希捷。日立，东芝    计算机最底层是 电子电路. 只能识别两个数 0 12. python的简介    解释型语言. 弱类型语言3. 安装4. hello world    print(&quot;你好啊. 我是周润发&quot;)5. 变量（命名规则）    命名规则；        １. 由数字, 字母, 下划线组成        2. 不能数字开头. 更不能是纯数字        3. 不能是关键字        4. 不要太长        5. 不要用中文        6. 区分大小写        7. 要有意义        8. 驼峰和下划线命名     常量:　全部字母大写常量. 约定俗成6. 数据类型     1. int整数. +-*/% //整除, &gt; &lt; &gt;=  &lt;= !=    2. str字符串. 用&#39;,&quot;,&#39;&#39;&#39;,&quot;&quot;&quot; 引起来的都是字符串 +  *      3. bool 布尔值. 只有True和False两个值7. 用户交互(input)    变量=input(&quot;提示语&quot;)  变量是字符串类型, 字符串=&gt; 数字    =&gt; int(str)8. if判断    最基本用法    if 条件判断:        代码块    运行流程. 当条件是真. 执行代码块    if 条件:        代码块1    else:        代码块2    执行流程: 当条件成立. 执行代码块1. 否则, 执行代码块2. 二选一    if 条件1:        代码块1    elif 条件2:        代码块2    .....    else:        代码块n    执行流程:　自行补全</code></pre><p>​        </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python介绍 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2020/08/30/hello-world/"/>
       <url>/2020/08/30/hello-world/</url>
