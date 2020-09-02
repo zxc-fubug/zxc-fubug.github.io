@@ -466,7 +466,67 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>一.python基本数据类型</strong> </p>
+                <h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><ul>
+<li><p>while循环</p>
+<pre><code>count = 1
+while count &lt; 8:
+    print(&quot;....&quot;)
+
+while True:
+    s = input(&quot;start:&quot;)
+    if s == &quot;t&quot;:
+        break #结束本次循环
+    if &#39;a&#39; in s:
+        print(&quot;输入内容不符合规则&quot;)
+        continue    #结束当前循环，继续执行下一次循环
+    print(&quot;ss:&quot;+s)
+
+#1+2+3+4...+100?
+count = 1
+sum = 0
+while count &lt;= 100:
+    sum += count
+    count +=1
+print(sum)
+
+#输出1-100中的奇数
+count = 1
+while count &lt;=100:
+    if count % 2 !=0:
+        print(count)
+    count += 1</code></pre>
+</li>
+<li><p>格式化输出</p>
+<pre><code>name = input(&quot;输入名字：&quot;)
+age = input(&quot;年龄：&quot;)
+gender = input(&quot;xingbie:&quot;)
+print(&quot;%s今年%s，爱好，性bie%s&quot;%(name,age,gender))
+#%s表示占位符（任何类型） %d ：数字    %%2=%2 表示转义（%默认占位）</code></pre>
+<p> %s就是代表字符串占位符，除此之外，还有%d, 是数字占位符， 如果把上⾯的age后⾯的换成%d，就代表你必须只 能输⼊数字啦 这时对应的数据必须是int类型. 否则程序会报错 使⽤时,需要进⾏类型转换.  </p>
+</li>
+<li><p>基本运算符</p>
+<p>​    1.算数运算符</p>
+<p>​    2.比较运算符     != 和 &lt;&gt; 表示不等于</p>
+<p>​    3.逻辑运算符    and ：并且的意思(两边都为真，结果为真)     or：或者的的意思(两边有一个为真，则为真，全部是假，结果才能是假)    not 非的意思(相反)</p>
+<p>​    #and or not 同时存在时，先算括号，然后not，然后and，最后or</p>
+<pre><code>print(3&gt;4 or 4&lt;3 and 1==1)    False
+print(1 &lt; 2 and 3 &lt; 4 or 1&gt;2) True
+print(2 &gt; 1 and 3 &lt; 4 or 4 &gt; 5 and 2 &lt; 1) True
+print(1 &gt; 2 and 3 &lt; 4 or 4 &gt; 5 and 2 &gt; 1 or 9 &lt; 8)    False
+print(1 &gt; 1 and 3 &lt; 4 or 4 &gt; 5 and 2 &gt; 1 and 9 &gt; 8 or 7 &lt; 6) False
+print(not 2 &gt; 1 and 3 &lt; 4 or 4 &gt; 5 and 2 &gt; 1 and 9 &gt; 8 or 7 &lt; 6) False
+
+print(1 or 2) 1
+print(0 or 3) 3         # x or y 如果x==0，那么就是y，否则是x
+print(0 and 2)    0        #and 相反 x and 如果x==0 那么就是x，否则就是y
+print(1 and 2)     2</code></pre>
+<p>​    4.赋值运算符</p>
+<p>​    5.成员运算符</p>
+<p>​    6.身份运算符</p>
+<p>​    7.位运算符</p>
+</li>
+</ul>
+<p><strong>一.python基本数据类型</strong> </p>
 <p>​        1. int ==&gt;  整数. 主要用来进行数学运算 </p>
 <p>​         2. str ==&gt; 字符串, 可以保存少量数据并进行相应的操作 </p>
 <p>​         3. bool==&gt;判断真假, True, False</p>
@@ -735,10 +795,15 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一.python基本数据类型 
-​        1. int ==&gt;  整数. 主要用来进行数学运算 
-​         2. str ==&gt; 字符串, 可以保存少量数据并进行相应的操作 
-​         3. bool
+                            循环
+while循环
+count = 1
+while count &lt; 8:
+    print(&quot;....&quot;)
+
+while True:
+    s = input(&quot;start:&quot;)
+    
                         
                     </div>
                     <div class="publish-info">
