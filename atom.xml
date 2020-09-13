@@ -6,7 +6,7 @@
   <link href="http://zxc-fubug.github.io/atom.xml" rel="self"/>
   
   <link href="http://zxc-fubug.github.io/"/>
-  <updated>2020-09-02T15:41:05.144Z</updated>
+  <updated>2020-09-13T15:12:14.346Z</updated>
   <id>http://zxc-fubug.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://zxc-fubug.github.io/2020/08/31/Python%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/"/>
     <id>http://zxc-fubug.github.io/2020/08/31/Python%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/</id>
     <published>2020-08-31T15:06:30.000Z</published>
-    <updated>2020-09-02T15:41:05.144Z</updated>
+    <updated>2020-09-13T15:12:14.346Z</updated>
     
     
       
@@ -48,19 +48,18 @@ while count &amp;lt; 8:
     <link href="http://zxc-fubug.github.io/2020/08/31/Python/"/>
     <id>http://zxc-fubug.github.io/2020/08/31/Python/</id>
     <published>2020-08-31T14:40:08.000Z</published>
-    <updated>2020-08-31T15:04:20.508Z</updated>
+    <updated>2020-09-06T08:44:45.950Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;一     上次课内容回顾&lt;br&gt;二     作业&lt;br&gt;三    本次课主要内容&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; 1. 计算机是什么
-     基本组成:
-         主板+cpu+内存
-         cpu: 主频, 核数（16） 
-        </summary>
+    <summary type="html">&lt;pre&gt;&lt;code&gt; 1. 计算机是什么
+          基本组成:
+              主板+cpu+内存
+              cpu: 主频, 核数（16） 
+              内存：大小(8G, 16G, 32G) 型号: DDR3,</summary>
         
       
     
