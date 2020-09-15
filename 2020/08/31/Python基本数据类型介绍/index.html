@@ -759,6 +759,244 @@ for num in range(10, 1, -2): # 反着来, 和切⽚⼀样
 </ul>
 </li>
 </ul>
+<ul>
+<li><p>基本数据类型（dict）</p>
+<ul>
+<li><p>字典（dict）是python中唯一的一个映射类型，是以{}括起来的键值对组成。在dict中key是唯一的，在保存的时候，根据key来计算出一个内存地址，然后将key-value保存在这个地址中。这种算法被称为hash算法，所以在dict中key必须是hash的。哈希所谓就是不可变的</p>
+</li>
+<li><p>语法</p>
+<ul>
+<li>{key1：value，key2：value}<ul>
+<li>注意：key必须是可哈希的，value没有要求，可以保存任意类型的数据</li>
+</ul>
+</li>
+</ul>
+<pre><code># 合法
+dic = &#123;123: 456, True: 999, &quot;id&quot;: 1, &quot;name&quot;: &#39;sylar&#39;, &quot;age&quot;: 18, &quot;stu&quot;: [&#39;帅
+哥&#39;, &#39;美⼥&#39;], (1, 2, 3): &#39;麻花藤&#39;&#125;
+print(dic[123])
+print(dic[True])
+print(dic[&#39;id&#39;])
+print(dic[&#39;stu&#39;])
+print(dic[(1, 2, 3)])
+
+# 不合法
+# dic = &#123;[1, 2, 3]: &#39;周杰伦&#39;&#125; # list是可变的. 不能作为key
+# dic = &#123;&#123;1: 2&#125;: &quot;哈哈哈&quot;&#125; # dict是可变的. 不能作为key
+dic = &#123;&#123;1, 2, 3&#125;: &#39;呵呵呵&#39;&#125; # set是可变的, 不能作为key</code></pre>
+<p>dict保存的数据不是按照我们添加进去的顺序保存的,是按照hash表的顺序保存的,而hash表不是连续的,所以不能进行切片工作,只能通过key来获取dict 中的数据</p>
+</li>
+<li><p>字典的增删改查和其他相关操作</p>
+<ul>
+<li>增加</li>
+</ul>
+<pre><code>dic = &#123;&#125;
+dic[&#39;name&#39;] = &#39;周润发&#39; # 如果dict中没有出现这个key, 就会新增⼀个key-value的组
+合进dict
+dic[&#39;age&#39;] = 18
+print(dic)
+
+# 如果dict中没有出现过这个key-value. 可以通过setdefault设置默认值
+dic.setdefault(&#39;李嘉诚&#39;) # 也可以往⾥⾯设置值.
+dic.setdefault(&quot;李嘉诚&quot;, &quot;房地产&quot;) # 如果dict中已经存在了. 那么setdefault将不会
+起作⽤
+print(dic)
+</code></pre>
+<ul>
+<li>删除</li>
+</ul>
+<pre><code>ret = dic.pop(&quot;jay&quot;)
+print(ret)
+
+del dic[&quot;jay&quot;]
+print(dic)
+
+# 随机删除.
+ret = dic.popitem()
+
+# 清空字典中的所
+dic.clear()</code></pre>
+<ul>
+<li>修改</li>
+</ul>
+<pre><code>dic = &#123;&quot;id&quot;: 123, &quot;name&quot;: &#39;sylar&#39;, &quot;age&quot;: 18&#125;
+dic1 = &#123;&quot;id&quot;: 456, &quot;name&quot;: &quot;麻花藤&quot;, &quot;ok&quot;: &quot;wtf&quot;&#125;
+dic.update(dic1) # 把dic1中的内容更新到dic中. 如果key重名. 则修改替换. 如果不存
+在key, 则新增.
+print(dic)
+print(dic1)</code></pre>
+<ul>
+<li>查询</li>
+</ul>
+<pre><code>print(dic[&#39;name&#39;])
+# print(dic[&#39;sylar&#39;]) # 报错
+print(dic.get(&quot;ok&quot;))
+print(dic.get(&quot;sylar&quot;)) # None
+print(dic.get(&quot;sylar&quot;, &quot;⽜B&quot;)) # ⽜B</code></pre>
+<ul>
+<li>其他相关操作</li>
+</ul>
+<pre><code>dic = &#123;&quot;id&quot;: 123, &quot;name&quot;: &#39;sylar&#39;, &quot;age&quot;: 18, &quot;ok&quot;: &quot;科⽐&quot;&#125;
+print(dic.keys()) # dict_keys([&#39;id&#39;, &#39;name&#39;, &#39;age&#39;, &#39;ok&#39;]) 不⽤管它是什么.当
+成list来⽤就⾏
+for key in dic.keys():
+ print(key)
+
+print(dic.values()) # dict_values([123, &#39;sylar&#39;, 18, &#39;科⽐&#39;]) ⼀样. 也当
+list来⽤
+for value in dic.values():
+ print(value)
+
+print(dic.items()) # dict_items([(&#39;id&#39;, 123), (&#39;name&#39;, &#39;sylar&#39;), (&#39;age&#39;,
+18), (&#39;ok&#39;, &#39;科⽐&#39;)]) 这个东⻄也是list. 只不过list中装的是tuple
+for key, value in dic.items(): # ?? 这个是解构
+ print(key, value)
+    结果 123 456
+    True 999
+    id 1
+    name sylar
+    age 18
+    stu [&#39;帅哥&#39;, &#39;美⼥&#39;]
+    (1, 2, 3) 麻花藤
+
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code># 解构
+a, b = 1, 2
+print(a, b)
+(c, d) = 3, 4
+print(c, d)
+e, f = [1, 2, 3] # 解构的时候注意数量必须匹配
+print(e, f)
+```
+
+- 字典的嵌套
+
+```
+# 字典的嵌套
+dic1 = &#123;
+ &quot;name&quot;: &quot;汪峰&quot;,
+ &quot;age&quot;: 18,
+ &quot;wife&quot;: &#123;
+ &quot;name&quot;: &#39;章⼦怡&#39;,
+ &quot;age&quot;: 28
+ &#125;,
+ &quot;children&quot;: [&#39;第⼀个⽑孩⼦&#39;, &#39;第⼆个⽑孩⼦&#39;],
+ &quot;desc&quot;: &#39;峰哥不会告我吧. 没关系. 我想上头条的&#39;
+&#125;
+
+print(dic1.get(&quot;wife&quot;).get(&quot;name&quot;))
+print(dic1.get(&quot;children&quot;))
+print(dic1.get(&quot;children&quot;)[1])
+```</code></pre>
+<ul>
+<li><p>万恶之源-编码</p>
+<ul>
+<li><p>is和==的区别</p>
+<ul>
+<li>id()</li>
+</ul>
+<p>通过id（）我们可以查看到一个变量表示的值内存中的地址</p>
+<pre><code>s = &#39;alex&#39;
+print(id(s)) # 4326667072
+s = &quot;alex&quot;
+print(id(s)) # 4326667072
+lst = [1, 2, 4]
+print(id(lst)) # 4326685768
+lst1 = [1, 2, 4]
+print(id(lst1)) # 4326684360
+
+s1 = &quot;@1 2 &quot;
+s2 = &quot;@1 2 &quot;
+print(id(s1))
+print(id(s2)) # 结果⼀致, 但是在终端中是不⼀致的. 所以在python中,命令⾏代码和py⽂
+件中的代码运⾏的效果可能是不⼀样的</code></pre>
+<p>小数据池（常量池）把我们使用过的值存储在小数据池中，供其他的变量使用，小数据池给数字和字符串使用，其他数据类型不存在。</p>
+<p>对于数字：-5~256是会被加到效数据池中的，每次使用的都是同一个对象</p>
+<p>对于字符串：</p>
+<p>​    1.如果是纯文字信息和下划线，那么这个对象会被添加到小数据池</p>
+<p>​    2.如果是带有特殊字符的，那么不会添加到小数据池，每次都是新的</p>
+<p>​    3.如果是带有字母*n的情况，’a’*20,在20个单位内是可以 的. 超过20个单位就不会添加 到⼩数据池中 </p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>注意(⼀般情况下): 在py⽂件中. 如果你只是单纯的定义⼀个字符串. 那么⼀般情况下都是会 被添加到⼩数据池中的. 我们可以这样认为: 在使⽤字符串的时候, python会帮我们把字符串 进⾏缓存, 在下次使⽤的时候直接指向这个字符串即可. 可以节省很多内存. 
+
+
+
+
+
+- 总结: is 比较的是地址 == 比较的是值 </code></pre>
+<ul>
+<li><p>编码的补充</p>
+<ul>
+<li>python2中默认使⽤的是ASCII码. 所以不⽀持中⽂. 如果需要在Python2中更改编码. 需要在⽂件的开始编写: </li>
+</ul>
+<pre><code># -*- encoding:utf-8 -*-</code></pre>
+<ul>
+<li>python3中: 内存中使⽤的是unicode码.  </li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>ASCII : 最早的编码. ⾥⾯有英⽂⼤写字⺟, ⼩写字⺟, 数字, ⼀些特殊字符. 没有中⽂, 8个01代码, 8个bit, 1个byte </p>
+</li>
+<li><p>GBK: 中⽂国标码, ⾥⾯包含了ASCII编码和中⽂常⽤编码. 16个bit, 2个byte </p>
+</li>
+<li><p>UNICODE: 万国码, ⾥⾯包含了全世界所有国家⽂字的编码. 32个bit, 4个byte, 包含了 ASCII </p>
+</li>
+<li><p>UTF-8: 可变⻓度的万国码. 是unicode的⼀种实现. 最⼩字符占8位 </p>
+<p>1.英⽂: 8bit 1byte </p>
+<p>2.欧洲⽂字:16bit 2byte </p>
+<p>3.中⽂:24bit 3byte </p>
+</li>
+</ol>
+<ul>
+<li>在python3的内存中. 在程序运⾏阶段. 使⽤的是unicode编码. 因为unicode是万国码. 什么内 容都可以进⾏显⽰. 那么在数据传输和存储的时候由于unicode比较浪费空间和资源. 需要把 unicode转存成UTF-8或者GBK进⾏存储. 怎么转换呢. 在python中可以把⽂字信息进⾏编码. 编码之后的内容就可以进⾏传输了. 编码之后的数据是bytes类型的数据.其实啊. 还是原来的 数据只是经过编码之后表现形式发⽣了改变⽽已. </li>
+</ul>
+<ul>
+<li><p>bytes的表现形式:  </p>
+<pre><code>    1.  英⽂ b&#39;alex&#39; 英⽂的表现形式和字符串没什么两样 
+      2.   中⽂ b&#39;\xe4\xb8\xad&#39; 这是⼀个汉字的UTF-8的bytes表现形式 </code></pre>
+<p> 字符串在传输时转化成bytes=&gt; encode(字符集)来完成 </p>
+<pre><code>s = &quot;alex&quot;
+print(s.encode(&quot;utf-8&quot;)) # 将字符串编码成UTF-8
+print(s.encode(&quot;GBK&quot;)) # 将字符串编码成GBK
+结果:
+b&#39;alex&#39;
+b&#39;alex&#39;
+
+s = &quot;中&quot;
+print(s.encode(&quot;UTF-8&quot;)) # 中⽂编码成UTF-8
+print(s.encode(&quot;GBK&quot;)) # 中⽂编码成GBK
+
+结果:
+b&#39;\xe4\xb8\xad&#39;
+b&#39;\xd6\xd0&#39;</code></pre>
+<p>英⽂编码之后的结果和源字符串⼀致. 中⽂编码之后的结果根据编码的不同. 编码结果 也不同. 我们能看到. ⼀个中⽂的UTF-8编码是3个字节. ⼀个GBK的中⽂编码是2个字节. 编码之后的类型就是bytes类型. 在⽹络传输和存储的时候我们python是保存和存储的bytes  类型. 那么在对⽅接收的时候. 也是接收的bytes类型的数据. 我们可以使⽤decode()来进⾏解 码操作. 把bytes类型的数据还原回我们熟悉的字符串: </p>
+<pre><code>s = &quot;我叫李嘉诚&quot;
+print(s.encode(&quot;utf-8&quot;)) #
+b&#39;\xe6\x88\x91\xe5\x8f\xab\xe6\x9d\x8e\xe5\x98\x89\xe8\xaf\x9a&#39;
+
+print(b&#39;\xe6\x88\x91\xe5\x8f\xab\xe6\x9d\x8e\xe5\x98\x89\xe8\xaf\x9a&#39;.decod
+e(&quot;utf-8&quot;)) # 解码</code></pre>
+<ul>
+<li>编码和解码的时候都需要制定编码格式.  </li>
+</ul>
+<pre><code>s = &quot;我是⽂字&quot;
+bs = s.encode(&quot;GBK&quot;) # 我们这样可以获取到GBK的⽂字
+# 把GBK转换成UTF-8
+# ⾸先要把GBK转换成unicode. 也就是需要解码
+s = bs.decode(&quot;GBK&quot;) # 解码
+# 然后需要进⾏重新编码成UTF-8
+bss = s.encode(&quot;UTF-8&quot;) # 重新编码
+print(bss)</code></pre>
+</li>
+</ul>
 
             </div>
             <hr/>
