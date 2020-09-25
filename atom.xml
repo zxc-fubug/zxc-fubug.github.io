@@ -6,7 +6,7 @@
   <link href="http://zxc-fubug.github.io/atom.xml" rel="self"/>
   
   <link href="http://zxc-fubug.github.io/"/>
-  <updated>2020-09-20T04:31:39.844Z</updated>
+  <updated>2020-09-25T05:43:03.044Z</updated>
   <id>http://zxc-fubug.github.io/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python</title>
+    <link href="http://zxc-fubug.github.io/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/"/>
+    <id>http://zxc-fubug.github.io/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/</id>
+    <published>2020-09-25T05:30:09.000Z</published>
+    <updated>2020-09-25T05:43:03.044Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;冒泡排序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;# 冒泡排序
+lst = [11, 22, 35, 6, 2]
+for i in range(len(lst)):
+    i = 0
+    while i &amp;lt; len(lst) - 1:
+    </summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python中的重要总结" scheme="http://zxc-fubug.github.io/tags/Python%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python</title>
+    <link href="http://zxc-fubug.github.io/2020/09/22/Python%E5%87%BD%E6%95%B0/"/>
+    <id>http://zxc-fubug.github.io/2020/09/22/Python%E5%87%BD%E6%95%B0/</id>
+    <published>2020-09-22T02:14:33.000Z</published>
+    <updated>2020-09-25T15:04:05.529Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;一、函数的定义&quot;&gt;&lt;a href=&quot;#一、函数的定义&quot; class=&quot;headerlink&quot; title=&quot;一、函数的定义&quot;&gt;&lt;/a&gt;一、函数的定义&lt;/h4&gt;&lt;p&gt;​    对代码块和功能的封装和定义&lt;/p&gt;
+&lt;h3 id=&quot;二、函数的定义语法&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python函数" scheme="http://zxc-fubug.github.io/tags/Python%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Python文件操作</title>

@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>Python</title>
+      <link href="/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/"/>
+      <url>/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<ul><li>冒泡排序</li></ul><pre><code># 冒泡排序lst = [11, 22, 35, 6, 2]for i in range(len(lst)):    i = 0    while i &lt; len(lst) - 1:        if lst[i] &gt; lst[i + 1]:            lst[i], lst[i + 1] = lst[i + 1], lst[i]    #解构        i += 1print(lst)</code></pre><ul><li>经典题1:文件al.txt内容(升级题)</li></ul><pre><code>序号  部门  人数  平均年龄    备注  描述1   python  30  26  单身狗 屌丝居多2   Linux   26  30  没对象 全是屌丝3   运营部 20  24  女生多 没有人通过代码,将其构建成这种数据类型:[&#123;&#39;序号&#39;:&#39;1&#39;,&#39;部门&#39;:Python,&#39;人数&#39;:30,&#39;平均年龄&#39;:26,&#39;备注&#39;:&#39;单身狗&#39;&#125;]f = open(&quot;a6.txt&quot;, mode=&quot;r&quot;, encoding=&quot;utf-8&quot;)line = f.readline()lst = line.split()  # 第一行切割完成 key就准备完了result = []# 接着向后读取for lin in f:    ll = lin.split()    # 每一行都进行切割    dic = &#123;&#125;    for i in range(len(ll)):    # i 表示ll的索引\        # lst[i]    # key        # ll[i]        # value        dic[lst[i]] = ll[i]    result.append(dic)print(result)</code></pre><ul><li>三元运算符</li></ul><pre><code>a = 1b = 2h = a if a&gt;b else bprint(h)</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python中的重要总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python</title>
+      <link href="/2020/09/22/Python%E5%87%BD%E6%95%B0/"/>
+      <url>/2020/09/22/Python%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<h4 id="一、函数的定义"><a href="#一、函数的定义" class="headerlink" title="一、函数的定义"></a>一、函数的定义</h4><p>​    对代码块和功能的封装和定义</p><h3 id="二、函数的定义语法"><a href="#二、函数的定义语法" class="headerlink" title="二、函数的定义语法"></a>二、函数的定义语法</h3><p>​    </p><pre><code>def 函数名():    函数体def yue():    print(&quot;123&quot;)</code></pre><ul><li><p>函数的调用：使用函数名可以调用函数，写法：函数名()，这个时候函数体就会被执行</p><pre><code>yue()</code></pre><p>执行过程</p></li></ul><img src="C:\Users\付举鹏\AppData\Roaming\Typora\typora-user-images\1600741360302.png" alt="1600741360302" style="zoom: 67%;" /><ul><li><p>函数的返回</p><p>执行完函数之后，我们可以使用return来返回结果</p><p>1.函数中遇到return，此函数结束，不再继续执行</p><pre><code>def yue(): print(&quot;约你&quot;) print(&quot;约我&quot;) print(&quot;约他&quot;) return print(&quot;约谁呀&quot;) # 这句话不会被执⾏yue()</code></pre><p>2.给函数的调用者一个访问结果</p><pre><code>def yue(): print(&quot;约你&quot;) print(&quot;约我&quot;) print(&quot;约他&quot;) return &quot;美⼥⼀枚&quot;girl = yue()print(girl) # 美⼥⼀枚</code></pre><p>3.函数的返回值可以是多个</p><pre><code>def yue():    print(&quot;123&quot;)    print(&quot;345&quot;)    return&quot;第一个结果&quot;,&quot;第二个结果&quot;girl = yue()print(type(girl))    #类型是tuple</code></pre></li><li><p>总结一下</p><p>1.遇到return，此函数结束，函数后面的东西不会被执行</p><p>2.return返回值：</p><p>​    如果return什么都不写 或者干脆不写return，那么返回值是None</p><p>​    如果return后面写了一个值，则调用者可以接受到一个结果</p><p>​    如果return后面写了多个值，则调用者可以接收一个tuple，调用者可以直接解构成多个变量</p></li></ul><p>​        4.函数的参数</p><p>​            参数，函数再调用的时候指定具体的一个变量的值，语法：</p><pre><code>def 函数名(参数列表):    函数体</code></pre><pre><code>def yue(chat):    print(&quot;拿出手机&quot;)    print(&quot;打开&quot;+chat)yue(&quot;微信&quot;)yue(&quot;默默&quot;)</code></pre><ul><li><p>形参</p><p>​    写在函数声明的位置的变量叫形参,形式上的一个完整,表示这个函数需要xxx</p></li><li><p>实参</p><p>​    在函数调用的时候给函数传递的值,叫实参,实际执行的时候给函数传递的信息,表示给函数xxx</p></li><li><p>传参</p><p>​    给函数传递信息的时候将实际参数交给形式参数的过程称为传参</p><pre><code>def yue(chat):     # chat 形参 print(&quot;拿出⼿机&quot;) print(&quot;打开&quot;+chat) print(&quot;找个漂亮的妹⼦&quot;) print(&quot;约不约&quot;)yue(&quot;陌陌&quot;)     # 实参len(&quot;字符串&quot;)     # &quot;字符串&quot;在这⾥就是实参print(&quot;麻花藤&quot;)     # &quot;麻花藤&quot;就是实参]()</code></pre></li></ul><pre><code>                函数名:命名规则和变量一样    函数的返回值:        return,函数执行完毕,不会执行后面的逻辑            1.如果函数中不写return返回None            2.只写return 返回None            3.return返回值,返回一个值            4.return 值1,值2,... 返回多个值,调用方接收到的是元祖(tuple)        参数:            在函数执行的时候给函数传递的参数            1.形参:                1.位置参数.                2.默认值参数.当调用的时候不给传值使用默认值                3.混合使用.顺序:    1.位置参数, 2.默认值参数            2.实参:                1.位置参数.按照位置给形参赋值                2.关键字参数.按照名称给形参赋值                3.混合参数.先用位置参数,再用关键字参数</code></pre><ul><li><p>例子</p><p>​    编写函数,给函数传递两个参数a,b 比较a, b的大小</p></li></ul><pre><code>def my_max(a,b):    if a &gt; b:        return a    else:        return b#有点麻烦,用一个三元运算符def my_max(a,b):    c = a if a &gt; b else b    #当 a&gt;b 成立返回a,否则返回b    return cl = my_max(11,22)print(l)</code></pre><ul><li><p>关键字参数</p><p>​    </p><pre><code>def yue(chat, address, age): print(&quot;拿出⼿机&quot;) print(&quot;打开&quot;+chat) print(&quot;找个&quot;+address+&quot;附近漂亮的&quot;+str(age)+&quot;岁妹⼦&quot;) print(&quot;约不约&quot;)yue(chat=&quot;微信&quot;, age=18, address=&quot;北京&quot;) # 关键字参数. </code></pre></li><li><p>混合参数</p><p>​    </p><pre><code># 混合参数yue(&quot;微信&quot;, age=18, address=&quot;上海&quot;) # 正确.第⼀个位置赋值给chat, 后⾯的参数开始指定关键字.</code></pre></li><li><p>默认值参数</p><pre><code>def stu_info(name,age,sex=&#39;男&#39;):    print(&quot;录入学生的信息&quot;)    print(name,age,sex)    print(&quot;录入完毕&quot;)stu_info(&quot;张强&quot;,12)</code></pre></li></ul><h2 id="函数的进阶"><a href="#函数的进阶" class="headerlink" title="函数的进阶"></a>函数的进阶</h2><ul><li><p>函数参数–动态传参</p><p>​    一.动态参数分为两种</p><p>​            1.动态接收位置参数</p><pre><code>def func(*args):    print(&quot;我要吃&quot;,args)func(&quot;炸鸡&quot;,&quot;汉堡&quot;)结果:我要吃(&#39;炸鸡&#39;,&#39;汉堡&#39;)        #多个参数传进去,收到的内容是tuple</code></pre><pre><code>def chi( *food, a, b): # 可以传入任意的位置参数    print(&quot;我要吃&quot;, food,a,b)  # 动态参数接收到的是tuple类型的数据chi(&quot;盖浇饭&quot;, &quot;辣条&quot;, a = &quot;面条&quot;,b = &quot;啊啊&quot;)</code></pre><ul><li><p>位置参数&gt; *args &gt; 默认值参数 &gt; **kwargs</p><p>关键字参数一定在位置参数后面</p></li></ul></li></ul><pre><code>def func(a, b, c, *args, d = 5):    print(a, b, c, d, args)func(1,2,3)func(1,2,3,4,5,6,7, d =&quot;马大哈&quot;)</code></pre><p>1.例子</p><pre><code>#　写函数. 给函数传递任意个整数. 返回这些数的和 def he(*n):     sum = 0     for e in n:       sum += e     return sum print(he(5))</code></pre><p>​                2.动态接收关键字参数</p><p>​    *位置参数</p><p>​    **关键字参数</p><pre><code> def func(**food):   # **food动态接收关键字参数     print(food) # 接收到的是字典 func(good_food=&quot;盖浇饭&quot;, bad_food=&quot;辣条&quot;, drink=&quot;冰封&quot;)</code></pre><pre><code> 这个函数可以接收所有的参数(无敌的) def func(*args, **kwargs):     print(args)     print(kwargs) func(1, 2, 5, 6, name=&quot;taibai&quot;,age=18, sex=&quot;不详&quot;)</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python函数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python文件操作</title>
       <link href="/2020/09/20/Python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/"/>
       <url>/2020/09/20/Python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</url>

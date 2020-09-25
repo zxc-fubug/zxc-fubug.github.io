@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python文件操作, zxc-fubug">
+    <meta name="keywords" content="Python, zxc-fubug">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python文件操作 | zxc-fubug</title>
+    <title>Python | zxc-fubug</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python文件操作</h1>
+                    <h1 class="description center-align post-title">Python</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%96%87%E4%BB%B6%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C/">
-                                <span class="chip bg-color">文件各种操作</span>
+                            <a href="/tags/Python%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%BB%E7%BB%93/">
+                                <span class="chip bg-color">Python中的重要总结</span>
                             </a>
                         
                     </div>
@@ -450,7 +450,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-09-20
+                    2020-09-25
                 </div>
                 
 
@@ -467,218 +467,51 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <ul>
-<li><p>文件操作</p>
-<p>1.初始文件操作</p>
-<p>2.只读(r,rb)</p>
-<p>3.只写(w,wb)</p>
-<p>4.追加(a,ab)</p>
-<p>5.r+读写</p>
-<p>6.w+写读</p>
-<p>7.a+写读(追加读写)</p>
-<p>8.其他操作方法</p>
-<p>9.文件的修改以及另一种打开文件句柄的方式</p>
-</li>
+<li>冒泡排序</li>
 </ul>
-<p>  一.初始文件操作</p>
-<p>  ​    使用Python来读写文件是非常简单的操作,使用open()函数打开一个文件,获取文件句柄.</p>
-<p>  然后通过文件句柄就可以进行各种操作,根据打开的方式的不同能够执行的操作也有相应的</p>
-<p>  差异</p>
-<p>  ​    打开文件的方式:r,w,a,r+,w+,a+,rb,wb,ab,r+b,w+b,a+b 默认使用的是r(只读)模式</p>
-<p>  二.只读操作(r,rb)</p>
-<pre><code>f = open(&quot;Text.txt&quot;,mode=&quot;r&quot;, encoding=&quot;utf-8&quot;)
-content = f.read()
-print(content)
-f.close()</code></pre>
-<p>  ​    encoding表示编码集，根据文件的实际保存编码进行获取数据，一般是utf-8</p>
-<p>  ​    rb    读出来的数据是bytes类型，在rb模式下，不能选择encoding字符集</p>
-<pre><code>f = open(&quot;Text.txt&quot;,mode=&quot;rb&quot; )
-content = f.read()
-print(content)
-f.close()
-结果:
-b&#39;\xe6\xaf\x85\xe5\x93\xa5, \xe5\xa4\xaa\xe7\x99\xbd,
-wuse\n\xe5\x91\xb5\xe5\x91\xb5\n\xe6\x97\xa5\xe5\xa4\xa9&#39;</code></pre>
-<p>  ​    rb的作用：在读取非文本文件的时候，比如MP3，图像，视频等信息的时候就需要用到rb，</p>
-<p>  因为这种数据是没办法显示出来的</p>
+<pre><code># 冒泡排序
+lst = [11, 22, 35, 6, 2]
+for i in range(len(lst)):
+    i = 0
+    while i &lt; len(lst) - 1:
+        if lst[i] &gt; lst[i + 1]:
+            lst[i], lst[i + 1] = lst[i + 1], lst[i]    #解构
+        i += 1
+print(lst)</code></pre>
 <ul>
-<li><p>绝对路径和相对路径</p>
-<p>1.绝对路径：从磁盘根目录开始到文件名</p>
-<p>2.相对路径：同一个文件夹下的文件，相对应当前这个程序所在的文件夹而言，如果在用一个文件夹中，则相对路径就是这个文件夹，如果在上一层文件夹，则要../</p>
-</li>
+<li>经典题1:文件al.txt内容(升级题)</li>
 </ul>
-<p><img src="C:\Users\付举鹏\AppData\Roaming\Typora\typora-user-images\1600568200931.png" alt="1600568200931"></p>
+<pre><code>序号  部门  人数  平均年龄    备注  描述
+1   python  30  26  单身狗 屌丝居多
+2   Linux   26  30  没对象 全是屌丝
+3   运营部 20  24  女生多 没有人
+通过代码,将其构建成这种数据类型:
+[&#123;&#39;序号&#39;:&#39;1&#39;,&#39;部门&#39;:Python,&#39;人数&#39;:30,&#39;平均年龄&#39;:26,&#39;备注&#39;:&#39;单身狗&#39;&#125;]
+
+
+
+f = open(&quot;a6.txt&quot;, mode=&quot;r&quot;, encoding=&quot;utf-8&quot;)
+line = f.readline()
+lst = line.split()  # 第一行切割完成 key就准备完了
+
+result = []
+# 接着向后读取
+for lin in f:
+    ll = lin.split()    # 每一行都进行切割
+    dic = &#123;&#125;
+    for i in range(len(ll)):    # i 表示ll的索引\
+        # lst[i]    # key
+        # ll[i]        # value
+        dic[lst[i]] = ll[i]
+    result.append(dic)
+print(result)</code></pre>
 <ul>
-<li><p>读取文件的方法</p>
-<p>1.read（）将文件的内容全部读取出来，弊端：占内存，如果文件过大，容易导致内存崩溃</p>
-<pre><code>f = open(&quot;../def/哇擦.txt&quot;, mode=&quot;r&quot;, encoding=&quot;utf-8&quot;)
-content = f.read()
-print(content)
-结果:
-友谊地久天⻓,
-爱⼀点,
-可惜我是⽔瓶座
-⼀⽣中最爱</code></pre>
-<p>2.read（）读取n个字符，需要注意的是：如果再次读取，那么会在当前位置继续去读而不是从头读，如果使用rb模式，则读取出来的是n个字节</p>
-<pre><code>f = open(&quot;../def/哇擦.txt&quot;, mode=&quot;r&quot; encoding=&quot;utf-8&quot;)
-content = f.read(3)
-print(content)
-
-结果:
-友谊地
-
-f = open(&quot;../def/哇擦.txt&quot;, mode=&quot;rb&quot;)
-content = f.read(3)
-print(content)
-
-结果:
-b&#39;\xe5\x8f\x8b&#39;
-
-f = open(&quot;../def/哇擦.txt&quot;, mode=&quot;r&quot;, encoding=&quot;utf-8&quot;)
-content = f.read(3)
-content2 = f.read(3)
-print(content)
-print(content2)
-
-结果:
-友谊地
-久天⻓</code></pre>
-<p>3.readline（）一次读取一行数据，注意：readline（）结尾，每次读取出来的数据都会有一个\n所以，需要我们使用strip（）方法来去掉\n或者 用replace(“ “,””)去掉所有空格</p>
-<pre><code>import os
-with open(&quot;老师点名&quot;,mode=&quot;r&quot;,encoding=&quot;utf-8&quot;) as f1:
-    for line in f1:
-        print(line.replace(&quot; &quot;,&quot;&quot;).strip())</code></pre>
-<p>4.readlines（）将每一行形成一个元素，放到一个列表中，将所有的内容读取出来，也是容易出现内存崩溃的问题，不推荐使用</p>
-<pre><code>f = open(&quot;../def/哇擦.txt&quot;, mode=&quot;r&quot;, encoding=&quot;utf-8&quot;)
-lst = f.readlines()
-print(lst)
-for line in lst:
-     print(line.strip())</code></pre>
-<p>5.循环读取：这种方式是最好的，每次读取一行内容，不会出现内存溢出的问题</p>
-<pre><code>import os
-with open(&quot;老师点名&quot;,mode=&quot;r&quot;,encoding=&quot;utf-8&quot;) as f1:
-    for line in f1:
-        print(line..strip()</code></pre>
-</li>
+<li>三元运算符</li>
 </ul>
-<p>​    二.写模式(w,wb)</p>
-<ul>
-<li><p>写的时候如果没有文件，则会创建文件，如果文件存在，则将原来文件删除，再写如新的内容</p>
-<pre><code>f = open(&quot;⼩娃娃&quot;, mode=&quot;w&quot;, encoding=&quot;utf-8&quot;)
-f.write(&quot;⾦⽑狮王&quot;)
-f.flush() # 刷新. 养成好习惯
-f.close()</code></pre>
-<pre><code>f = open(&quot;⼩娃娃&quot;, mode=&quot;w&quot;, encoding=&quot;utf-8&quot;)
-f.write(&quot;⾦⽑狮王&quot;)
-f.read() # not readable 模式是w. 不可以执⾏读操作
-f.flush()
-f.close()</code></pre>
-<p>在wb模式下，可以不指定打开文件的编码，但是写文件的时候不行将字符串转换成utf-8的bytes数据</p>
-<pre><code>f = open(&quot;⼩娃娃&quot;, mode=&quot;wb&quot;)
-f.write(&quot;⾦⽑狮王&quot;.encode(&quot;utf-8&quot;))
-f.flush()
-f.close()</code></pre>
-</li>
-</ul>
-<p>四.追加（a，ab）</p>
-<p>​    再追加的模式下，我们写入的内容会追加在文件的结尾</p>
-<pre><code>f = open(&quot;⼩娃娃&quot;, mode=&quot;a&quot;, encoding=&quot;utf-8&quot;)
-f.write(&quot;麻花藤的最爱&quot;)
-f.flush()
-f.close()</code></pre>
-<p>五.读写模式（r+，r+b）</p>
-<p>​    对于读写模式，必须是先读，因为默认光标是在开头的，准备读取的，当读完之后在进行写入，使用频率最高就是r+</p>
-<pre><code>f = open(&quot;⼩娃娃&quot;, mode=&quot;r+&quot;, encoding=&quot;utf-8&quot;)
-content = f.read()
-f.write(&quot;麻花藤的最爱&quot;)
-print(content)
-f.flush()
-f.close()
-结果:
-正常的读取之后, 写在结尾</code></pre>
-<p>​    r+模式，必须是先读取，然后再写入</p>
-<p>六.写读（w+，w+b）</p>
-<p>​    先将所有的内容清空，然后再写入，最后再读取，但读取的内容是空的，一般不常用</p>
-<pre><code>f = open(&quot;⼩娃娃&quot;, mode=&quot;w+&quot;, encoding=&quot;utf-8&quot;)
-f.write(&quot;哈哈&quot;)
-content = f.read()
-print(content)
-f.flush()
-f.close()</code></pre>
-<p>七.追加读（a+）</p>
-<p>​    a+模式下，不论是先读还是后读，都是读不到数据的</p>
-<pre><code>f = open(&quot;⼩娃娃&quot;, mode=&quot;a+&quot;, encoding=&quot;utf-8&quot;)
-f.write(&quot;⻢化腾&quot;)
-content = f.read()
-print(content)
-f.flush()
-f.close()</code></pre>
-<p>八.其他相关操作</p>
-<p>​    1.seek(n) 光标移动到n位置，注意，移动的单位是byte。一个中文字是3个byte</p>
-<p>​        通常我们使用seek()都是移动到开头或者结尾</p>
-<p>​        移动到开头：seek()</p>
-<p>​        移动到结尾：seek(0,2)    seek的第二个参数表示的是从哪个位置进行偏移，默认是0(表示开头)、1表示当前位置，2表示结尾</p>
-<pre><code>f = open(&quot;⼩娃娃&quot;, mode=&quot;r+&quot;, encoding=&quot;utf-8&quot;)
-f.seek(0) # 光标移动到开头
-            #不管前面你读了几个，后面去写都是再末尾
-            #再不进行任何操作的时候，在开头写
-            #如果读取了一些内容，再写，会写到结尾
-content = f.read() # 读取内容, 此时光标移动到结尾
-print(content)
-f.seek(0) # 再次将光标移动到开头
-f.seek(0, 2) # 将光标移动到结尾
-content2 = f.read() # 读取内容. 什么都没有
-print(content2)
-
-f.seek(0) # 移动到开头
-f.write(&quot;张国荣&quot;) # 写⼊信息. 此时光标在9 中⽂3 * 3个 = 9
-
-f.flush()
-f.close()</code></pre>
-<p>​    </p>
-<p>​    2.tell() 使用tell()可以帮我们获取当前光标的位置</p>
-<pre><code>f = open(&quot;⼩娃娃&quot;, mode=&quot;r+&quot;, encoding=&quot;utf-8&quot;)
-f.seek(0) # 光标移动到开头
-content = f.read() # 读取内容, 此时光标移动到结尾
-print(content)
-f.seek(0) # 再次将光标移动到开头
-f.seek(0, 2) # 将光标移动到结尾
-content2 = f.read() # 读取内容. 什么都没有
-print(content2)
-
-f.seek(0) # 移动到开头
-f.write(&quot;张国荣&quot;) # 写⼊信息. 此时光标在9 中⽂3 * 3个 = 9
-
-print(f.tell()) # 光标位置9
-f.flush()
-f.close()</code></pre>
-<p>​    3.truncate() 截断文件</p>
-<pre><code>f = open(&quot;⼩娃娃&quot;, mode=&quot;w&quot;, encoding=&quot;utf-8&quot;)
-f.write(&quot;哈哈&quot;) # 写⼊两个字符
-f.seek(3) # 光标移动到3, 也就是两个字中间
-f.truncate() # 删掉光标后⾯的所有内容
-f.close()
-
-f = open(&quot;⼩娃娃&quot;, mode=&quot;r+&quot;, encoding=&quot;utf-8&quot;)
-content = f.read(3) # 读取12个字符
-f.seek(4)
-print(f.tell())
-f.truncate() # 后⾯的所有内容全部都删掉
-# print(content)
-f.flush()
-f.close()</code></pre>
-<p>  <strong>深坑请注意: 在r+模式下. 如果读取了内容. 不论读取内容多少. 光标显⽰的是多少. 再写入 或者操作⽂件的时候都是在结尾进⾏的操作.</strong>   </p>
-<p> 所以如果想做截断操作. 记住了. 要先挪动光标. 挪动到你想要截断的位置. 然后再进⾏截断 关于truncate(n), 如果给出了n. 则从开头开头进⾏截断, 如果不给n, 则从当前位置截断. 后⾯ 的内容将会被删除 </p>
-<p>九.修改文件以及另一种打开文件的方法</p>
-<p>​    文件修改：只能将文件中的内容读取到内存中，将信息修改完毕，然后将源文件删除，将新文件的名字改成老文件的名字</p>
-<pre><code>import os
-
-with open(&quot;文件&quot;,mode=&quot;r&quot;,encoding=&quot;utf-8&quot;) as f1,\
-        open(&quot;文件_副本&quot;,mode=&quot;w&quot;,encoding=&quot;utf-8&quot;) as  f2:
-    for line in f1:
-        s1 = line.replace(&quot;肉&quot;,&quot;菜&quot;)
-        f2.write(s1)
-os.remove(&quot;文件&quot;)
-os.rename(&quot;文件_副本&quot;,&quot;文件&quot;)</code></pre>
+<pre><code>a = 1
+b = 2
+h = a if a&gt;b else b
+print(h)</code></pre>
 
             </div>
             <hr/>
@@ -704,7 +537,7 @@ os.rename(&quot;文件_副本&quot;,&quot;文件&quot;)</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zxc-fubug.github.io/2020/09/20/Python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">http://zxc-fubug.github.io/2020/09/20/Python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</a>
+                    <a href="http://zxc-fubug.github.io/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/">http://zxc-fubug.github.io/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -742,8 +575,8 @@ os.rename(&quot;文件_副本&quot;,&quot;文件&quot;)</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%96%87%E4%BB%B6%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C/">
-                                    <span class="chip bg-color">文件各种操作</span>
+                                <a href="/tags/Python%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%BB%E7%BB%93/">
+                                    <span class="chip bg-color">Python中的重要总结</span>
                                 </a>
                             
                         </div>
@@ -911,9 +744,64 @@ os.rename(&quot;文件_副本&quot;,&quot;文件&quot;)</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Python">
+                        
+                        <span class="card-title">Python</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+冒泡排序
+
+# 冒泡排序
+lst = [11, 22, 35, 6, 2]
+for i in range(len(lst)):
+    i = 0
+    while i &lt; len(lst) - 1:
+        if lst
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            二哈君
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">Python中的重要总结</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/09/22/Python%E5%87%BD%E6%95%B0/">
                     <div class="card-image">
@@ -939,9 +827,9 @@ def yue():
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -955,59 +843,6 @@ def yue():
                     
                     <a href="/tags/Python%E5%87%BD%E6%95%B0/">
                         <span class="chip bg-color">Python函数</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/08/31/Python%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Python">
-                        
-                        <span class="card-title">Python</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            循环
-while循环
-count = 1
-while count &lt; 8:
-    print(&quot;....&quot;)
-
-while True:
-    s = input(&quot;start:&quot;)
-    
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-31
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            二哈君
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-                        <span class="chip bg-color">Python基本数据类型</span>
                     </a>
                     
                 </div>
