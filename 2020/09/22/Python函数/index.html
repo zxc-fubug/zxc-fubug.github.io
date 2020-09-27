@@ -477,12 +477,9 @@ def yue():
 <li><p>函数的调用：使用函数名可以调用函数，写法：函数名()，这个时候函数体就会被执行</p>
 <pre><code>yue()</code></pre>
 <p>执行过程</p>
+<p><img src="C:\Users\付举鹏\Desktop\Python学习截图\3.PNG"></p>
 </li>
 </ul>
-<img src="C:\Users\付举鹏\AppData\Roaming\Typora\typora-user-images\1600741360302.png" alt="1600741360302" style="zoom: 67%;" />
-
-
-
 <ul>
 <li><p>函数的返回</p>
 <p>执行完函数之后，我们可以使用return来返回结果</p>
@@ -652,6 +649,96 @@ func(1,2,3,4,5,6,7, d =&quot;马大哈&quot;)</code></pre>
      print(args)
      print(kwargs)
  func(1, 2, 5, 6, name=&quot;taibai&quot;,age=18, sex=&quot;不详&quot;)</code></pre>
+<ul>
+<li>动态参数的另一种穿传参方式:</li>
+</ul>
+<pre><code>def fun(*args):
+    print(args)
+lst = [1, 4, 7]
+fun(lst[0], lst[1], lst[2])
+
+fun(*lst) # 可以使⽤*把⼀个列表按顺序打散
+s = &quot;⾂妾做不到&quot;
+fun(*s) # 字符串也可以打散, (可迭代对象)</code></pre>
+<p>在实参位置给一个序列,列表,可迭代对象前面加个*表示把这个序列按顺序打散</p>
+<p>在形参的位置上的*表示把接收到的参数组合成一个元组</p>
+<p>如果是一个字典,那么也可以打散,不过需要两个**</p>
+<pre><code>def fun(**kwargs):
+    print(kwargs)
+
+dic = &#123;&#39;a&#39;:1, &#39;b&#39;:2&#125;
+fun(**dic)</code></pre>
+<h3 id="二-命名空间"><a href="#二-命名空间" class="headerlink" title="二.命名空间"></a>二.命名空间</h3><p>​    在Python解释器开始执行之后,就会在内存中开辟一个空间,每当遇到一个变量的时候,就把变量名和值之间的关系记录下来,但是当遇到函数定义的时候,解释器只是把函数名读入内存,表示这个函数存在了,至于函数内部的变量和逻辑,解释器不关心这个,也就是说一开始的时候函数只是加载进来,仅此而已,只有当函数被调用和访问的时候.解释器才会根据函数内部声明的变量来进行开辟变量的内部空间.随着函数执行完毕.这些函数内部变量占用的空间也会随着函数执行完毕而被清空</p>
+<ul>
+<li>在形参上* 聚合,**聚合</li>
+<li>在实参上*打散, **打散</li>
+</ul>
+<p>1.命名空间的分类:</p>
+<p>​    a.内置命名空间–&gt;Python解释内部运行时的变量函数</p>
+<p>​    b.全局命名空间–&gt;我们在py文件中直接声明出来的变量,函数</p>
+<p>​    c.局部命名空间–&gt;在函数内部声明的变量和函数</p>
+<p>​    取值顺序:1.局部命名空间  2. 全局命名空间  3. 内置命名空间</p>
+<h3 id="三-作用域"><a href="#三-作用域" class="headerlink" title="三.作用域"></a>三.作用域</h3><p>​        作用域就是作用范围</p>
+<p>​    1.全局作用域–&gt;内置+全局</p>
+<p>​    2.局部作用域–&gt;局部(在函数内部使用)</p>
+<p>globals() 查看全局作用域中的名字</p>
+<p>locals()  查看当前作用域的名字</p>
+<pre><code>a = 10
+def func():
+    a = 40
+    b = 20
+    def abc():
+        print(&quot;哈哈&quot;)
+    print(a, b)     # 这⾥使⽤的是局部作⽤域
+    print(globals())     # 打印全局作⽤域中的内容
+    print(locals())     # 打印局部作⽤域中的内容
+
+func()</code></pre>
+<h3 id="四-函数嵌套"><a href="#四-函数嵌套" class="headerlink" title="四.函数嵌套"></a>四.函数嵌套</h3><ol>
+<li><p>只要遇见了()就是函数的调用, 如果没有() 就不是函数的调用</p>
+</li>
+<li><p>函数的执行顺序</p>
+<p>![](C:\Users\付举鹏\Desktop\Python学习截图\屏幕截图 2020-09-27 221218.png)</p>
+<p>函数的嵌套</p>
+<pre><code>a = 1
+def fun_1():
+    a = 2
+    def fun_2():
+         def fun_3():
+             nonlocal a
+             a =  4
+             print(a)
+         print(a)
+         fun_3()
+         print(a)
+    print(a)
+    fun_2()
+    print(a)
+print(a)
+fun_1()
+print(a)
+
+结果:1 2 2 4 4 4 1</code></pre>
+</li>
+</ol>
+<h3 id="五-关键字-global-和-nonlocal"><a href="#五-关键字-global-和-nonlocal" class="headerlink" title="五.关键字 global 和 nonlocal"></a>五.关键字 global 和 nonlocal</h3><p>​    global 表示把全局变量拿到局部来用</p>
+<pre><code>def func():
+    global a    # a 不再是局部变量. 是全局变量
+    a = 30  # 把全局中的a重新赋值成30
+    print(a)
+func()
+print(a)</code></pre>
+<p>​    nonlocal  把离他最近的一层的变量拿过来,不会找全局</p>
+<pre><code>a = 10
+def func1():
+
+    def func2():
+        nonlocal a  # 找局部作用域中 离他最近的那个变量引入进来
+        a = 20
+        print(a)
+    func2()
+    print(a)
+func1()</code></pre>
 
             </div>
             <hr/>
@@ -900,15 +987,12 @@ func(1,2,3,4,5,6,7, d =&quot;马大哈&quot;)</code></pre>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-冒泡排序
-
-# 冒泡排序
+                            一.冒泡排序# 冒泡排序
 lst = [11, 22, 35, 6, 2]
 for i in range(len(lst)):
     i = 0
     while i &lt; len(lst) - 1:
-        if lst
+        if lst[
                         
                     </div>
                     <div class="publish-info">
