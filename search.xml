@@ -5,6 +5,25 @@
     
     <entry>
       <title>Python</title>
+      <link href="/2020/10/03/Python%E7%94%9F%E6%88%90%E5%99%A8,%E9%97%AD%E5%8C%85/"/>
+      <url>/2020/10/03/Python%E7%94%9F%E6%88%90%E5%99%A8,%E9%97%AD%E5%8C%85/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一-函数名的运用"><a href="#一-函数名的运用" class="headerlink" title="一.函数名的运用"></a>一.函数名的运用</h3><ul><li>函数名的内存地址</li></ul><pre><code>def func():    print(&quot;呵呵&quot;)print(func)结果:&lt;function func at 0x1101e4ea0&gt;</code></pre><p>1.函数名可以赋值给其他变量</p><pre><code>def func():    print(&quot;123&quot;)print(func)a = func    #把函数当成一个变量赋值给另一个变量a() # 函数调用func()</code></pre><p>2.函数名可以当做容器类的元素(列表 lst)</p><pre><code>def func1():    print(&quot;hehe&quot;)def func2():    print(&quot;hehe&quot;)def func3():    print(&quot;hehe&quot;)lst = [func1,func2,func3]for i in lst:    i()</code></pre><p>3.函数名可以当做函数的参数</p><pre><code>def func():    print(&quot;123&quot;)def func1(fn):    print(&quot;我是func2&quot;)    fn()    #执行传递过来的fn    print(&quot;这里是函数1&quot;)func2(func) #把函数func当成参数传递func2的参数fn</code></pre><p>4.函数名可以作为函数的返回值</p><pre><code>def func_1():    print(&quot;这⾥是函数1&quot;)    def func_2():    print(&quot;这⾥是函数2&quot;)    print(&quot;这⾥是函数1&quot;)    return func_2fn = func_1() # 执⾏函数1. 函数1返回的是函数2, 这时fn指向的就是上⾯函数2fn() </code></pre><h3 id="二-闭包"><a href="#二-闭包" class="headerlink" title="二.闭包"></a>二.闭包</h3><ul><li>闭包就是内层函数对外层函数 (非全局) 的变量的引用</li><li>内部函数访问外部函数的局部变量</li></ul><pre><code>def func1():    name = &quot;alex&quot;     #常驻内存,防止其他程序改变这个变量    def func2():        print(name)    #在内层函数中调用了外层函数的变量,叫闭包,可以让局部变量常驻内存    return func2ret= func1()ret() #执行的就是func2结果:alex</code></pre><ul><li><p>闭包的好处</p><p>1.安全</p><p>2.常驻内存,提高效率</p></li></ul><pre><code>from urllib.request import urlopendef but():    content = urlopen(&quot;http://www.h3c.com/cn/&quot;).read()    def inner():        return content  # 再函数内部使用了外部的变量.闭包    #print(inner.__closure__) #查看inner是否是闭包,有东西就是闭包,返回None 就不是闭包    return innerfn = but()content = fn() #获取内容print(content)content1 = fn() #重新获取内容print(content1)</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 生成器·闭包 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python</title>
       <link href="/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/"/>
       <url>/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/</url>
       

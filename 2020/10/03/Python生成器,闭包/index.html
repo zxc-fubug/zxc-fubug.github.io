@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Python%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%BB%E7%BB%93/">
-                                <span class="chip bg-color">Python中的重要总结</span>
+                            <a href="/tags/%E7%94%9F%E6%88%90%E5%99%A8%C2%B7%E9%97%AD%E5%8C%85/">
+                                <span class="chip bg-color">生成器·闭包</span>
                             </a>
                         
                     </div>
@@ -450,7 +450,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-09-25
+                    2020-10-03
                 </div>
                 
 
@@ -466,44 +466,88 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一-冒泡排序"><a href="#一-冒泡排序" class="headerlink" title="一.冒泡排序"></a>一.冒泡排序</h3><pre><code># 冒泡排序
-lst = [11, 22, 35, 6, 2]
-for i in range(len(lst)):
-    i = 0
-    while i &lt; len(lst) - 1:
-        if lst[i] &gt; lst[i + 1]:
-            lst[i], lst[i + 1] = lst[i + 1], lst[i]    #解构
-        i += 1
-print(lst)</code></pre>
-<h3 id="二-经典题1-文件al-txt内容-升级题"><a href="#二-经典题1-文件al-txt内容-升级题" class="headerlink" title="二.经典题1:文件al.txt内容(升级题)"></a>二.经典题1:文件al.txt内容(升级题)</h3><pre><code>序号  部门  人数  平均年龄    备注  描述
-1   python  30  26  单身狗 屌丝居多
-2   Linux   26  30  没对象 全是屌丝
-3   运营部 20  24  女生多 没有人
-通过代码,将其构建成这种数据类型:
-[&#123;&#39;序号&#39;:&#39;1&#39;,&#39;部门&#39;:Python,&#39;人数&#39;:30,&#39;平均年龄&#39;:26,&#39;备注&#39;:&#39;单身狗&#39;&#125;]
+                <h3 id="一-函数名的运用"><a href="#一-函数名的运用" class="headerlink" title="一.函数名的运用"></a>一.函数名的运用</h3><ul>
+<li>函数名的内存地址</li>
+</ul>
+<pre><code>def func():
+    print(&quot;呵呵&quot;)
+print(func)
+
+结果:
+&lt;function func at 0x1101e4ea0&gt;
+</code></pre>
+<p>1.函数名可以赋值给其他变量</p>
+<pre><code>def func():
+    print(&quot;123&quot;)
+print(func)
+a = func    #把函数当成一个变量赋值给另一个变量
+a() # 函数调用func()</code></pre>
+<p>2.函数名可以当做容器类的元素(列表 lst)</p>
+<pre><code>def func1():
+    print(&quot;hehe&quot;)
+def func2():
+    print(&quot;hehe&quot;)
+def func3():
+    print(&quot;hehe&quot;)
+
+lst = [func1,func2,func3]
+for i in lst:
+    i()</code></pre>
+<p>3.函数名可以当做函数的参数</p>
+<pre><code>def func():
+    print(&quot;123&quot;)
+
+def func1(fn):
+    print(&quot;我是func2&quot;)
+    fn()    #执行传递过来的fn
+    print(&quot;这里是函数1&quot;)
+func2(func) #把函数func当成参数传递func2的参数fn</code></pre>
+<p>4.函数名可以作为函数的返回值</p>
+<pre><code>def func_1():
+    print(&quot;这⾥是函数1&quot;)
+    def func_2():
+    print(&quot;这⾥是函数2&quot;)
+    print(&quot;这⾥是函数1&quot;)
+    return func_2
+
+fn = func_1() # 执⾏函数1. 函数1返回的是函数2, 这时fn指向的就是上⾯函数2
+fn() </code></pre>
+<h3 id="二-闭包"><a href="#二-闭包" class="headerlink" title="二.闭包"></a>二.闭包</h3><ul>
+<li>闭包就是内层函数对外层函数 (非全局) 的变量的引用</li>
+<li>内部函数访问外部函数的局部变量</li>
+</ul>
+<pre><code>def func1():
+    name = &quot;alex&quot;     #常驻内存,防止其他程序改变这个变量
+    def func2():
+        print(name)    #在内层函数中调用了外层函数的变量,叫闭包,可以让局部变量常驻内存
+    return func2
+ret= func1()
+ret() #执行的就是func2
+结果:
+alex</code></pre>
+<ul>
+<li><p>闭包的好处</p>
+<p>1.安全</p>
+<p>2.常驻内存,提高效率</p>
+</li>
+</ul>
+<pre><code>from urllib.request import urlopen
 
 
+def but():
+    content = urlopen(&quot;http://www.h3c.com/cn/&quot;).read()
 
-f = open(&quot;a6.txt&quot;, mode=&quot;r&quot;, encoding=&quot;utf-8&quot;)
-line = f.readline()
-lst = line.split()  # 第一行切割完成 key就准备完了
+    def inner():
+        return content  # 再函数内部使用了外部的变量.闭包
+    #print(inner.__closure__) #查看inner是否是闭包,有东西就是闭包,返回None 就不是闭包
+    return inner
 
-result = []
-# 接着向后读取
-for lin in f:
-    ll = lin.split()    # 每一行都进行切割
-    dic = &#123;&#125;
-    for i in range(len(ll)):    # i 表示ll的索引\
-        # lst[i]    # key
-        # ll[i]        # value
-        dic[lst[i]] = ll[i]
-    result.append(dic)
-print(result)</code></pre>
-<h3 id="三-三元运算符"><a href="#三-三元运算符" class="headerlink" title="三.三元运算符"></a>三.三元运算符</h3><pre><code>a = 1
-b = 2
-h = a if a&gt;b else b
-print(h)</code></pre>
-<h3 id="四-Python中递归-层数"><a href="#四-Python中递归-层数" class="headerlink" title="四.Python中递归 层数"></a>四.Python中递归 层数</h3><pre><code>在Python中递归层数最多998</code></pre>
+
+fn = but()
+content = fn() #获取内容
+print(content)
+content1 = fn() #重新获取内容
+print(content1)</code></pre>
 
             </div>
             <hr/>
@@ -529,7 +573,7 @@ print(h)</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zxc-fubug.github.io/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/">http://zxc-fubug.github.io/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://zxc-fubug.github.io/2020/10/03/Python%E7%94%9F%E6%88%90%E5%99%A8,%E9%97%AD%E5%8C%85/">http://zxc-fubug.github.io/2020/10/03/Python%E7%94%9F%E6%88%90%E5%99%A8,%E9%97%AD%E5%8C%85/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -567,8 +611,8 @@ print(h)</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Python%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%BB%E7%BB%93/">
-                                    <span class="chip bg-color">Python中的重要总结</span>
+                                <a href="/tags/%E7%94%9F%E6%88%90%E5%99%A8%C2%B7%E9%97%AD%E5%8C%85/">
+                                    <span class="chip bg-color">生成器·闭包</span>
                                 </a>
                             
                         </div>
@@ -736,9 +780,10 @@ print(h)</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2020/10/03/Python%E7%94%9F%E6%88%90%E5%99%A8,%E9%97%AD%E5%8C%85/">
                     <div class="card-image">
@@ -766,9 +811,9 @@ print(func)
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -777,6 +822,7 @@ print(func)
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -795,7 +841,7 @@ print(func)
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/22/Python%E5%87%BD%E6%95%B0/">
+                <a href="/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/">
                     <div class="card-image">
                         
                         
@@ -807,20 +853,17 @@ print(func)
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、函数的定义​    对代码块和功能的封装和定义
-二、函数的定义语法​    
-def 函数名():
-    函数体
-
-def yue():
-    print(&quot;123&quot;)
-
-函数的调用：使用函数名可以调用函数，写法
+                            一.冒泡排序# 冒泡排序
+lst = [11, 22, 35, 6, 2]
+for i in range(len(lst)):
+    i = 0
+    while i &lt; len(lst) - 1:
+        if lst[
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-25
                             </span>
                         <span class="publish-author">
                             
@@ -833,8 +876,8 @@ def yue():
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python%E5%87%BD%E6%95%B0/">
-                        <span class="chip bg-color">Python函数</span>
+                    <a href="/tags/Python%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">Python中的重要总结</span>
                     </a>
                     
                 </div>
