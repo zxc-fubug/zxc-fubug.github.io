@@ -483,6 +483,7 @@
 
     def shop(self):
         print(&quot;人类可以消费....&quot;)
+        self.hight = 175 # 方法中也可以封装属性
 
 # 类名的角度
     # 类中的静态变量
@@ -504,6 +505,7 @@
 # print(Person.__dict__) # 打印类中所有的内容
 
         # 3. 操作类中的方法 (工作中基本不用类名去操作)
+        # 3. 除了类方法,静态方法,需要类名调用之外,剩下的方法都要对象调用
 # Person.work(11)
 
 # 对象的角度
@@ -517,6 +519,11 @@
 # 2. 自动执行类中的__init__方法,将对象空间传给__init__的self参数
 # 3. 给对象封装相应的属性(变量)
 # print(ret.__dict__) # 查询对象中的所有内容 结果是 字典&#123;&#125;
+
+# 执行过程
+# 1.创建了一个对象空间,实例空间
+# 2. 自动执行__init__方法,并将我的对象空间传给self
+# 3. 执行具体的__init__代码,给对象空间封装属性
 
 # 操作对象中静态变量
     # 1. __dict__ 查询对象中的所有内容
@@ -559,6 +566,60 @@ ret = Person(&#39;alex&#39;, 19, &#39;喝酒&#39;)
 # ret.work()
 # ret.shop()
 # ret.get()</code></pre>
+<h3 id="二-面向对象-名称空间"><a href="#二-面向对象-名称空间" class="headerlink" title="二.面向对象-名称空间"></a>二.面向对象-名称空间</h3><p>1.创建一个类就会创建一个类的名称空间,用来存储类中定义的所有名字,这些名字称为类的属性</p>
+<p>​        而类有两种属性:    静态属性和动态属性</p>
+<p>​                                静态属性就是直接在类中定义的变量</p>
+<p>​                                动态属性就是定义在类中的方法</p>
+<p>​        其中类的数据属性是共享给所有对象的</p>
+<pre><code>&gt;&gt;&gt;id(egg.role)
+4341594072 # 内存地址
+&gt;&gt;&gt;id(Person.role)
+4341594072</code></pre>
+<p>​        而类动态属性是绑定到所有对象的</p>
+<pre><code>&gt;&gt;&gt;egg.attack
+&lt;bound method Person.attack of &lt;__main__.Person object at 0x101285860&gt;&gt;
+&gt;&gt;&gt;Person.attack
+&lt;function Person.attack at 0x10127abf8&gt; </code></pre>
+<h4 id="创建一个对象-实例就会创建一个对象-实例的名称空间-存放对象-实例的名字-称为对象-实例的属性"><a href="#创建一个对象-实例就会创建一个对象-实例的名称空间-存放对象-实例的名字-称为对象-实例的属性" class="headerlink" title="创建一个对象/实例就会创建一个对象/实例的名称空间, 存放对象/实例的名字.  称为对象/实例的属性"></a>创建一个对象/实例就会创建一个对象/实例的名称空间, 存放对象/实例的名字.  称为对象/实例的属性</h4><p>在obj.name 会先从obj 自己的名称空间找 name  .找不到则去类中找,再找不到就去父类中扎找…最好找不到就会抛出异常</p>
+<ol start="2">
+<li>查询顺序:<ol>
+<li>对象.属性:  先从对象空间找.如果找不到.再从类空间找.再找不到.再从父类中找..</li>
+<li>类名.属性:  先从本类空间中找.如果找不到,在从父类中找..</li>
+</ol>
+</li>
+<li>对象与对象之间是相互独立的</li>
+</ol>
+<pre><code>计算一个类 实例化多少对象.
+
+class Count:
+    count = 0
+    def __init__(self):
+        Count.count = self.count + 1
+
+obj1 = Count()
+obj2 = Count()
+
+print(Count.count)
+count = 0
+
+def func():
+    print(count)
+func()
+
+class Count:
+    count = 0
+    def __init__(self):
+        pass
+
+通过类名可以更改我的类中的静态变量值
+Count.count = 6
+print(Count.__dict__)
+
+但是通过对象 不能改变只能引用类中的静态变量
+
+obj1 = Count()
+print(obj1.count)
+obj1.count = 6</code></pre>
 
             </div>
             <hr/>

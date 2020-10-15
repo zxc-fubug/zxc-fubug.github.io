@@ -504,6 +504,54 @@ b = 2
 h = a if a&gt;b else b
 print(h)</code></pre>
 <h3 id="四-Python中递归-层数"><a href="#四-Python中递归-层数" class="headerlink" title="四.Python中递归 层数"></a>四.Python中递归 层数</h3><pre><code>在Python中递归层数最多998</code></pre>
+<h3 id="五-用迭代器模拟for-循环"><a href="#五-用迭代器模拟for-循环" class="headerlink" title="五.用迭代器模拟for 循环"></a>五.用迭代器模拟for 循环</h3><pre><code>lst = [1,2,3,4]
+it = lst.__iter__()  # 获取迭代器
+
+while 1:
+    try:
+        name = it.__next__()  # 获取内容
+        print(name)
+    except StopIteration:  # 抛异常
+        break</code></pre>
+<h3 id="六-接收n-个参数-返回最大值-和-最小值-字典"><a href="#六-接收n-个参数-返回最大值-和-最小值-字典" class="headerlink" title="六. 接收n 个参数, 返回最大值 和 最小值(字典)"></a>六. 接收n 个参数, 返回最大值 和 最小值(字典)</h3><pre><code>def func(*args):
+    ma = args[0]  # 假设第0项就是最大值
+    mi = args[0]  # 假设第0项就是最小值
+    for el in args:
+        if el &gt; ma:
+            ma = el  # 当前这个元素比假设的那个大,进行赋值
+        if el &lt; mi:
+            mi = el
+    return &#123;&quot;最大值&quot;: ma, &quot;最小值&quot;: mi&#125;
+
+
+ret = func(123,42, 22, 545, 21)
+print(ret)</code></pre>
+<h3 id="七-经典题"><a href="#七-经典题" class="headerlink" title="七. 经典题"></a>七. 经典题</h3><pre><code>user_list=[
+        &#123;&quot;name&quot;: &quot;alex&quot;, &quot;hobby&quot;: &quot;抽烟&quot;&#125;,
+        &#123;&quot;name&quot;: &quot;alex&quot;, &quot;hobby&quot;: &quot;喝酒&quot;&#125;,
+        &#123;&quot;name&quot;: &quot;alex&quot;, &quot;hobby&quot;: &quot;烫头&quot;&#125;,
+        &#123;&quot;name&quot;: &quot;wusir&quot;, &quot;hobby&quot;: &quot;喊麦&quot;&#125;,
+        &#123;&quot;name&quot;: &quot;wusir&quot;, &quot;hobby&quot;: &quot;街舞&quot;&#125;,
+        &#123;&quot;name&quot;: &quot;alex&quot;, &quot;hobby&quot;: &quot;泡吧&quot;&#125;,
+        &#123;&quot;name&quot;:&quot;太白&quot;, &quot;hobby&quot;:&quot;开车&quot;&#125;
+         ]
+# [&#123;&quot;name&quot;: &quot;alex&quot;, &quot;hobby_list&quot;: [&quot;抽烟&quot;,&quot;喝酒&quot;,&quot;烫头&quot;,&quot;泡吧&quot;]&#125;,&#123;&quot;name&quot;: &quot;wusir&quot;, &quot;hobby_list&quot;: [&quot;喊麦&quot;, &quot;街舞&quot;]&#125;,]
+
+result = [] # &#123;&#39;name&#39;: &#39;alex&#39;, &#39;hobby_list&#39;: [&#39;抽烟&#39;]&#125;
+for user in user_list:
+    # 1.判断是否在result里面存在了这个人, 如果存在. 把hobby_list添加一个hobby
+    # 2.不存在. 创建一个新字典
+    # 3.第一次循环user_lsit result[] 为空 所以直接创建dic&#123;&#125; 执行else
+    for new_user in result:
+        if user[&#39;name&#39;] == new_user[&#39;name&#39;]:
+            new_user[&#39;hobby_list&#39;].append(user[&#39;hobby&#39;])
+            break
+    else:
+        dic = &#123;&#125;
+        dic[&quot;name&quot;] = user[&#39;name&#39;]
+        dic[&#39;hobby_list&#39;] = [user[&#39;hobby&#39;]]
+        result.append(dic)
+print(result)</code></pre>
 
             </div>
             <hr/>
