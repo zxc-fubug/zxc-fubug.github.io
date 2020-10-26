@@ -620,6 +620,289 @@ print(Count.__dict__)
 obj1 = Count()
 print(obj1.count)
 obj1.count = 6</code></pre>
+<h3 id="三-组合-给一个类的对象封装一个属性-这个属性是另一个类的对象"><a href="#三-组合-给一个类的对象封装一个属性-这个属性是另一个类的对象" class="headerlink" title="三.组合: 给一个类的对象封装一个属性,这个属性是另一个类的对象"></a>三.组合: 给一个类的对象封装一个属性,这个属性是另一个类的对象</h3><pre><code>class GameRole:
+    def __init__(self, name, ad, hp):
+        self.name = name
+        self.ad = ad
+        self.hp = hp
+
+    def attack(self,p):
+        p.hp = p.hp - self.ad
+        print(&#39;%s 攻击 %s,%s 掉了%s血,还剩%s血&#39; %(self.name,p.name,p.name,self.ad,p.hp))
+
+    def armament_weapon(self,wea):
+        self.wea = wea
+
+
+class Weapon:
+    def __init__(self,name,ad):
+        self.name = name
+        self.ad = ad
+
+
+    def fight(self,p1,p2):
+        p2.hp = p2.hp - self.ad
+        print(&#39;%s 用%s打了%s,%s 掉了%s血,还剩%s血&#39;\
+              % (p1.name,self.name,p2.name,p2.name,self.ad,p2.hp))
+
+p1 = GameRole(&#39;大阳哥&#39;,20,500)
+p2 = GameRole(&#39;印度阿宁&#39;,50,200)
+axe = Weapon(&#39;三板斧&#39;,60)
+broadsword = Weapon(&#39;屠龙宝刀&#39;,100)
+# print(axe)
+p1.armament_weapon(axe)  # 给大阳哥 装备了三板斧这个对象.
+# print(p1.wea)
+# print(p1.wea.name)
+# print(p1.wea.ad)
+p1.wea.fight(p1,p2)</code></pre>
+<h3 id="四-面向对象第一大特性—继承"><a href="#四-面向对象第一大特性—继承" class="headerlink" title="四.面向对象第一大特性—继承"></a>四.面向对象第一大特性—继承</h3><ol>
+<li><p>子类以及子类实例化的对象, 可以访问父类的任何方法和变量</p>
+</li>
+<li><p>类名可以访问父类的所有内容 (print(Animal.breath))</p>
+</li>
+<li><p>子类实例化的对象也可以访问父类所有内容 print(p1.breath) print(p1) p1.eat()</p>
+</li>
+<li><p>只执行父类的方法: 子类中不要定义与父类同名的方法</p>
+</li>
+<li><p>只执行子类的方法,在子类中创建</p>
+</li>
+<li><p>既要执行子类的方法,又要执行父类中的方法?</p>
+<ol>
+<li><p>两种办法:</p>
+<pre><code>Animal.__init__(self, name, sex, age)
+super().__init__(name,sex,age)</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>class Animal:
+    breath = &#39;呼吸&#39; # 静态字段
+
+    def __init__(self,name,sex,age)
+        self.name = name
+        self.sex = sex
+        self.age = age
+
+    def eat(self):
+        print(&#39;吃东西...&#39;)
+
+class Cat(Animal): # 括号里面的: 父类,基类,超类 括号外面的: 子类,派生类
+    pass
+
+class Dog(Animal):
+    pass
+
+p1 = Cat(&#39;alex&#39;,&#39;women&#39;,100)    # 实例化子类对象
+print(p1.__dict__)
+</code></pre>
+<pre><code>class Animal:
+
+    def __init__(self, name, sex, age):
+        self.name = name
+        self.sex = sex
+        self.age = age
+
+    def eat(self, a):
+        print(&#39;%s吃%s&#39; % (self.name, a))
+
+    def drink(self):
+        print(&#39;%s喝东西&#39; % self.name)
+
+
+class Cat(Animal):
+    def __init__(self, name, sex, age, wing):
+        Animal.__init__(self, name, sex, age)
+        # super(Cat, self).__init__(name, sex, age)
+        self.wing = wing
+
+    def miaow(self):
+        print(&#39;喵喵叫&#39;)
+
+    def eat(self, a):
+        super(Cat, self).eat(a)
+        print(666)
+
+
+c1 = Cat(&#39;tom&#39;, &#39;公&#39;, 3, &#39;好看&#39;)
+# print(c1.__dict__)
+c1.eat(&#39;金蝉&#39;)</code></pre>
+<h3 id="五-继承的进阶"><a href="#五-继承的进阶" class="headerlink" title="五.继承的进阶"></a>五.继承的进阶</h3><p>​    1.继承: 单继承, 多继承</p>
+<p>​    2.类的角度: A–&gt;经典类,B–&gt;新式类</p>
+<p>​        1.新式类: 凡是继承object类都是新式类( 在Python3版本中,所有类都是新式类,因为Python3版本中的类都默认继承object)</p>
+<p>​        2.经典类: 不继承object类的都是经典类(Python2中既有新式类又有经典类,中所有的类都不继承object,所以所有的类默认是经典类)</p>
+<p>​    3.单继承: 新式类,经典类查询顺序一样</p>
+<pre><code>class A:
+    def func(self):
+        print(&#39;A&#39;)
+
+
+class B(A):
+    def func(self):
+        print(&#39;B&#39;)
+
+
+class C(B):
+    def func(self):
+        print(&#39;C&#39;)
+
+
+c1 = C()
+c1.func()
+b1 = B()
+b1.func()</code></pre>
+<p>​    4.多继承:</p>
+<p>​        1.新式类: 遵循广度优先</p>
+<p>​        2.多继承的新式类 广度优先:  一条路都到倒数第二级,进行判断,如果其他路能走到终点,则返回走另外一条路,如果不能,则走到终点</p>
+<p><img src="C:\Users\付举鹏\AppData\Roaming\Typora\typora-user-images\1603693720711.png" alt="1603693720711"></p>
+<p>​        </p>
+<pre><code>class A:
+    def func(self):
+        print(&#39;IN A&#39;)
+
+
+class B(A):
+    pass
+    # def func(self):
+    #     print(&#39;IN B&#39;)
+
+
+class C(A):
+    pass
+    # def func(self):
+    #     print(&#39;IN C&#39;)
+
+
+class D(B):
+    pass
+    # def func(self):
+    #     print(&#39;IN D&#39;)
+
+
+class E(C):
+    pass
+    # def func(self):
+    #     print(&#39;IN E&#39;)
+
+
+class F(D, E):
+    pass
+    # def func(self):
+    #     print(&#39;IN F&#39;)
+
+f1 = F()
+f1.func()
+
+print(F.mro())  # 查询类的继承顺序</code></pre>
+<p>​        3.经典类: 遵循深度优先:  一条路走到底</p>
+<h3 id="六-面向对象之封装和多态"><a href="#六-面向对象之封装和多态" class="headerlink" title="六.面向对象之封装和多态"></a>六.面向对象之封装和多态</h3><p>​    一. 接口类,抽象类: 制定一个规范(Python中没有接口的概念)</p>
+<p>​        </p>
+<pre><code># 制定规则,抽象类,接口类
+from abc import ABCMeta, abstractmethod
+
+
+class Payment(metaclass=ABCMeta):  # 抽象类(接口类)
+    @abstractmethod  # 装饰器
+    def pay(self): pass  # 制定规范
+
+
+class Alipay(Payment):
+    def __init__(self, money):
+        self.money = money
+
+    def pay(self):
+        print(&#39;使用了支付宝支付了%s&#39; % self.money)
+
+
+class Jdpay(Payment):
+    def __init__(self, money):
+        self.money = money
+
+    def pay(self):
+        print(&#39;使用了京东支付了%s&#39; % self.money)
+
+
+def pay(obj):
+    obj.pay()
+
+
+a1 = Alipay(1000)
+p1 = Jdpay(1222)
+
+pay(a1)  # 归一化设计
+pay(p1)</code></pre>
+<p>​    二. 多态</p>
+<p>​        1.多态: Python中没有多态,只有鸭子类型(Python是弱类型语言,不管是什么类型,传入函数,封装到对象中都可以)</p>
+<p>​        以下这些类互称为鸭子</p>
+<pre><code>class Str:
+    def index(self):
+        pass
+
+
+class List:
+    def index(self):
+        pass
+
+
+class Tuple:
+    def index(self):
+        pass</code></pre>
+<p>​    三.封装</p>
+<p>​        1.广义的封装: 实例化一个对象, 给对象空间封装一些属性</p>
+<p>​        2.狭义的封装: 私有制</p>
+<p>​        3.私有成员:  私有静态字段,私有方法,私有对象属性</p>
+<p>​        </p>
+<p>​        A.私有静态字段</p>
+<p>​        </p>
+<pre><code>class A:
+    __money = 1100  # 前面加 __就是私有静态字段
+
+
+class B(A):
+    name = &#39;alex&#39;
+    __age = 99  # 前面加 __就是私有静态字段
+
+    def func(self):
+        print(self.__age)  # 对于私有静态字段,类的内部是可以访问的
+        print(B.__age)
+        # print(self.__money)
+        print(&#39;func...&#39;)
+
+
+a1 = B()
+print(a1.name)
+print(a1.name)
+
+print(a1.__age)  # 实例化对象不能访问私有静态字段
+print(B.__age)  # 类名也不能访问私有静态字段
+                #对与私有静态字段,类的外部是不能访问的
+
+a1.func()
+#对于私有静态字段,只能在类的内部访问,类的外部,派生类均不能访问
+#其实是可以访问的是Python中的一个bug(工作中千万不要用)
+print(B._B__age)
+print(B.__dict__)</code></pre>
+<p>​        B.私有方法</p>
+<pre><code>#私有方法
+class B:
+    __money = 1000  #前面加 __就是私有静态字段
+    def __f1(self):  #前面加 __就是私有方法
+        print(&#39;B&#39;)
+
+
+class A(B):
+    name = &#39;alex&#39;
+
+    def __func(self):
+        print(&#39;func...&#39;)
+
+    def func1(self):
+        self.__func()  # 类的内部可以访问
+        self.__f1()
+
+a1 = A()
+# a1.__func()  # 类的外部不能访问
+a1.func1()  # 类的内部可以访问
+a1.func1()  # 类的派生类不可以访问</code></pre>
 
             </div>
             <hr/>
