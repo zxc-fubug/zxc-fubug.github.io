@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%9D%E5%A7%8B/">
-                                <span class="chip bg-color">面向对象初始</span>
+                            <a href="/tags/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%BB%E7%BB%93/">
+                                <span class="chip bg-color">Python面向对象的总结</span>
                             </a>
                         
                     </div>
@@ -450,7 +450,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-10-13
+                    2020-11-07
                 </div>
                 
 
@@ -466,271 +466,153 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一-面向对象的初始"><a href="#一-面向对象的初始" class="headerlink" title="一.面向对象的初始"></a>一.面向对象的初始</h3><p>​    1.类 : 具有相同属性和技能的一类事物</p>
-<p>​    2.对象 : 具体类的表现, 具体的实实在在的一个实例</p>
-<p>​    </p>
-<pre><code>class Person:
-    &#39;&#39;&#39; 类体:两部分: 变量部分,方法(函数)部分 &#39;&#39;&#39;
-    mind = &#39;有思想&#39;  # 变量,一般叫(静态变量,静态字段)
-    animal = &#39;高级动物&#39;
-    faith = &#39;有信仰&#39;
-
-    def __init__(self):
-        print(66)
-
-    def work(self):  # 方法,函数,动态变量
-        print(&quot;人类都会工作&quot;)
-
-    def shop(self):
-        print(&quot;人类可以消费....&quot;)
-        self.hight = 175 # 方法中也可以封装属性
-
-# 类名的角度
-    # 类中的静态变量
-        # 1. Person.__dict__ 查询类中的所有内容,不能进行增删改查
-
-# print(Person.__dict__)
-# print(Person.__dict__[&#39;faith&#39;]) # 获取类中静态字段具体的值
-# Person.__dict__[&#39;mind&#39;] = &#39;无脑&#39; # 报错
-# print(Person.__dict__[&#39;mind&#39;])
-
-        # 2. 万能的点 . 对类中的单个的变量进行增删改查
-
-# print(Person.mind)  # 查
-# print(Person.animal) # 查
-
-# Person.money = &#39;运用货币&#39; 增
-# Person.mind = &#39;无脑&#39; # 改
-# del Person.mind  # 删除
-# print(Person.__dict__) # 打印类中所有的内容
-
-        # 3. 操作类中的方法 (工作中基本不用类名去操作)
-        # 3. 除了类方法,静态方法,需要类名调用之外,剩下的方法都要对象调用
-# Person.work(11)
-
-# 对象的角度
-# ret = Person() # 类名 + () 的这个过程: 实例化的过程( 创建一个对象的过程 )
-    # Person() 实例化对象,实例,对象
-# print(ret)
-#  1. 只要类名 + () 产生一个对象,自动执行类中__init__方法.
-
-执行步骤
-# 1. 类名+() 产生一个实例 ( 对象,对象空间 )
-# 2. 自动执行类中的__init__方法,将对象空间传给__init__的self参数
-# 3. 给对象封装相应的属性(变量)
-# print(ret.__dict__) # 查询对象中的所有内容 结果是 字典&#123;&#125;
-
-# 执行过程
-# 1.创建了一个对象空间,实例空间
-# 2. 自动执行__init__方法,并将我的对象空间传给self
-# 3. 执行具体的__init__代码,给对象空间封装属性
-
-# 操作对象中静态变量
-    # 1. __dict__ 查询对象中的所有内容
-    # 2. 万能的点 . 
-print(ret.name)  # 查
-ret.high = 189  # 增
-del ret.faith  # 删除
-ret.age = 99  # 改
-
-# print(ret.__dict__)  # 
-
-对象操作类中的静态变量 : 只能查询
-# print(ret.mind)
-
-对象调用类中的方法 ( 工作中 通过对象执行类中的方法,而不是通过类名)
-# ret.shop()
-# print(ret)</code></pre>
-<p>例子</p>
-<pre><code>class Person:
-    mind = &#39;有思想的&#39;
-    animal = &#39;高级动物&#39;
-    faith = &#39;有信仰的&#39;
-
-    def __init__(self, name, age, hobby):
-        self.name = name
-        self.age = age
-        self.faith = hobby
-
-    def work(self):
-        print(&#39;%s是会工作的&#39; % self.name)
-
-    def shop(self):
-        print(&#39;%s会消费......&#39; % self.name)
-
-    def get(self):
-        print(&#39;%s今年%s岁了&#39; % (self.name, self.age))
-
-
-ret = Person(&#39;alex&#39;, 19, &#39;喝酒&#39;)
-# ret.work()
-# ret.shop()
-# ret.get()</code></pre>
-<h3 id="二-面向对象-名称空间"><a href="#二-面向对象-名称空间" class="headerlink" title="二.面向对象-名称空间"></a>二.面向对象-名称空间</h3><p>1.创建一个类就会创建一个类的名称空间,用来存储类中定义的所有名字,这些名字称为类的属性</p>
-<p>​        而类有两种属性:    静态属性和动态属性</p>
-<p>​                                静态属性就是直接在类中定义的变量</p>
-<p>​                                动态属性就是定义在类中的方法</p>
-<p>​        其中类的数据属性是共享给所有对象的</p>
-<pre><code>&gt;&gt;&gt;id(egg.role)
-4341594072 # 内存地址
-&gt;&gt;&gt;id(Person.role)
-4341594072</code></pre>
-<p>​        而类动态属性是绑定到所有对象的</p>
-<pre><code>&gt;&gt;&gt;egg.attack
-&lt;bound method Person.attack of &lt;__main__.Person object at 0x101285860&gt;&gt;
-&gt;&gt;&gt;Person.attack
-&lt;function Person.attack at 0x10127abf8&gt; </code></pre>
-<h4 id="创建一个对象-实例就会创建一个对象-实例的名称空间-存放对象-实例的名字-称为对象-实例的属性"><a href="#创建一个对象-实例就会创建一个对象-实例的名称空间-存放对象-实例的名字-称为对象-实例的属性" class="headerlink" title="创建一个对象/实例就会创建一个对象/实例的名称空间, 存放对象/实例的名字.  称为对象/实例的属性"></a>创建一个对象/实例就会创建一个对象/实例的名称空间, 存放对象/实例的名字.  称为对象/实例的属性</h4><p>在obj.name 会先从obj 自己的名称空间找 name  .找不到则去类中找,再找不到就去父类中扎找…最好找不到就会抛出异常</p>
-<ol start="2">
-<li>查询顺序:<ol>
-<li>对象.属性:  先从对象空间找.如果找不到.再从类空间找.再找不到.再从父类中找..</li>
-<li>类名.属性:  先从本类空间中找.如果找不到,在从父类中找..</li>
-</ol>
+                <h3 id="一-面向对象"><a href="#一-面向对象" class="headerlink" title="一.面向对象"></a>一.面向对象</h3><h6 id="1-写代码的时候-什么时候用面向对象"><a href="#1-写代码的时候-什么时候用面向对象" class="headerlink" title="1.写代码的时候,什么时候用面向对象"></a>1.写代码的时候,什么时候用面向对象</h6><ul>
+<li>代码量大,功能多的时候</li>
+<li>处理比较复杂的角色之间的关系(面试可以这么说)<ul>
+<li>qq 好友 陌生人 群 组</li>
+<li>复杂的电商程序</li>
+<li>公司/学校的人事管理/功能的系统</li>
+</ul>
 </li>
-<li>对象与对象之间是相互独立的</li>
-</ol>
-<pre><code>计算一个类 实例化多少对象.
+<li>面向对象的好处<ul>
+<li>代码的清晰度更高了</li>
+<li>可读性,无论是开发者,还是调用者,都能明确的分辨出每个角色拥有的方法和属性</li>
+<li>增强了代码的可扩展性</li>
+<li>增加复用性</li>
+<li>更加规范</li>
+</ul>
+</li>
+</ul>
+<h6 id="2-对象"><a href="#2-对象" class="headerlink" title="2.对象"></a>2.对象</h6><ul>
+<li>Python当中一切皆对象, 基础数据类型 都是对象</li>
+<li>类型和自定义类的关系–&gt;类型和类是一个东西<ul>
+<li>type(obj) obj 是一个对象,那么它的type就是它的类型</li>
+</ul>
+</li>
+<li>创建一个对象<ul>
+<li>类名() 实例化一个对象</li>
+<li><strong>new</strong>() 创造了一个对象的空间,一些简单的初始化</li>
+</ul>
+</li>
+<li>创建一个类<ul>
+<li>class 类名  —&gt;语法级别的 Python解释器读到这句话的时候,就会创建类</li>
+<li>type是所有类的元类, object是所有类的父类</li>
+<li>类也是被创建出来的,type创建类, type(cls)  = type<ul>
+<li>class A(metaclass = ABCMeta) ABCMeta创建了这个A类,那么ABCMeta就是A的元类</li>
+<li>那么 type 就是这个类的 元类</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>type(obj) 的结果就是这个对象所属的类</li>
+<li>type(类) 的结果及时创建这个类的元类, 大多数情况下就是type,除非你指定metaclass</li>
+</ul>
+<pre><code>class Saler:
+    def __init__(self, name, sex, ident):
+        self.name = name
+        self.sex = sex
+        self.ident = ident
 
-class Count:
-    count = 0
-    def __init__(self):
-        Count.count = self.count + 1
+    def sale(self):
+        print(&#39;%s卖东西&#39; % self.name)
 
-obj1 = Count()
-obj2 = Count()
-
-print(Count.count)
-count = 0
-
-def func():
-    print(count)
-func()
-
-class Count:
-    count = 0
-    def __init__(self):
+    def add_goods(self):
         pass
 
-通过类名可以更改我的类中的静态变量值
-Count.count = 6
-print(Count.__dict__)
 
-但是通过对象 不能改变只能引用类中的静态变量
-
-obj1 = Count()
-print(obj1.count)
-obj1.count = 6</code></pre>
-<h3 id="三-组合-给一个类的对象封装一个属性-这个属性是另一个类的对象"><a href="#三-组合-给一个类的对象封装一个属性-这个属性是另一个类的对象" class="headerlink" title="三.组合: 给一个类的对象封装一个属性,这个属性是另一个类的对象"></a>三.组合: 给一个类的对象封装一个属性,这个属性是另一个类的对象</h3><pre><code>class GameRole:
-    def __init__(self, name, ad, hp):
-        self.name = name
-        self.ad = ad
-        self.hp = hp
-
-    def attack(self,p):
-        p.hp = p.hp - self.ad
-        print(&#39;%s 攻击 %s,%s 掉了%s血,还剩%s血&#39; %(self.name,p.name,p.name,self.ad,p.hp))
-
-    def armament_weapon(self,wea):
-        self.wea = wea
-
-
-class Weapon:
-    def __init__(self,name,ad):
-        self.name = name
-        self.ad = ad
-
-
-    def fight(self,p1,p2):
-        p2.hp = p2.hp - self.ad
-        print(&#39;%s 用%s打了%s,%s 掉了%s血,还剩%s血&#39;\
-              % (p1.name,self.name,p2.name,p2.name,self.ad,p2.hp))
-
-p1 = GameRole(&#39;大阳哥&#39;,20,500)
-p2 = GameRole(&#39;印度阿宁&#39;,50,200)
-axe = Weapon(&#39;三板斧&#39;,60)
-broadsword = Weapon(&#39;屠龙宝刀&#39;,100)
-# print(axe)
-p1.armament_weapon(axe)  # 给大阳哥 装备了三板斧这个对象.
-# print(p1.wea)
-# print(p1.wea.name)
-# print(p1.wea.ad)
-p1.wea.fight(p1,p2)</code></pre>
-<h3 id="四-面向对象第一大特性—继承"><a href="#四-面向对象第一大特性—继承" class="headerlink" title="四.面向对象第一大特性—继承"></a>四.面向对象第一大特性—继承</h3><ol>
-<li><p>子类以及子类实例化的对象, 可以访问父类的任何方法和变量</p>
-</li>
-<li><p>类名可以访问父类的所有内容 (print(Animal.breath))</p>
-</li>
-<li><p>子类实例化的对象也可以访问父类所有内容 print(p1.breath) print(p1) p1.eat()</p>
-</li>
-<li><p>只执行父类的方法: 子类中不要定义与父类同名的方法</p>
-</li>
-<li><p>只执行子类的方法,在子类中创建</p>
-</li>
-<li><p>既要执行子类的方法,又要执行父类中的方法?</p>
-<ol>
-<li><p>两种办法:</p>
-<pre><code>Animal.__init__(self, name, sex, age)
-super().__init__(name,sex,age)</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-<pre><code>class Animal:
-    breath = &#39;呼吸&#39; # 静态字段
-
-    def __init__(self,name,sex,age)
-        self.name = name
-        self.sex = sex
-        self.age = age
-
-    def eat(self):
-        print(&#39;吃东西...&#39;)
-
-class Cat(Animal): # 括号里面的: 父类,基类,超类 括号外面的: 子类,派生类
-    pass
-
-class Dog(Animal):
-    pass
-
-p1 = Cat(&#39;alex&#39;,&#39;women&#39;,100)    # 实例化子类对象
-print(p1.__dict__)
+alex = Saler(&#39;alex&#39;, None, &#39;looser&#39;)
+print(type(alex))
+print(type(Saler))  # Saler类 --&gt; Saler类型 类型的类型 = 类型
 </code></pre>
-<pre><code>class Animal:
+<h6 id="3-类-class-类名"><a href="#3-类-class-类名" class="headerlink" title="3. 类 class 类名"></a>3. 类 class 类名</h6><ul>
+<li><p>类是什么时候被加载的, 以及类名是什么时候生效的</p>
+</li>
+<li><p>类</p>
+<ul>
+<li>静态属性/静态字段/静态变量</li>
+<li>动态属性/方法</li>
+</ul>
+<pre><code>class Person:
+    role = &#39;china&#39;
+    print(role)
 
-    def __init__(self, name, sex, age):
-        self.name = name
-        self.sex = sex
-        self.age = age
+    def func(self):
+        pass
 
-    def eat(self, a):
-        print(&#39;%s吃%s&#39; % (self.name, a))
+a = Person()
+print(Person.func)  # &lt;function Person.func at 0x000001999CEBF1F8&gt;
+print(a.func)  # &lt;bound method Person.func of &lt;__main__.Person object at 0x000001999CEE1C48&gt;&gt;
+内存地址是不一样的,如下</code></pre>
+</li>
+</ul>
+<p><img src="C:\Users\付举鹏\AppData\Roaming\Typora\typora-user-images\1604742664127.png" alt="1604742664127"></p>
+<h6 id="4-对象"><a href="#4-对象" class="headerlink" title="4.对象"></a>4.对象</h6><ul>
+<li>类创造对象的过程就是实例化的过程 :  构造new, 初始化 init</li>
+<li>可以通过指针找到类的空间中的内容</li>
+<li>对象本身内部存储了一些只属于对象的属性</li>
+</ul>
+<h6 id="5-组合"><a href="#5-组合" class="headerlink" title="5.组合"></a>5.组合</h6><ul>
+<li>什么有什么的关系 (比如: 学生和课程的关系)</li>
+<li>一个类的对象作为一个类的属性(组合的定义)</li>
+</ul>
+<h6 id="6-继承"><a href="#6-继承" class="headerlink" title="6.继承"></a>6.继承</h6><pre><code>class Foo:
+    def __init__(self):
+        self.func()
 
-    def drink(self):
-        print(&#39;%s喝东西&#39; % self.name)
+    def func(self): print(&#39;Foo.func&#39;)
 
 
-class Cat(Animal):
-    def __init__(self, name, sex, age, wing):
-        Animal.__init__(self, name, sex, age)
-        # super(Cat, self).__init__(name, sex, age)
-        self.wing = wing
-
-    def miaow(self):
-        print(&#39;喵喵叫&#39;)
-
-    def eat(self, a):
-        super(Cat, self).eat(a)
-        print(666)
+class Son(Foo):
+    def func(self): print(&#39;Son.func&#39;)
 
 
-c1 = Cat(&#39;tom&#39;, &#39;公&#39;, 3, &#39;好看&#39;)
-# print(c1.__dict__)
-c1.eat(&#39;金蝉&#39;)</code></pre>
-<h3 id="五-继承的进阶"><a href="#五-继承的进阶" class="headerlink" title="五.继承的进阶"></a>五.继承的进阶</h3><p>​    1.继承: 单继承, 多继承</p>
-<p>​    2.类的角度: A–&gt;经典类,B–&gt;新式类</p>
-<p>​        1.新式类: 凡是继承object类都是新式类( 在Python3版本中,所有类都是新式类,因为Python3版本中的类都默认继承object)</p>
-<p>​        2.经典类: 不继承object类的都是经典类(Python2中既有新式类又有经典类,中所有的类都不继承object,所以所有的类默认是经典类)</p>
-<p>​    3.单继承: 新式类,经典类查询顺序一样</p>
+s = Son()
+结果是 : Son.func</code></pre>
+<ul>
+<li><p>什么是什么的关系 (dog 和 Animal 的关系) 节省代码</p>
+</li>
+<li><p>子类 和 父类</p>
+</li>
+<li><p>单继承  和  多继承</p>
+<ul>
+<li><p>单继承</p>
+<ul>
+<li>如果子类的对象调用某个方法<ul>
+<li>子类有: 调用子类的<ul>
+<li>子类有单想调用父类的:<ul>
+<li>super : 不用自己传self super(子类,self).方法名(除了self之外的参数)</li>
+<li>父类名:  父类名.方法名(self,…)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>子类没有,找父类</li>
+</ul>
+</li>
+<li>注意 在任意类中调用的方法,都要仔细分辨以下这个self到底是谁的对象</li>
+</ul>
+</li>
+<li><p>多继承</p>
+</li>
+<li><p>新式类: 广度优先 - c3算法</p>
+<ul>
+<li>mro方法查看继承顺序</li>
+<li>py3 中默认继承object, 所以py3 中都是新式类<ul>
+<li>super().func() 遵循mro算法, 在类的内部不用传子类名和self</li>
+</ul>
+</li>
+<li>py2 中需要主动继承object<ul>
+<li>super(子类名,self).func() 必须传子类名和self</li>
+<li>经典类: 深度优先</li>
+</ul>
+</li>
+<li>py2 不继承object, 默认都是经典类</li>
+<li>没有mro算法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <pre><code>class A:
     def func(self):
         print(&#39;A&#39;)
@@ -738,171 +620,110 @@ c1.eat(&#39;金蝉&#39;)</code></pre>
 
 class B(A):
     def func(self):
+        super(B, self).func()
         print(&#39;B&#39;)
-
-
-class C(B):
-    def func(self):
-        print(&#39;C&#39;)
-
-
-c1 = C()
-c1.func()
-b1 = B()
-b1.func()</code></pre>
-<p>​    4.多继承:</p>
-<p>​        1.新式类: 遵循广度优先</p>
-<p>​        2.多继承的新式类 广度优先:  一条路都到倒数第二级,进行判断,如果其他路能走到终点,则返回走另外一条路,如果不能,则走到终点</p>
-<p><img src="C:\Users\付举鹏\AppData\Roaming\Typora\typora-user-images\1603693720711.png" alt="1603693720711"></p>
-<p>​        </p>
-<pre><code>class A:
-    def func(self):
-        print(&#39;IN A&#39;)
-
-
-class B(A):
-    pass
-    # def func(self):
-    #     print(&#39;IN B&#39;)
 
 
 class C(A):
-    pass
-    # def func(self):
-    #     print(&#39;IN C&#39;)
-
-
-class D(B):
-    pass
-    # def func(self):
-    #     print(&#39;IN D&#39;)
-
-
-class E(C):
-    pass
-    # def func(self):
-    #     print(&#39;IN E&#39;)
-
-
-class F(D, E):
-    pass
-    # def func(self):
-    #     print(&#39;IN F&#39;)
-
-f1 = F()
-f1.func()
-
-print(F.mro())  # 查询类的继承顺序</code></pre>
-<p>​        3.经典类: 遵循深度优先:  一条路走到底</p>
-<h3 id="六-面向对象之封装和多态"><a href="#六-面向对象之封装和多态" class="headerlink" title="六.面向对象之封装和多态"></a>六.面向对象之封装和多态</h3><p>​    一. 接口类,抽象类: 制定一个规范(Python中没有接口的概念)</p>
-<p>​        </p>
-<pre><code># 制定规则,抽象类,接口类
-from abc import ABCMeta, abstractmethod
-
-
-class Payment(metaclass=ABCMeta):  # 抽象类(接口类)
-    @abstractmethod  # 装饰器
-    def pay(self): pass  # 制定规范
-
-
-class Alipay(Payment):
-    def __init__(self, money):
-        self.money = money
-
-    def pay(self):
-        print(&#39;使用了支付宝支付了%s&#39; % self.money)
-
-
-class Jdpay(Payment):
-    def __init__(self, money):
-        self.money = money
-
-    def pay(self):
-        print(&#39;使用了京东支付了%s&#39; % self.money)
-
-
-def pay(obj):
-    obj.pay()
-
-
-a1 = Alipay(1000)
-p1 = Jdpay(1222)
-
-pay(a1)  # 归一化设计
-pay(p1)</code></pre>
-<p>​    二. 多态</p>
-<p>​        1.多态: Python中没有多态,只有鸭子类型(Python是弱类型语言,不管是什么类型,传入函数,封装到对象中都可以)</p>
-<p>​        以下这些类互称为鸭子</p>
-<pre><code>class Str:
-    def index(self):
-        pass
-
-
-class List:
-    def index(self):
-        pass
-
-
-class Tuple:
-    def index(self):
-        pass</code></pre>
-<p>​    三.封装</p>
-<p>​        1.广义的封装: 实例化一个对象, 给对象空间封装一些属性</p>
-<p>​        2.狭义的封装: 私有制</p>
-<p>​        3.私有成员:  私有静态字段,私有方法,私有对象属性</p>
-<p>​        </p>
-<p>​        A.私有静态字段</p>
-<p>​        </p>
-<pre><code>class A:
-    __money = 1100  # 前面加 __就是私有静态字段
-
-
-class B(A):
-    name = &#39;alex&#39;
-    __age = 99  # 前面加 __就是私有静态字段
-
     def func(self):
-        print(self.__age)  # 对于私有静态字段,类的内部是可以访问的
-        print(B.__age)
-        # print(self.__money)
-        print(&#39;func...&#39;)
+        super(C, self).func()  # 这里super(C, self) 是默认的,可以不传,在python3中
+        print(&#39;C&#39;)
 
 
-a1 = B()
-print(a1.name)
-print(a1.name)
-
-print(a1.__age)  # 实例化对象不能访问私有静态字段
-print(B.__age)  # 类名也不能访问私有静态字段
-                #对与私有静态字段,类的外部是不能访问的
-
-a1.func()
-#对于私有静态字段,只能在类的内部访问,类的外部,派生类均不能访问
-#其实是可以访问的是Python中的一个bug(工作中千万不要用)
-print(B._B__age)
-print(B.__dict__)</code></pre>
-<p>​        B.私有方法</p>
-<pre><code>#私有方法
-class B:
-    __money = 1000  #前面加 __就是私有静态字段
-    def __f1(self):  #前面加 __就是私有方法
-        print(&#39;B&#39;)
+class D(B, C):
+    def func(self):
+        super().func()
+        print(&#39;D&#39;)
 
 
-class A(B):
-    name = &#39;alex&#39;
+d = D()
+d.func()
+结果是A C B D 执行顺序遵循mro算法 mro执行顺序: dbca
 
-    def __func(self):
-        print(&#39;func...&#39;)
+b = B()
+b.func()</code></pre>
+<p><img src="C:\Users\付举鹏\AppData\Roaming\Typora\typora-user-images\1604742755894.png" alt="1604742755894"></p>
+<h6 id="7-抽象类和接口"><a href="#7-抽象类和接口" class="headerlink" title="7.抽象类和接口"></a>7.抽象类和接口</h6><ul>
+<li>不能被实例化</li>
+<li>规范子类当中必须实现某个方法</li>
+<li>有原生的实现抽象类的方法,但是没有原生实现接口类的方法</li>
+<li>抽象类: 抽象类中的方法是可以实现的  只能单继承</li>
+<li>接口类: 可以多继承 但是这个类中的所有方法都不应该被实现<ul>
+<li>java中<ul>
+<li>java 只支持类的单继承  抽象类 父类的方法可以实现</li>
+<li>接口 interface 支持多继承的规范 . 接口中的所有方法 只能写pass</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h6 id="8-多态"><a href="#8-多态" class="headerlink" title="8.多态"></a>8.多态</h6><ul>
+<li>在python中处处存在</li>
+<li>定义:  一种类型的多种形态, 多个子类去继承父类, 那么每一个子类都是这个父类的一种形态</li>
+</ul>
+<pre><code>class Animal:pass
+class Tiger(Animal):pass
+class Frog(Animal):pass</code></pre>
+<ul>
+<li>鸭子类型:  规范全凭自觉</li>
+</ul>
+<h6 id="9-封装"><a href="#9-封装" class="headerlink" title="9.封装"></a>9.封装</h6><ul>
+<li>私有的<ul>
+<li>广义的封装: 把方法和属性都封装在一个类里,定义一个规范来描述一类事物</li>
+<li>狭义的封装: 私有化 只能在类的内部访问</li>
+<li>__静态变量, 私有方法  , 私有的对象属性, 私有的类方法 , 私有的静态方法</li>
+<li>在内存中的存储形式:  _类名__名字</li>
+<li>为什么在类的内部可以使用双下划线访问 : 在类的内部使用, 你就知道在哪个类中</li>
+<li>在子类中可以访问父类私有变量吗? 不行</li>
+<li>私有 :  不能在类的外部使用也不能被继承</li>
+</ul>
+</li>
+</ul>
+<h6 id="10-property"><a href="#10-property" class="headerlink" title="10.property"></a>10.property</h6><ul>
+<li>是装饰器函数, 内置函数, 帮助你将类中的方法伪装成属性 , 也叫特性</li>
+<li>调用方法的时候不需要主动加括号</li>
+<li>让程序的逻辑性更合理</li>
+<li>@方法名.setter  装饰器, 修改被property装饰的属性的时候会调用被这个装饰器装饰的方法,除了self之外还有一个参数, 被修改的值</li>
+<li>@ 方法名.deleter 装饰器,当要删除被property装饰的属性的时候会调用被这个装饰器装饰的方法</li>
+<li>只用property</li>
+</ul>
+<pre><code>class Circle:
+    def __init__(self, r):
+        self.r = r
 
-    def func1(self):
-        self.__func()  # 类的内部可以访问
-        self.__f1()
+    @property
+    def area(self):
+        return 3.14*self.r**2  # 这个方法计算结果本身就是一个属性,但是这个属性会随着这个类/对象的一个基础变量的变化而变化
 
-a1 = A()
-# a1.__func()  # 类的外部不能访问
-a1.func1()  # 类的内部可以访问
-a1.func1()  # 类的派生类不可以访问</code></pre>
+
+c = Circle(5)
+print(c.area)
+c = Circle(1)
+print(c.area)</code></pre>
+<ul>
+<li>其他语言 property+私有的 合用 , 这时候更多的也会用到setter 和 deleter</li>
+</ul>
+<pre><code>class A:
+    def __init__(self, name):
+        self.__name = name
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, new_name):
+        if type(new_name) is str:
+            self.__name = new_name
+
+    @name.deleter
+    def name(self):
+        del self.__name
+
+
+a = A(123)
+print(a.name)</code></pre>
+<p><img src="C:\Users\付举鹏\AppData\Roaming\Typora\typora-user-images\1604742788101.png" alt="1604742788101"></p>
 
             </div>
             <hr/>
@@ -928,7 +749,7 @@ a1.func1()  # 类的派生类不可以访问</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zxc-fubug.github.io/2020/10/13/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">http://zxc-fubug.github.io/2020/10/13/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</a>
+                    <a href="http://zxc-fubug.github.io/2020/11/07/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%95%B4%E7%90%86/">http://zxc-fubug.github.io/2020/11/07/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%95%B4%E7%90%86/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -966,8 +787,8 @@ a1.func1()  # 类的派生类不可以访问</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%9D%E5%A7%8B/">
-                                    <span class="chip bg-color">面向对象初始</span>
+                                <a href="/tags/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%BB%E7%BB%93/">
+                                    <span class="chip bg-color">Python面向对象的总结</span>
                                 </a>
                             
                         </div>
@@ -1135,9 +956,10 @@ a1.func1()  # 类的派生类不可以访问</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2020/11/07/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%95%B4%E7%90%86/">
                     <div class="card-image">
@@ -1165,9 +987,9 @@ qq 好友 陌生人 群 组
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1176,6 +998,7 @@ qq 好友 陌生人 群 组
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1194,7 +1017,7 @@ qq 好友 陌生人 群 组
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/03/Python%E7%94%9F%E6%88%90%E5%99%A8,%E9%97%AD%E5%8C%85/">
+                <a href="/2020/10/13/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
                     <div class="card-image">
                         
                         
@@ -1206,22 +1029,16 @@ qq 好友 陌生人 群 组
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一. 函数名的运用
-函数名的内存地址
-
-def func():
-    print(&quot;呵呵&quot;)
-print(func)
-
-结果:
-&lt;function func at 0x1101e4ea0&gt;
-
-1.函数名可以
+                            一.面向对象的初始​    1.类 : 具有相同属性和技能的一类事物
+​    2.对象 : 具体类的表现, 具体的实实在在的一个实例
+​    
+class Person:
+    &#39;&#39;&#39; 类体:两部分: 变量部分
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-13
                             </span>
                         <span class="publish-author">
                             
@@ -1234,8 +1051,8 @@ print(func)
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%94%9F%E6%88%90%E5%99%A8%C2%B7%E9%97%AD%E5%8C%85-%E5%92%8C%E5%90%84%E7%A7%8D%E6%8E%A8%E5%AF%BC%E5%BC%8F/">
-                        <span class="chip bg-color">生成器·闭包 和各种推导式</span>
+                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%9D%E5%A7%8B/">
+                        <span class="chip bg-color">面向对象初始</span>
                     </a>
                     
                 </div>
