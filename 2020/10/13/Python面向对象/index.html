@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="zxc-fubug" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.1.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="zxc-fubug" type="application/atom+xml">
+</head>
 
 
 <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
@@ -903,6 +903,181 @@ a1 = A()
 # a1.__func()  # 类的外部不能访问
 a1.func1()  # 类的内部可以访问
 a1.func1()  # 类的派生类不可以访问</code></pre>
+<h3 id="七-面向对象之反射-重点"><a href="#七-面向对象之反射-重点" class="headerlink" title="七.面向对象之反射(重点)"></a>七.面向对象之反射(重点)</h3><p> 1.反射:  用字符串数据类型的变量名来访问这个变量的值</p>
+<p> 2.反射的方法: getattr hasattr setattr  delattr</p>
+<ul>
+<li>命名空间.xxx = getattr(命名空间, ‘xxx’)</li>
+</ul>
+<p>​    1.反射类  –&gt;  静态属性  类方法  静态方法</p>
+<pre><code>s Student:
+    role = &#39;student&#39;
+    @classmethod
+    def check_course(cls):
+        print(&#39;查看课程&#39;)
+
+    @staticmethod
+    def login():
+        print(&#39;登录&#39;)
+
+
+# 反射查看属性
+print(Student.role)
+print(hasattr(Student, &#39;role&#39;))  # 结果是True
+print(getattr(Student, &#39;role&#39;))
+
+# 反射调用方法
+getattr(Student, &#39;check_course&#39;)()  # 类方法
+getattr(Student, &#39;login&#39;)()  # 静态方法
+
+num = input(&#39;&gt;&gt;&gt;&#39;)
+if hasattr(Student, num):
+    getattr(Student, num)()</code></pre>
+<p>​    2.对象的反射 –&gt; 方法  对象属性</p>
+<pre><code>class A:
+    def __init__(self, name):
+        self.name = name
+
+    def func(self):
+        print(&#39;in func&#39;)
+
+
+a = A(&#39;alex&#39;)
+print(a.name)
+# 反射对象属性
+print(hasattr(a, &#39;name&#39;))
+print(getattr(a, &#39;name&#39;))
+
+# 反射对象方法
+getattr(a, &#39;func&#39;)()</code></pre>
+<p>​    3.模块的反射</p>
+<pre><code>mport os   # 别人写好的python代码的结合
+
+# os.rename(&#39;__init__.py&#39;, &#39;init&#39;)
+# getattr(os, &#39;rename&#39;)(&#39;nit&#39;, &#39;__init__.py&#39;)  # == os.name
+rename = os.rename
+rename1 = getattr(os, &#39;rename&#39;)
+# rename1(&#39;__init__.py&#39;, &#39;init&#39;)  # os.rename(__init__.py&#39;, &#39;init&#39;) 
+rename(&#39;init&#39;, &#39;__init__.py&#39;)  # os.rename(&#39;init&#39;, &#39;__init__.py&#39;)</code></pre>
+<p>​        1.反射自己模块中的内容</p>
+<pre><code># 反射自己模块中的内容, 找到自己当前文件所在的命名空间
+def wahaha():
+    print(&#39;哈哈哈&#39;)
+
+def qqing():
+    print(&quot;123&quot;)
+
+
+import sys
+# print(sys.modules)
+# import 相当于导入了一个模块
+# 模块哪个导入了, 哪个没导入, 在自己的python解释器里面应该记录下来
+# import sys 是一个模块, 这个模块里的所有的方法都是和python解释器相关的
+# sys.modules 这个方法, 表示所有在当前这个python程序中导入的模块
+# &#39;__main__&#39;:&lt;module &#39;__main__&#39; from &#39;D:/sylar/python_workspace/day20/4.反射.py&#39;&gt;
+print(sys.modules[&#39;__main__&#39;])
+my_file = sys.modules[&#39;__main__&#39;]
+my_file.wahaha()
+my_file.qqing()
+
+getattr(my_file, &#39;wahaha&#39;)()</code></pre>
+<ul>
+<li>反射<ul>
+<li>hasattr getattr</li>
+<li>类名.名字<ul>
+<li>getattr(类名, ‘名字’)</li>
+</ul>
+</li>
+<li>对象名.名字<ul>
+<li>getattr(对象, ‘名字’)</li>
+</ul>
+</li>
+<li>模块名<ul>
+<li>getattr(模块, ‘名字’)</li>
+</ul>
+</li>
+<li>自己文件.名字<ul>
+<li>import sys</li>
+<li>getattr(sys.modules[‘_ <em>main</em> _ _’], ‘名字’) </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="选课系统的代码"><a href="#选课系统的代码" class="headerlink" title="选课系统的代码"></a><em>选课系统的代码</em></h4><pre><code>class Manager:
+    OPERATE_DIC = [
+        (&#39;创建学生账号&#39;, &#39;create_student&#39;),
+        (&#39;创建课程&#39;, &#39;create_course&#39;),
+        (&#39;查看学生信息&#39;, &#39;check_student_info&#39;)
+    ]
+
+    def __init__(self, name):
+        self.name = name
+
+    def create_student(self):
+        print(&#39;创建学生账号&#39;)
+
+    def create_course(self):
+        print(&#39;创建课程&#39;)
+
+    def check_student_info(self):
+        print(&#39;查看学生信息&#39;)
+
+
+class Student:
+    OPERATE_DIC = [
+        (&#39;查看课程&#39;, &#39;check_course&#39;),
+        (&#39;选择课程&#39;, &#39;choose_course&#39;),
+        (&#39;查看已经选择的课程&#39;, &#39;choosed_course&#39;)
+    ]
+
+    def __init__(self, name):
+        self.name = name
+
+    def check_course(self):
+        print(&#39;查看课程&#39;)
+
+    def choose_course(self):
+        print(&#39;选择课程&#39;)
+
+    def choosed_course(self):
+        print(&#39;查看已经选择的课程&#39;)
+
+
+def login():
+    username = input(&#39;user: &#39;)
+    password = input(&#39;pwd: &#39;)
+    with open(&#39;userinfo&#39;) as f1:
+        for line in f1:
+            user, pwd, ident = line.strip().split(&#39;|&#39;)
+            if user == username and pwd == password:
+                print(&#39;登录成功...&#39;)
+                return username, ident
+
+
+import sys
+
+
+def main():
+    usr, id = login()
+    file = sys.modules[&#39;__main__&#39;]
+    cls = getattr(file, id)
+    obj = cls(usr)
+    operate_dic = cls.OPERATE_DIC
+    while True:
+        for num, i in enumerate(operate_dic, 1):
+            print(num, i[0])
+
+        choice = int(input(&#39;请选择:&#39;))
+        print(len(operate_dic))
+        if choice &lt; len(operate_dic):
+            choice_item = operate_dic[choice - 1]
+            getattr(obj, choice_item[1])()
+        else:
+            print(&#39;输入有误,重新输入:&#39;)
+
+
+main()
+</code></pre>
 
             </div>
             <hr/>
