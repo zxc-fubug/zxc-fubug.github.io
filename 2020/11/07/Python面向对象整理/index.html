@@ -724,6 +724,148 @@ print(c.area)</code></pre>
 a = A(123)
 print(a.name)</code></pre>
 <p><img src="C:\Users\付举鹏\AppData\Roaming\Typora\typora-user-images\1604742788101.png" alt="1604742788101"></p>
+<h6 id="11-classmethod"><a href="#11-classmethod" class="headerlink" title="11.classmethod"></a>11.classmethod</h6><ul>
+<li>类方法的装饰器  内置函数</li>
+<li>使用类名调用, 默认传类名作为第一个参数</li>
+<li>不用对象命名空间中的内容, 而用到了类命名空间中的变量(静态属性) 或者类方法或静态方法</li>
+</ul>
+<pre><code>class Goods:
+
+    __discount = 0.8
+    def __init__(self, price):
+        self.__price = price
+
+    @property
+    def price(self):
+        return self.__price * Goods.__discount
+
+    @classmethod
+    def change_discout(cls, num):
+        cls.__discount = num
+
+## 商场的程序
+apple = Goods(5)
+banana = Goods(10)
+print(apple.price, banana.price)
+Goods.change_discout(1)  # 类名调用类方法 这里是改变__discount的值
+print(apple.price, banana.price)</code></pre>
+<h6 id="12-staticmethod"><a href="#12-staticmethod" class="headerlink" title="12.staticmethod"></a>12.staticmethod</h6><ul>
+<li>静态方法的装饰器  内置函数</li>
+<li>如果一个类里面的方法, 既不需要用到self中的资源, 也不用cls 中的资源</li>
+<li>相当于一个普通函数</li>
+<li>但是你由于某种原因, 还是要把这个方法放在类中,这是时候,就将这个方法变成一个静态方法</li>
+<li>某种原因<ul>
+<li>你完全想用面向对象编程, 所有的函数都必须写在类中</li>
+<li>某个功能确确实实是这个类的方法, 但是确确实实没有用到这个类有关系的资源</li>
+</ul>
+</li>
+<li>比如 : 学生 管理员    课程  和  班级</li>
+</ul>
+<pre><code>class Person:
+    @staticmethod
+    def login():  # 动词 动作  属于某一个对象 用不到类的资源
+        pass
+
+
+class Student(Person):pass
+class Manager(Person):pass
+class Course:pass
+class Classes:pass
+</code></pre>
+<h5 id="13-object-new-重点"><a href="#13-object-new-重点" class="headerlink" title="13.object.new() 重点"></a>13.object.<strong>new</strong>() 重点</h5><h5 id="14-反射-重点"><a href="#14-反射-重点" class="headerlink" title="14.反射(重点)"></a>14.反射(重点)</h5><ul>
+<li>从某个指定的命名空间中, 用字符串数据类型的变量名来获取变量的值</li>
+<li>类名反射  静态属性 类方法 静态方法</li>
+<li>对象反射  对象属性  方法</li>
+<li>模块   模块中的方法</li>
+<li>自己模块中<ul>
+<li>import sys</li>
+<li>mymodule = sys.modules[‘<strong>main</strong>‘]</li>
+<li>getattr(mymodule,’变量名’)</li>
+</ul>
+</li>
+<li>hasattr/getattr/setattr/delattr</li>
+<li>参数<ul>
+<li>(命名空间,’变量名’)</li>
+<li>setattr(命名空间,’变量名’,新的值)</li>
+</ul>
+</li>
+<li>变量名, 你只能拿到一个字符串的版本<ul>
+<li>可以从文件里拿</li>
+<li>交互拿 :  input/ 网络传输(二进制–&gt; bytes类型–&gt;str)</li>
+</ul>
+</li>
+</ul>
+<h5 id="14-进阶"><a href="#14-进阶" class="headerlink" title="14.进阶"></a>14.进阶</h5><ul>
+<li>内置方法/魔术方法/双下方法</li>
+<li>_  _名字__  不是被直接调用的</li>
+<li>间接调用: 内置函数/面向对象中的特殊语法/python提供的语法糖 (语法糖,就是给程序员提供了更实用的编码方式,有利于更好的编码风格,更易读)</li>
+</ul>
+<pre><code>x = 5
+y = 6
+print(x.add__(y))
+print(x + y)  # 语法糖,和上面实现的功能是一样的</code></pre>
+<ul>
+<li><p>_ <em>str__ : str(obj) . 要求必须实现</em> _ _ str__ ,要求这个方法的返回值必须是字符串str类型</p>
+<ul>
+<li>应用场景 :  print %s str </li>
+</ul>
+</li>
+<li><p>_ _call__ :  相当于对象()  用类写装饰器</p>
+</li>
+<li><p>_ <em>len__ :  len(obj) , 要求必须实现了</em> _ len__ ,  要求这个方法的返回值必须是数字int类型</p>
+</li>
+<li><p>_ _new__:   在实例化的过程中, 最先执行的方法,在执行init之前, 用来创造一个对象, 是一个构造方法</p>
+<ul>
+<li>经典的单利类</li>
+</ul>
+</li>
+<li><p>_ _init__ :  在实例化过程中,在new执行之后, 自动触发的一个初始化方法</p>
+</li>
+<li><p>_ _ add__:  加法</p>
+</li>
+</ul>
+<pre><code>class MyType:
+    def __init__(self, s):
+        self.s = s
+
+    def __add__(self, other):
+        return self.s.count(&#39;*&#39;) + other.s.count(&#39;*&#39;)
+
+
+obj1 = MyType(&#39;asdf*****&#39;)
+obj2 = MyType(&#39;xfg****&#39;)
+print(obj1 + obj2)
+print(obj1.__add__(obj2))</code></pre>
+<ul>
+<li>_ <em>repr__ :  是</em>  _ <em>str__的备胎, 如果有     _ _str</em> _ 方法,那么 print, %s, str  都先会执行  _ <em>str</em> _ 方法,并且使用_ _str__的返回值<ul>
+<li>如果没有_ _ str __ ,那么print %s str 都会执行repr</li>
+<li>应用场景  repr(obj) %r </li>
+</ul>
+</li>
+<li>在子类中使用_ _ str _ <em>,先找子类的</em> _ _ str _ _. 没有的话向上找,只要父类不是object,就执行父类的 _ _ str _ _方法</li>
+<li>但是如果除了object之外的父类都没有 _ _ str _ _ 方法, 就执行子类的 _ _ repr _ _,如果子类也没有,还要向上找继续找父类中的 _ _ repr __ 方法</li>
+</ul>
+<pre><code>class A:
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return &#39;**%s**&#39; % self.name
+
+    def __repr__(self):
+        return self.name
+
+
+class B(A):
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return &#39;***&#39;
+
+b = B(&#39;alex&#39;)
+print(b)
+print(str(b), repr(b))</code></pre>
 
             </div>
             <hr/>
