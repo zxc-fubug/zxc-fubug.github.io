@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="zxc-fubug" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="zxc-fubug" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
@@ -1078,6 +1078,173 @@ def main():
 
 main()
 </code></pre>
+<h3 id="八-面向对象的进阶"><a href="#八-面向对象的进阶" class="headerlink" title="八.面向对象的进阶"></a>八.面向对象的进阶</h3><ul>
+<li><p>析构方法</p>
+<ul>
+<li>释放一个空间之前执行</li>
+<li>某对象借用了操作系统的资源, 还要通过析构方法归还回去:  比如–&gt; 文件资源, 网络资源</li>
+</ul>
+<p>1.垃圾回收机制</p>
+</li>
+</ul>
+<pre><code>class A:
+    def __del__(self):
+        # 析构方法 del A的对象, 会自动触发这个方法
+        print(&#39;执行我来了&#39;)
+
+
+a = A()
+del a  # 对象的删除, del
+print(a)
+
+class File:
+    def __init__(self, file_path):
+        self.f = open(file_path)
+        self.name = &#39;alex&#39;
+
+    def read(self):
+        self.f.read(1024)
+
+    def __del__(self):  # 是去归还/释放一些在创建对象的时候借用的一些资源
+        # del 对象的时候 是程序员触发
+        # python 解释器的垃圾回收机制, 回收这个对象所占的内存的时候, python自动触发的
+
+        self.close()
+
+
+f = File(&#39;文件名&#39;)
+f.read()
+# 不管是主动还是被动, 这个f对象总会被清理掉, 被清理掉就会触发__del__方法, 触发这个方法就会归还操作系统的文件资源
+# python解释器在内部就能搞定的事
+# 申请一块空间, 是操作系统分配给你的
+# 在这一块空间中, 是由python解释器来管理的
+
+# example :  
+f = open(&#39;文件&#39;)  # python--&gt; 操作系统 --&gt; 硬盘里的文件 --&gt; 文件操作符
+f.close()  # f就是文件操作符
+# def f</code></pre>
+<ul>
+<li>item系列 是和对象使用[] 访问值有联系<ul>
+<li>在内置模块中,有一些特殊的方法, 要求对象必须实现_ _ getitem _ _/ _ _ setitem _ _ 才能使用</li>
+</ul>
+</li>
+</ul>
+<pre><code>class A:
+    def __getitem__(self, item):
+        return getattr(self, item)
+
+    def __setitem__(self, key, value):
+        setattr(self, key, value*2)
+
+    def __delitem__(self, key):
+        delattr(self, key)
+
+
+a = A()
+a.k1 = &#39;k1&#39;
+print(a.k1)
+a[&#39;k1&#39;] = &#39;v1&#39;  # 默认调用 __setitem 方法
+print(a[&#39;k1&#39;])  # 默认调用 __getitem
+del a[&#39;k1&#39;]  # 默认调用__delitem
+print(a[&#39;k1&#39;]) 
+
+class B:
+    def __init__(self, lst):
+        self.lst = lst
+
+    def __getitem__(self, item):
+        return self.lst[item]
+
+    def __setitem__(self, key, value):
+        self.lst[key] = value
+
+    def __delitem__(self, key):
+        self.lst.pop(key)
+
+
+b = B([&#39;111&#39;, &#39;22&#39;, &#39;dd&#39;, &#39;rr&#39;])
+print(b.lst[0])
+print(b[0])
+b[2] = &#39;alex&#39;
+print(b[2])
+print(b.lst)
+del b[2]
+print(b.lst)</code></pre>
+<ul>
+<li><p>hash方法</p>
+<ul>
+<li>底层数据结构是基于hash值寻址的优化</li>
+<li>hash 是一个算法</li>
+<li>能够把某一个要存在内里的值通过一系列的计算</li>
+<li>‘adf’ – &gt; 851621 类似于这样</li>
+<li>对同一个值在多次执行python代码的时候值是不同的</li>
+<li>但是同一个值, 在同一次执行python代码的时候hash值 永远不变</li>
+<li>字典的寻址 – hash 算法 通过key的hash值去找value,所以速度比较快</li>
+<li>d = {‘key’ : ‘value’}</li>
+<li>hash 是一个内置函数</li>
+<li>hash(obj)  # obj内部必须是实现了_ _ hash _ _ 方法</li>
+<li>set集合  hash不是万能的, 两个不一样的字符串, hash值可能相等–&gt; 如果hash值相等,首先它就会判断值是否相等 == ,相同则去重, 不同则存在内存中</li>
+<li>set集合的去重原理–&gt; 通过hash算法去重的, hash的结果找到一块内存地址,只要这个地址上没有数据,就说明之前没有重复的数据, 如果这块地址上有一个数据存在了,才判断这个值和我要存的值是否一样, 如果一样,覆盖去重, 如果不一样,二次寻址给这个值换个地方存</li>
+</ul>
+</li>
+<li><p>eq方法</p>
+</li>
+</ul>
+<pre><code>class A:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __eq__(self, other):
+        if self.name == other.name and self.age == other.age:
+            return True
+
+
+a = A(&#39;LAEX&#39;, 10)
+a1 = A(&#39;LAEX&#39;, 10)
+a2 = A(&#39;LAEX&#39;, 10)
+a3 = A(&#39;LAEX&#39;, 10)
+
+print(a, a1,)
+print(a == a1 == a2)  # 返回True 完全和__eq__方法一样</code></pre>
+<ul>
+<li>一道经典面试题</li>
+</ul>
+<pre><code># 一个类
+# 对象的属性: 姓名 性别 年龄 部门
+# 员工管理系统
+# 内部转岗 python--go开发
+# alex male 44 python
+# alex male 55 go
+# 1000个员工
+# 如果几个员工对象的姓名和性别相同,这是一个人
+# 请对这1000个员工做去重
+class Employee:
+    def __init__(self, name, sex, age, partment):
+        self.name = name
+        self.sex = sex
+        self.age = age
+        self.partment = partment
+
+    def __hash__(self):  # 第二步 ,重写父类boject的__hash__方法, 返回hash的值,还是不行
+        return hash(&#39;%s%s&#39; % (self.name, self.sex))
+
+    def __eq__(self, other):  # 第三步, 重写__eq__方法 ,判断值是否相等,返回True
+        if self.name == other.name and self.sex == other.sex:
+            return True
+
+
+employ_lst = []
+for i in range(100):
+    employ_lst.append(Employee(&#39;alex&#39;, &#39;male&#39;, i, &#39;python&#39;))
+for i in range(100):
+    employ_lst.append(Employee(&#39;wusir&#39;, &#39;male&#39;, i, &#39;go&#39;))
+
+employ_set = set(employ_lst)  # 第一步,先用set集合去重,结果不行
+# print(employ_lst)
+
+for person in employ_set:
+    print(person.__dict__)</code></pre>
 
             </div>
             <hr/>

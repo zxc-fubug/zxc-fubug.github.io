@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="zxc-fubug" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="zxc-fubug" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
@@ -552,6 +552,30 @@ for user in user_list:
         dic[&#39;hobby_list&#39;] = [user[&#39;hobby&#39;]]
         result.append(dic)
 print(result)</code></pre>
+<h3 id="八-深浅拷贝"><a href="#八-深浅拷贝" class="headerlink" title="八.深浅拷贝"></a>八.深浅拷贝</h3><pre><code>import copy
+
+赋值
+l1 = [1, 2, 3, [1, 4, 5]]
+l2 = l1  # = 是赋值, 数据完全共享,不管改哪个, 两个列表的值都会变
+l2[0] = &#39;alex&#39;
+print(l1)  # [&#39;alex&#39;, 2, 3, [1, 4, 5]]
+print(l2)  # [&#39;alex&#39;, 2, 3, [1, 4, 5]]
+
+浅拷贝
+l1 = [1, 2, 3, [1, 4, 5]]
+l2 = copy.copy(l1)  # 浅拷贝, 数据半共享,只改变列表的第一层,第二层不变
+l1[0] = &#39;alex&#39;
+# l2[0] = &#39;alex&#39;
+print(l1)  # [&#39;alex&#39;, 2, 3, [1, 4, 5]]
+print(l2)  # [1, 2, 3, [1, 4, 5]]
+
+深拷贝
+l1 = [1, 2, 3, [1, 4, 5]]
+l2 = copy.deepcopy(l1)  # 深拷贝, 数据完全不共享,互相没有影响
+l1[0] = &#39;alex0&#39;
+l2[3][0] = &#39;alex&#39;
+
+print(l1, l2)  # [&#39;alex0&#39;, 2, 3, [1, 4, 5]] [1, 2, 3, [&#39;alex&#39;, 4, 5]]</code></pre>
 
             </div>
             <hr/>
