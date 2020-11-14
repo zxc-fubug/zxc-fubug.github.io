@@ -527,7 +527,7 @@ import my_module  # 要导入一个py文件的名字,但是不加.py后缀名
                     # 模块的名字必须要满足变量的命名规范
                     # 一般情况下,模块都是小写字母开头的名字
 # import这个模块相当于执行了这个模块所在的py文件
-# 模块可以被多次导入,但是不会被重复导入
+# 模块不会被多次导入
 
 # 模块的使用
 my_module.login()
@@ -550,6 +550,153 @@ import my_module
     # 再导入第三方模块
     # 最后导入自定义模块
 </code></pre>
+<ul>
+<li>from_import<ul>
+<li>from import的时候执行了什么??<ul>
+<li>想当于执行了整个py文件</li>
+</ul>
+</li>
+<li>导入了什么,就能是有什么, 不导入的变量, 不能使用</li>
+<li>不导入并不意味着不存, 而是没有建立文件到模块中其他名字的引用</li>
+<li>当模块中的方法或者变量  和 文件重名时, 那么这个名字只代表最后一次对他赋值的那个</li>
+<li>在本文件中对全局变量的修改是完全不影响模块中的变量引用的</li>
+</ul>
+</li>
+<li>模块的重命名</li>
+</ul>
+<pre><code>from module1 import login as l1</code></pre>
+<ul>
+<li>导入多个重命名</li>
+</ul>
+<pre><code>from module1 import login as l1, name as l2</code></pre>
+<ul>
+<li>from 模块 import *</li>
+</ul>
+<pre><code>__all__ = [&#39;age&#39;]  #可以控制*导入的东西,这里只表示导入age
+
+name = &#39;alex&#39;
+age = 19
+
+
+def login():
+    print(&#39;in my login&#39;)
+
+
+def asd():
+    print(&#39;in my asd&#39;)
+
+
+if __name__ == &#39;__main__&#39;:  # 所有测试语句方法在里面,在导入模块之后,执行脚本的时候就不会自动执行
+    login()
+    asd()
+
+
+from module1 import *  # *表示导入模块中所有的变量和方法
+
+print(age)
+# print(name)
+# asd()
+# login()</code></pre>
+<ul>
+<li><p>pyc编译文件</p>
+<ol>
+<li>python的执行  —&gt;  解释-编译</li>
+<li>当一个文件作为一个脚本被导入的时候</li>
+<li>就会在这个文件所在的目录的_ _ pycache _ _下生成一个编译好的文件</li>
+<li>为了之后导入这个文件的时候直接读这个编译好的pyc文件</li>
+<li>可以节省一些导入的时间</li>
+</ol>
+</li>
+<li><p>运行一个py 文件的两中方式</p>
+<ol>
+<li>以模块的形式运行</li>
+</ol>
+</li>
+</ul>
+<pre><code>import my_module
+if __name__ == &#39;__main__&#39;:
+    my_module.login()</code></pre>
+<ol start="2">
+<li><p>直接pycharm运行  cmd运行</p>
+<pre><code>          1. 就是以脚本的方式运行
+          2. 那么需要在本文件中直接打印的代码上加上
+          3. if _ _ name _ _ = [&#39;_ _ main _ _&#39;]
+          4. 在编写py文件的时候
+                     1. 所有不在函数和类中封装的内容都应该写在
+                     2. if _ _ name _ _ = [&#39;_ _ main _ _&#39;] : 下面</code></pre>
+<pre><code>import sys
+import module1
+
+print(sys.modules)  # 结果是: 存储了所有导入的文件的名字和这个文件的内存地址
+
+&#123;sys : 文件的内存地址,&#39;__main__&#39; : 当前执行文件所在的地址&#125;
+
+# 再次使用反射反射自己模块中的内容的时候
+import sys
+print(getattr(sys.modules[__name__], &#39;name&#39;))</code></pre>
+</li>
+</ol>
+<p>​                </p>
+<ul>
+<li><p>模块搜索路径</p>
+<ol>
+<li>模块没导入之前是在硬盘上的</li>
+<li>模块的搜索路径全部存储在sys.path列表中</li>
+<li>导入模块的顺序,是从前到后找到一个符合条件的模块就立即停止不再向后寻找</li>
+<li>如果要导入的模块和当前执行文件是同级目录<ol>
+<li>直接导入即可</li>
+</ol>
+</li>
+<li>如果要导入的模块和当前执行的文件不是同级<ol>
+<li>需要吧导入的模块的绝对路径添加到sys.path 列表中</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>重新加载模块</p>
+<ul>
+<li>在import之后  再修改这个被导入的模块, 程序是感知不到的</li>
+<li>reload这种方法可以强制程序再重新导入这个模块一次(非常不推荐使用)</li>
+</ul>
+</li>
+</ul>
+<pre><code>import module1
+import time
+import importlib
+module1.login()
+time.sleep(20)
+importlib.reload(module1)  # 表示重新加载
+module1.login()</code></pre>
+<ul>
+<li>模块的循环使用<ol>
+<li>在模块的导入中, 不要产生循环引用问题</li>
+<li>如果发生循环导入了, 就会发现明明写在这个模块中的方法, 显示找不到</li>
+</ol>
+</li>
+</ul>
+<h3 id="二-包"><a href="#二-包" class="headerlink" title="二.包"></a>二.包</h3><ul>
+<li>导入包相当于执行了这个包下面的 _ _ init _ _ 方法</li>
+<li>可以设 _ _ init _ _方法来完成一些模块的导入</li>
+<li>如果直接导入一个包, 那么相当于执行了这个包中的_ _ init _ _文件,并不会帮你把这个包下面的其他包以及py文件自动的导入到内存</li>
+</ul>
+<pre><code># import bbb.api.policy
+# bbb.api.policy.get()
+
+import bbb.api.policy as a1
+a1.get()</code></pre>
+<ol>
+<li><p>绝对导入和相对导入</p>
+<pre><code>在glance/api/version.py
+
+#绝对导入
+from glance.cmd import manage
+manage.main()
+
+#相对导入
+from ..cmd import manage
+manage.main()</code></pre>
+</li>
+</ol>
 
             </div>
             <hr/>
