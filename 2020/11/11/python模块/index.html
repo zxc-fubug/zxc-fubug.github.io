@@ -619,11 +619,11 @@ if __name__ == &#39;__main__&#39;:
 <ol start="2">
 <li><p>直接pycharm运行  cmd运行</p>
 <pre><code>          1. 就是以脚本的方式运行
-          2. 那么需要在本文件中直接打印的代码上加上
-          3. if _ _ name _ _ = [&#39;_ _ main _ _&#39;]
-          4. 在编写py文件的时候
-                     1. 所有不在函数和类中封装的内容都应该写在
-                     2. if _ _ name _ _ = [&#39;_ _ main _ _&#39;] : 下面</code></pre>
+                   2. 那么需要在本文件中直接打印的代码上加上
+                            3. if _ _ name _ _ = [&#39;_ _ main _ _&#39;]
+                                     4. 在编写py文件的时候
+                                       1. 所有不在函数和类中封装的内容都应该写在
+                                             2. if _ _ name _ _ = [&#39;_ _ main _ _&#39;] : 下面</code></pre>
 <pre><code>import sys
 import module1
 
@@ -697,6 +697,242 @@ from ..cmd import manage
 manage.main()</code></pre>
 </li>
 </ol>
+<h3 id="二-正则表达式"><a href="#二-正则表达式" class="headerlink" title="二.正则表达式"></a>二.正则表达式</h3><ul>
+<li><p>定义: 就是一种匹配字符串的规则</p>
+</li>
+<li><p>应用: 登录注册的表单验证,爬虫,自动化开发, 日志分析</p>
+</li>
+<li><p>正则表达式是一种独特的语法,和python没有关系</p>
+</li>
+<li><p>帮助学习工具 <a target="_blank" rel="noopener" href="http://tool.chinaz.com/regex/">http://tool.chinaz.com/regex/</a></p>
+</li>
+</ul>
+<ol>
+<li>字符组 []<ol>
+<li>在一个字符的位置上能出现的内容</li>
+<li>[1abc]   是一个范围</li>
+<li>[0-9] [A-Z] [a-z]  表示匹配三个字符</li>
+<li>[abc0-9]  表示匹配一个字符</li>
+<li>[0-9a-zA-Z]  表示匹配一个字符</li>
+<li>[^]  非字符组</li>
+</ol>
+</li>
+<li>元字符<ol>
+<li>\d == [0-9] 也表示匹配一个字符, 匹配的是一个数字</li>
+<li>\w == [0-9a-zA-Z] 也表示匹配一个数字字母下划线</li>
+<li>\s == [\n \t]  包括回车 空格 和 制表符tab \n匹配回车  \t 匹配制表符</li>
+<li>\D 匹配非数字</li>
+<li>\W 匹配非数字字母下划线</li>
+<li>\S 匹配非空白</li>
+<li>\b 匹配单词的开始或结束</li>
+<li>| 或者的意思</li>
+<li>() 分组的意思</li>
+<li>^  匹配字符串的开始</li>
+<li>&amp; 匹配字符串的结束</li>
+<li>.  除了换行符的所有</li>
+<li>[\d\D] [\w\W] [\s\S]  匹配所有</li>
+</ol>
+</li>
+<li>量词<ol>
+<li>?  重复0次或者一次(也就是可有可无)</li>
+<li>+重复1次或者更多次(1~多次)</li>
+<li>*重复0次或者更多次(0~多次)</li>
+<li>{n} 重复n次</li>
+<li>{n,} 重复至少n次</li>
+<li>{n,m} 重复n到m次</li>
+</ol>
+</li>
+<li>其他<ol>
+<li>贪婪匹配(回溯算法) 尽可能的匹配多的</li>
+<li>量词?  表示惰性匹配也就是取消贪婪匹配<ol>
+<li>?? *? +? {n}?</li>
+<li>最常用 .*?x   表示任意字符找到一个x</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>正则表达式的例子</li>
+</ol>
+<pre><code>1.匹配任意长度的正整数
+    [1-9]\d*
+2.匹配小数
+    -?\d+\.\d+
+3.匹配整数或者小数
+    -?\d+\.?\d*  有缺陷 1. 2. 这样的内容也会匹配上
+    -?\d+\.?\d+  有缺陷 1 2 这样的一位数就匹配不上了
+    -?\d+(\.\d+)? 准确的
+4.匹配负数
+    -0\.\d+|-[1-9]\d*(\.\d+)?
+5.匹配qq号
+    [1-9]\d&#123;5,11&#125;
+6.匹配长度为11位的电话号码
+    1[3-9]\d&#123;9&#125;
+7.匹配长度为8-10位的用户密码 包含数字字母下划线和?@
+    [\w?@]&#123;8,10&#125;
+8.匹配验证码,4位数字字母组成的
+    [\da-zA-Z]&#123;4&#125;
+9.1-2*((60-30+(-40/5)*(9-2*5/3+7/3*99/4*2998+10*568/14))-(-4*3)/(16-3*2))
+匹配出最内层的小括号
+    \([\d\.+\-*/]+\)
+    \([^()]+\)</code></pre>
+<p> 6.转义符</p>
+<p>​    1.正则表达式中的转义</p>
+<p>​        ‘\ (‘ 表示转义小括号</p>
+<pre><code>     # [()+*?/$.]   在字符组中一些特殊的字符会现出原形
+# 所有的 \w \d \s(\n,\t, )  \W \D \S都表示它原本的意义
+# [-]只有写在字符组的首位的时候表示普通的减号
+#    写在其他位置的时候表示范围[1-9]
+#    如果就是想匹配减号 [1\-9]
+
+</code></pre>
+<p>​    2.python中的转义</p>
+<pre><code># 分析过程
+&#39;\n&#39;  # \转义符 赋予这个n一个特殊的意义 表示一个换行符
+# print(&#39;\\n&#39;)
+# print\\n(&#39;C:\\next&#39;)
+# print(r&#39;C:\next&#39;)
+# &#39;\\\\n&#39; &#39;\\n&#39;
+# 结论
+# r&#39;\\n&#39; r&#39;\n&#39;  在python中</code></pre>
+<h3 id="三-re模块"><a href="#三-re模块" class="headerlink" title="三.re模块"></a>三.re模块</h3><p>​    1.匹配</p>
+<p>​    findall 和 search match</p>
+<pre><code>import re
+
+# findall
+# print(re.findall(&#39;\d&#39;, &#39;asdf23&#39;))
+# 参数 返回值类型(列表),返回值个数(1) 返回值内容:所有匹配上的内容
+
+# search
+ret = re.search(&#39;\d+&#39;, &quot;afasdf1231adf212&quot;)  # 返回值类型: 正则匹配结果的对象  返回值个数:1 如果匹配上了就返回对象
+print(ret.group())  # 返回的对象是通过group 来获取匹配到的第一个结果
+如果没有匹配上,结果就是None
+
+# match
+ret1 = re.match(&#39;\d+&#39;, &#39;*&amp;1231afasdf1231adf212&#39;)  # 只匹配前面出现的,不然会报错
+print(ret1.group())</code></pre>
+<p>​    2.替换</p>
+<p>​    sub 和 subn</p>
+<pre><code># sub 和 replace是一样的
+print(re.sub(&#39;\d+&#39;, &#39;H&#39;, &#39;123FSDF52FSF1&#39;))
+
+# subn  会打印你替换了的次数
+print(re.subn(&#39;\d+&#39;, &#39;H&#39;, &#39;123FSDF52FSF1&#39;))
+结果:(&#39;HFSDFHFSFH&#39;, 3)</code></pre>
+<pre><code> 3.切割</code></pre>
+<p>​    split</p>
+<pre><code>print(re.split(&#39;\d+&#39;, &#39;123faaf23&#39;))
+# 会把数字不打印
+# 结果是个列表 [&#39;&#39;, &#39;faaf&#39;, &#39;&#39;]</code></pre>
+<p>​    4.进阶方法</p>
+<p>​    compile(时间效率) 和 finditer(空间效率)</p>
+<pre><code># compile 起到一个预编译的作用,只有多次使用某一个相同的正则表达式的时候,compile才会提高我们程序的效率
+ret = re.compile(&#39;-0\.\d+|-[1-9]+(\.\d+)?&#39;)
+res = ret.search(&#39;asdf-0.01-99&#39;)
+print(res.group())
+
+# finditer
+ret = re.finditer(&#39;\d&#39;, &#39;adfad12fasdf123&#39;)  # 返回的是一个迭代器
+print(ret)
+for i in ret:
+    print(i.group())</code></pre>
+<p>​    5.python中的正则表达式</p>
+<p>​        1.findall 会优先显示分组中的内容,要想取消分组优先,(?:正则表达式)</p>
+<p>​        2.split 遇到分组 会保留分组内被切掉的内容</p>
+<p>​        3.search 如果search中有分组的话,通过group(n)就能够拿到group中的匹配的内容</p>
+<pre><code>ret = re.findall(&#39;-0\.\d+|-[1-9]\d*(?:\.\d+)?&#39;, &#39;-1asdada-200&#39;)
+print(ret)
+
+ret = re.split(&#39;(\d+)&#39;,&#39;alex83egon20taibai40&#39;)
+print(ret)
+
+# 分组遇见search
+ret = re.search(&#39;\d+(.\d+)(.\d+)(.\d+)?&#39;,&#39;1.2.3.4-2*(60+(-40.35/5)-(-4*3))&#39;)
+print(ret.group())
+print(ret.group(1))
+print(ret.group(2))
+print(ret.group(3))</code></pre>
+<pre><code> 6. 分组命名
+      1. (?P&lt; name &gt; 正则表达式)  表示给分组起名字
+      2. (?P=name) 表示使用这个分组,这里匹配到的内容应该和分组中的内容完全相同
+7. 通过索引使用分组
+    1. \1 表示使用第一组, 匹配到的内容和分组中的内容完全相同</code></pre>
+<pre><code>import re
+# ret=re.findall(r&quot;\d+(?:\.\d+)?&quot;,&quot;1-2*(60+(-40.35/5)-(-4*3))&quot;)
+# print(ret)
+
+# ret=re.findall(r&quot;\d+(?:\.\d+)|(\d+)&quot;,&quot;1-2*(60+(-40.35/5)-(-4*3))&quot;)
+# print(ret)
+# ret.remove(&#39;&#39;)
+# print(ret)
+
+import re
+# ret = re.findall(&#39;&gt;(\w+)&lt;&#39;,r&#39;&lt;a&gt;wahaha&lt;\a&gt;&#39;)
+# print(ret)
+
+# ret = re.search(r&#39;&lt;(\w+)&gt;(\w+)&lt;/(\w+)&gt;&#39;,r&#39;&lt;a&gt;wahaha&lt;/b&gt;&#39;)
+# print(ret.group())
+# print(ret.group(1))
+# print(ret.group(2))
+
+
+
+分组命名
+ret = re.search(&quot;&lt;(?P&lt;name&gt;\w+)&gt;\w+&lt;/(?P=name)&gt;&quot;,&quot;&lt;h1&gt;hello&lt;/h1&gt;&quot;)
+print(ret.group(&#39;name&#39;))  #结果 ：h1
+# print(ret.group())  #结果 ：&lt;h1&gt;hello&lt;/h1&gt;
+
+ret = re.search(r&quot;&lt;(\w+)&gt;\w+&lt;/\1&gt;&quot;,&quot;&lt;h1&gt;hello&lt;/h1&gt;&quot;)
+print(ret.group(1))
+# print(ret.group())  #结果 ：&lt;h1&gt;hello&lt;/h1&gt;
+
+ret = re.search(r&#39;&lt;(?P&lt;tag&gt;\w+)&gt;(?P&lt;c&gt;\w+)&lt;/(\w+)&gt;&#39;,r&#39;&lt;a&gt;wahaha&lt;/b&gt;&#39;)
+print(ret.group())
+print(ret.group(&#39;tag&#39;))
+print(ret.group(&#39;c&#39;))</code></pre>
+<h4 id="四-爬虫练习"><a href="#四-爬虫练习" class="headerlink" title="四.爬虫练习"></a>四.爬虫练习</h4><pre><code>import re
+from urllib.request import urlopen
+
+
+# 内置的包,来获取网页的源代码 字符串
+
+def getPage(url):
+    reponse = urlopen(url)
+    return reponse.read().decode(&#39;utf-8&#39;)
+
+
+def parsePage(s):
+    ret = com.finditer(s)
+    for i in ret:
+        ret = &#123;
+            &quot;id&quot;: i.group(&quot;id&quot;),
+            &quot;title&quot;: i.group(&quot;title&quot;),
+            &quot;rating_num&quot;: i.group(&quot;rating_num&quot;),
+            &quot;comment_num&quot;: i.group(&quot;comment_num&quot;)
+        &#125;
+        yield ret
+
+
+def main(num):
+    url = &#39;https://movie.douban.com/top250?start=%s&amp;filter=&#39; % num
+    reponse_html = getPage(url)
+    ret = parsePage(reponse_html)
+    print(ret)
+    f = open(&#39;info1&#39;,encoding=&#39;utf-8&#39;)
+    for obj in ret:
+        print(obj)
+        data = str(obj)
+        f.write(data, &#39;\n&#39;)
+
+    f.close()
+
+com = re.compile(
+    &#39;&lt;div class=&quot;item&quot;&gt;.*?&lt;div class=&quot;pic&quot;&gt;.*?&lt;em .*?&gt;(?P&lt;id&gt;\d+).*?&lt;span class=&quot;title&quot;&gt;(?P&lt;title&gt;.*?)&lt;/span&gt;&#39;
+    &#39;.*?&lt;span class=&quot;rating_num&quot; .*?&gt;(?P&lt;rating_num&gt;.*?)&lt;/span&gt;.*?&lt;span&gt;(?P&lt;comment_num&gt;.*?)评价&lt;/span&gt;&#39;, re.S)
+
+count = 0
+for i in range(10):
+    main(count)
+    count += 25</code></pre>
 
             </div>
             <hr/>
