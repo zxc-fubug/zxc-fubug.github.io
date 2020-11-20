@@ -623,7 +623,7 @@ if __name__ == &#39;__main__&#39;:
                             3. if _ _ name _ _ = [&#39;_ _ main _ _&#39;]
                                      4. 在编写py文件的时候
                                        1. 所有不在函数和类中封装的内容都应该写在
-                                             2. if _ _ name _ _ = [&#39;_ _ main _ _&#39;] : 下面</code></pre>
+                                                   2. if _ _ name _ _ = [&#39;_ _ main _ _&#39;] : 下面</code></pre>
 <pre><code>import sys
 import module1
 
@@ -697,7 +697,7 @@ from ..cmd import manage
 manage.main()</code></pre>
 </li>
 </ol>
-<h3 id="二-正则表达式"><a href="#二-正则表达式" class="headerlink" title="二.正则表达式"></a>二.正则表达式</h3><ul>
+<h3 id="三-正则表达式"><a href="#三-正则表达式" class="headerlink" title="三.正则表达式"></a>三.正则表达式</h3><ul>
 <li><p>定义: 就是一种匹配字符串的规则</p>
 </li>
 <li><p>应用: 登录注册的表单验证,爬虫,自动化开发, 日志分析</p>
@@ -794,7 +794,7 @@ manage.main()</code></pre>
 # &#39;\\\\n&#39; &#39;\\n&#39;
 # 结论
 # r&#39;\\n&#39; r&#39;\n&#39;  在python中</code></pre>
-<h3 id="三-re模块"><a href="#三-re模块" class="headerlink" title="三.re模块"></a>三.re模块</h3><p>​    1.匹配</p>
+<h3 id="四-re模块"><a href="#四-re模块" class="headerlink" title="四.re模块"></a>四.re模块</h3><p>​    1.匹配</p>
 <p>​    findall 和 search match</p>
 <pre><code>import re
 
@@ -855,7 +855,7 @@ print(ret.group(3))</code></pre>
       1. (?P&lt; name &gt; 正则表达式)  表示给分组起名字
       2. (?P=name) 表示使用这个分组,这里匹配到的内容应该和分组中的内容完全相同
 7. 通过索引使用分组
-    1. \1 表示使用第一组, 匹配到的内容和分组中的内容完全相同</code></pre>
+        1. \1 表示使用第一组, 匹配到的内容和分组中的内容完全相同</code></pre>
 <pre><code>import re
 # ret=re.findall(r&quot;\d+(?:\.\d+)?&quot;,&quot;1-2*(60+(-40.35/5)-(-4*3))&quot;)
 # print(ret)
@@ -889,7 +889,7 @@ ret = re.search(r&#39;&lt;(?P&lt;tag&gt;\w+)&gt;(?P&lt;c&gt;\w+)&lt;/(\w+)&gt;&#
 print(ret.group())
 print(ret.group(&#39;tag&#39;))
 print(ret.group(&#39;c&#39;))</code></pre>
-<h4 id="四-爬虫练习"><a href="#四-爬虫练习" class="headerlink" title="四.爬虫练习"></a>四.爬虫练习</h4><pre><code>import re
+<h4 id="五-爬虫练习"><a href="#五-爬虫练习" class="headerlink" title="五.爬虫练习"></a>五.爬虫练习</h4><pre><code>import re
 from urllib.request import urlopen
 
 
@@ -933,6 +933,25 @@ count = 0
 for i in range(10):
     main(count)
     count += 25</code></pre>
+<h3 id="六-验证码代码"><a href="#六-验证码代码" class="headerlink" title="六.验证码代码"></a>六.验证码代码</h3><pre><code># 验证码
+import random
+
+
+def rand_code(n=6, flag=True):
+    code = &#39;&#39;
+    for i in range(n):
+        rand_num = str(random.randint(0, 9))
+        if flag == True:
+            rand_alph = chr(random.randint(97, 122))  # 是根据ASCLL 表 获取小写字母,97-127(a-z)
+            rand_alph_upper = chr(random.randint(65, 90))  # 是根据ASCLL表 获取大写字母 65-90(A-Z)
+            rand_num = random.choice([rand_num, rand_alph, rand_alph_upper])
+        code += rand_num
+    return code
+
+
+ret = rand_code(flag=False)
+print(ret)
+</code></pre>
 
             </div>
             <hr/>
