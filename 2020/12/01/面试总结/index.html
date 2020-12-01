@@ -432,9 +432,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                                <span class="chip bg-color">面试题</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -462,7 +466,22 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="1-遍历字典"><a href="#1-遍历字典" class="headerlink" title="1.遍历字典"></a>1.遍历字典</h3><pre><code>for k,v in dic.items()</code></pre>
+<h3 id="2-什么叫闭包"><a href="#2-什么叫闭包" class="headerlink" title="2.什么叫闭包?"></a>2.什么叫闭包?</h3><p>函数内部调用函数外部(局部)的变量</p>
+<h3 id="3-在调用一个函数中-如何结束本程序"><a href="#3-在调用一个函数中-如何结束本程序" class="headerlink" title="3.在调用一个函数中,如何结束本程序?"></a>3.在调用一个函数中,如何结束本程序?</h3><pre><code>quit() sys.exit() exit() 让函数抛出异常</code></pre>
+<h3 id="4-交换机和路由器的区别"><a href="#4-交换机和路由器的区别" class="headerlink" title="4.交换机和路由器的区别?"></a>4.交换机和路由器的区别?</h3><p>交换机的主要功能是组织局域网, 经过交换机内部处理解析信息之后, 将信息以点对点,点对多的形式传给固定端</p>
+<p>路由器: 跨网段进行数据传输,路由选择最佳路径</p>
+<h3 id="5-针对-使用UDP协议发送数据-一次收发大小究竟多少合适"><a href="#5-针对-使用UDP协议发送数据-一次收发大小究竟多少合适" class="headerlink" title="5.针对 使用UDP协议发送数据,一次收发大小究竟多少合适?"></a>5.针对 使用UDP协议发送数据,一次收发大小究竟多少合适?</h3><p>udp不会发生粘包,udp协议本层对一次收发数据大小的限制是:</p>
+<p>​    65535 - ip包头(20) - udp包头(8) = 65507</p>
+<p>站在数据链路层, 因为网卡的MTU 一般被限制在了1500, 所以对数据链路层来说,一次收发数据的大小被限制在</p>
+<p>​    1500 - ip包头(20) - udp包头(8) = 1472</p>
+<p>得到结论:</p>
+<p>​    如果sendto(num)</p>
+<p>​    num &gt; 65507 就会报错</p>
+<p>​    1472 &lt; num &lt; 65507 会在数据链路层拆包,而udp本身就是不可靠协议, 所以一旦</p>
+<p>拆包之后, 造成的多个小数据包在网络传输中,如果丢任何一个, 那么此次数据传输就会失败</p>
+<p>​    num &lt; 1472 是比较理想的状态</p>
+
             </div>
             <hr/>
 
@@ -524,7 +543,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                                    <span class="chip bg-color">面试题</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -707,7 +730,10 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            1.遍历字典for k,v in dic.items()
+2.什么叫闭包?函数内部调用函数外部(局部)的变量
+3.在调用一个函数中,如何结束本程序?quit() sys.exit() exit() 让函数抛出异常
+4.交换机和路由器的区别?
                         
                     </div>
                     <div class="publish-info">
@@ -723,6 +749,14 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="chip bg-color">面试题</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

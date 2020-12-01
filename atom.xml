@@ -6,7 +6,7 @@
   <link href="http://zxc-fubug.github.io/atom.xml" rel="self"/>
   
   <link href="http://zxc-fubug.github.io/"/>
-  <updated>2020-12-01T09:19:54.669Z</updated>
+  <updated>2020-12-01T09:34:48.784Z</updated>
   <id>http://zxc-fubug.github.io/</id>
   
   <author>
@@ -21,11 +21,22 @@
     <link href="http://zxc-fubug.github.io/2020/12/01/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/"/>
     <id>http://zxc-fubug.github.io/2020/12/01/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/</id>
     <published>2020-12-01T09:19:54.000Z</published>
-    <updated>2020-12-01T09:19:54.669Z</updated>
+    <updated>2020-12-01T09:34:48.784Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-遍历字典&quot;&gt;&lt;a href=&quot;#1-遍历字典&quot; class=&quot;headerlink&quot; title=&quot;1.遍历字典&quot;&gt;&lt;/a&gt;1.遍历字典&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;for k,v in dic.items()&lt;/code&gt;&lt;/pre&gt;
+&lt;h3</summary>
+        
+      
     
     
     
     
+    <category term="面试题" scheme="http://zxc-fubug.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
