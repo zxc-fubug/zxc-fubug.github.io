@@ -6,7 +6,7 @@
   <link href="http://zxc-fubug.github.io/atom.xml" rel="self"/>
   
   <link href="http://zxc-fubug.github.io/"/>
-  <updated>2020-11-20T03:12:18.055Z</updated>
+  <updated>2020-12-01T09:19:54.669Z</updated>
   <id>http://zxc-fubug.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面试总结</title>
+    <link href="http://zxc-fubug.github.io/2020/12/01/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/"/>
+    <id>http://zxc-fubug.github.io/2020/12/01/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/</id>
+    <published>2020-12-01T09:19:54.000Z</published>
+    <updated>2020-12-01T09:19:54.669Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>网络编程</title>
+    <link href="http://zxc-fubug.github.io/2020/11/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <id>http://zxc-fubug.github.io/2020/11/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</id>
+    <published>2020-11-25T15:21:15.000Z</published>
+    <updated>2020-12-01T09:18:44.138Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一-网络基础&quot;&gt;&lt;a href=&quot;#一-网络基础&quot; class=&quot;headerlink&quot; title=&quot;一.网络基础&quot;&gt;&lt;/a&gt;一.网络基础&lt;/h3&gt;&lt;p&gt;​    1.网络基础相关的知识&lt;/p&gt;
+&lt;p&gt;​        (1) 架构&lt;/p&gt;
+&lt;p&gt;​     </summary>
+        
+      
+    
+    
+    
+    
+    <category term="网络编程" scheme="http://zxc-fubug.github.io/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>python模块</title>
