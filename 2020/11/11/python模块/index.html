@@ -1,0 +1,1620 @@
+<!DOCTYPE HTML>
+<html lang="cn">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="python模块, zxc-fubug">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>python模块 | zxc-fubug</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="zxc-fubug" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">zxc-fubug</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">zxc-fubug</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">python模块</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%A8%A1%E5%9D%97/">
+                                <span class="chip bg-color">模块</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2020-11-11
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="一-模块初识"><a href="#一-模块初识" class="headerlink" title="一.模块初识"></a>一.模块初识</h3><ul>
+<li>模块的分类<ul>
+<li>内置模块<ul>
+<li>安装python解释器的时候跟着装上的那些方法</li>
+</ul>
+</li>
+<li>第三方模块<ul>
+<li>没在安装怕python解释器的时候安装的那些功能</li>
+</ul>
+</li>
+<li>自定义功能<ul>
+<li>自己写的功能是一个通用的功能，可以当作是一个模块</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>模块的定义<ul>
+<li>有的功能开发者自己无法完成，这样的话需要借助已经实现的函数/类来完成这些功能</li>
+<li>自己实现不了的功能由别人代替了<ul>
+<li>比如：和操作系统打交道</li>
+<li>和时间</li>
+<li>随机数</li>
+<li>压缩一个文件</li>
+<li>和网络通信</li>
+</ul>
+</li>
+<li>别人写好的一组功能–&gt; 文件夹/py文件/c语言编译好的一些编译文件</li>
+</ul>
+</li>
+<li>模块的好处<ul>
+<li>分类  管理方法</li>
+<li>节省内存</li>
+<li>提供更多的功能</li>
+</ul>
+</li>
+<li>为什么要有模块?<ul>
+<li>分类, 管理方法</li>
+<li>节省内存</li>
+<li>提供更多的功能</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>模块的创建和导入</li>
+</ul>
+<pre><code># 自定义模块,模块的创建
+# py文件名--&gt;my_module
+print(&#39;这是我的模块&#39;)
+
+name = &#39;alex&#39;
+
+
+def login():
+    print(&#39;这是一个登录函数&#39;)
+
+
+# 模块的导入
+import my_module  # 要导入一个py文件的名字,但是不加.py后缀名
+                    # 模块的名字必须要满足变量的命名规范
+                    # 一般情况下,模块都是小写字母开头的名字
+# import这个模块相当于执行了这个模块所在的py文件
+# 模块不会被多次导入
+
+# 模块的使用
+my_module.login()
+print(my_module.name)  # 直接调用导入进来模块的方法以及属性等等
+
+
+# 模块的重命名
+import my_module as m  # 语法  import 模块名 as 新名字
+m.login()
+print(m.name)
+
+
+# 导入多个模块
+import os
+import my_module
+# PEP8规范
+# 所有的模块导入都应该尽量放在这个文件的开头
+# 模块的导入也是有顺序的
+    # 先导入内置模块
+    # 再导入第三方模块
+    # 最后导入自定义模块
+</code></pre>
+<ul>
+<li>from_import<ul>
+<li>from import的时候执行了什么??<ul>
+<li>想当于执行了整个py文件</li>
+</ul>
+</li>
+<li>导入了什么,就能是有什么, 不导入的变量, 不能使用</li>
+<li>不导入并不意味着不存, 而是没有建立文件到模块中其他名字的引用</li>
+<li>当模块中的方法或者变量  和 文件重名时, 那么这个名字只代表最后一次对他赋值的那个</li>
+<li>在本文件中对全局变量的修改是完全不影响模块中的变量引用的</li>
+</ul>
+</li>
+<li>模块的重命名</li>
+</ul>
+<pre><code>from module1 import login as l1</code></pre>
+<ul>
+<li>导入多个重命名</li>
+</ul>
+<pre><code>from module1 import login as l1, name as l2</code></pre>
+<ul>
+<li>from 模块 import *</li>
+</ul>
+<pre><code>__all__ = [&#39;age&#39;]  #可以控制*导入的东西,这里只表示导入age
+
+name = &#39;alex&#39;
+age = 19
+
+
+def login():
+    print(&#39;in my login&#39;)
+
+
+def asd():
+    print(&#39;in my asd&#39;)
+
+
+if __name__ == &#39;__main__&#39;:  # 所有测试语句方法在里面,在导入模块之后,执行脚本的时候就不会自动执行
+    login()
+    asd()
+
+
+from module1 import *  # *表示导入模块中所有的变量和方法
+
+print(age)
+# print(name)
+# asd()
+# login()</code></pre>
+<ul>
+<li><p>pyc编译文件</p>
+<ol>
+<li>python的执行  —&gt;  解释-编译</li>
+<li>当一个文件作为一个脚本被导入的时候</li>
+<li>就会在这个文件所在的目录的_ _ pycache _ _下生成一个编译好的文件</li>
+<li>为了之后导入这个文件的时候直接读这个编译好的pyc文件</li>
+<li>可以节省一些导入的时间</li>
+</ol>
+</li>
+<li><p>运行一个py 文件的两中方式</p>
+<ol>
+<li>以模块的形式运行</li>
+</ol>
+</li>
+</ul>
+<pre><code>import my_module
+if __name__ == &#39;__main__&#39;:
+    my_module.login()</code></pre>
+<ol start="2">
+<li><p>直接pycharm运行  cmd运行</p>
+<pre><code>          1. 就是以脚本的方式运行
+                   2. 那么需要在本文件中直接打印的代码上加上
+                            3. if _ _ name _ _ = [&#39;_ _ main _ _&#39;]
+                                     4. 在编写py文件的时候
+                                       1. 所有不在函数和类中封装的内容都应该写在
+                                                   2. if _ _ name _ _ = [&#39;_ _ main _ _&#39;] : 下面</code></pre>
+<pre><code>import sys
+import module1
+
+print(sys.modules)  # 结果是: 存储了所有导入的文件的名字和这个文件的内存地址
+
+&#123;sys : 文件的内存地址,&#39;__main__&#39; : 当前执行文件所在的地址&#125;
+
+# 再次使用反射反射自己模块中的内容的时候
+import sys
+print(getattr(sys.modules[__name__], &#39;name&#39;))</code></pre>
+</li>
+</ol>
+<p>​                </p>
+<ul>
+<li><p>模块搜索路径</p>
+<ol>
+<li>模块没导入之前是在硬盘上的</li>
+<li>模块的搜索路径全部存储在sys.path列表中</li>
+<li>导入模块的顺序,是从前到后找到一个符合条件的模块就立即停止不再向后寻找</li>
+<li>如果要导入的模块和当前执行文件是同级目录<ol>
+<li>直接导入即可</li>
+</ol>
+</li>
+<li>如果要导入的模块和当前执行的文件不是同级<ol>
+<li>需要吧导入的模块的绝对路径添加到sys.path 列表中</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>重新加载模块</p>
+<ul>
+<li>在import之后  再修改这个被导入的模块, 程序是感知不到的</li>
+<li>reload这种方法可以强制程序再重新导入这个模块一次(非常不推荐使用)</li>
+</ul>
+</li>
+</ul>
+<pre><code>import module1
+import time
+import importlib
+module1.login()
+time.sleep(20)
+importlib.reload(module1)  # 表示重新加载
+module1.login()</code></pre>
+<ul>
+<li>模块的循环使用<ol>
+<li>在模块的导入中, 不要产生循环引用问题</li>
+<li>如果发生循环导入了, 就会发现明明写在这个模块中的方法, 显示找不到</li>
+</ol>
+</li>
+</ul>
+<h3 id="二-包"><a href="#二-包" class="headerlink" title="二.包"></a>二.包</h3><ul>
+<li>导入包相当于执行了这个包下面的 _ _ init _ _ 方法</li>
+<li>可以设 _ _ init _ _方法来完成一些模块的导入</li>
+<li>如果直接导入一个包, 那么相当于执行了这个包中的_ _ init _ _文件,并不会帮你把这个包下面的其他包以及py文件自动的导入到内存</li>
+</ul>
+<pre><code># import bbb.api.policy
+# bbb.api.policy.get()
+
+import bbb.api.policy as a1
+a1.get()</code></pre>
+<ol>
+<li><p>绝对导入和相对导入</p>
+<pre><code>在glance/api/version.py
+
+#绝对导入
+from glance.cmd import manage
+manage.main()
+
+#相对导入
+from ..cmd import manage
+manage.main()</code></pre>
+</li>
+</ol>
+<h3 id="三-正则表达式"><a href="#三-正则表达式" class="headerlink" title="三.正则表达式"></a>三.正则表达式</h3><ul>
+<li><p>定义: 就是一种匹配字符串的规则</p>
+</li>
+<li><p>应用: 登录注册的表单验证,爬虫,自动化开发, 日志分析</p>
+</li>
+<li><p>正则表达式是一种独特的语法,和python没有关系</p>
+</li>
+<li><p>帮助学习工具 <a target="_blank" rel="noopener" href="http://tool.chinaz.com/regex/">http://tool.chinaz.com/regex/</a></p>
+</li>
+</ul>
+<ol>
+<li>字符组 []<ol>
+<li>在一个字符的位置上能出现的内容</li>
+<li>[1abc]   是一个范围</li>
+<li>[0-9] [A-Z] [a-z]  表示匹配三个字符</li>
+<li>[abc0-9]  表示匹配一个字符</li>
+<li>[0-9a-zA-Z]  表示匹配一个字符</li>
+<li>[^]  非字符组</li>
+</ol>
+</li>
+<li>元字符<ol>
+<li>\d == [0-9] 也表示匹配一个字符, 匹配的是一个数字</li>
+<li>\w == [0-9a-zA-Z] 也表示匹配一个数字字母下划线</li>
+<li>\s == [\n \t]  包括回车 空格 和 制表符tab \n匹配回车  \t 匹配制表符</li>
+<li>\D 匹配非数字</li>
+<li>\W 匹配非数字字母下划线</li>
+<li>\S 匹配非空白</li>
+<li>\b 匹配单词的开始或结束</li>
+<li>| 或者的意思</li>
+<li>() 分组的意思</li>
+<li>^  匹配字符串的开始</li>
+<li>&amp; 匹配字符串的结束</li>
+<li>.  除了换行符的所有</li>
+<li>[\d\D] [\w\W] [\s\S]  匹配所有</li>
+</ol>
+</li>
+<li>量词<ol>
+<li>?  重复0次或者一次(也就是可有可无)</li>
+<li>+重复1次或者更多次(1~多次)</li>
+<li>*重复0次或者更多次(0~多次)</li>
+<li>{n} 重复n次</li>
+<li>{n,} 重复至少n次</li>
+<li>{n,m} 重复n到m次</li>
+</ol>
+</li>
+<li>其他<ol>
+<li>贪婪匹配(回溯算法) 尽可能的匹配多的</li>
+<li>量词?  表示惰性匹配也就是取消贪婪匹配<ol>
+<li>?? *? +? {n}?</li>
+<li>最常用 .*?x   表示任意字符找到一个x</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>正则表达式的例子</li>
+</ol>
+<pre><code>1.匹配任意长度的正整数
+    [1-9]\d*
+2.匹配小数
+    -?\d+\.\d+
+3.匹配整数或者小数
+    -?\d+\.?\d*  有缺陷 1. 2. 这样的内容也会匹配上
+    -?\d+\.?\d+  有缺陷 1 2 这样的一位数就匹配不上了
+    -?\d+(\.\d+)? 准确的
+4.匹配负数
+    -0\.\d+|-[1-9]\d*(\.\d+)?
+5.匹配qq号
+    [1-9]\d&#123;5,11&#125;
+6.匹配长度为11位的电话号码
+    1[3-9]\d&#123;9&#125;
+7.匹配长度为8-10位的用户密码 包含数字字母下划线和?@
+    [\w?@]&#123;8,10&#125;
+8.匹配验证码,4位数字字母组成的
+    [\da-zA-Z]&#123;4&#125;
+9.1-2*((60-30+(-40/5)*(9-2*5/3+7/3*99/4*2998+10*568/14))-(-4*3)/(16-3*2))
+匹配出最内层的小括号
+    \([\d\.+\-*/]+\)
+    \([^()]+\)</code></pre>
+<p> 6.转义符</p>
+<p>​    1.正则表达式中的转义</p>
+<p>​        ‘\ (‘ 表示转义小括号</p>
+<pre><code>     # [()+*?/$.]   在字符组中一些特殊的字符会现出原形
+# 所有的 \w \d \s(\n,\t, )  \W \D \S都表示它原本的意义
+# [-]只有写在字符组的首位的时候表示普通的减号
+#    写在其他位置的时候表示范围[1-9]
+#    如果就是想匹配减号 [1\-9]
+
+</code></pre>
+<p>​    2.python中的转义</p>
+<pre><code># 分析过程
+&#39;\n&#39;  # \转义符 赋予这个n一个特殊的意义 表示一个换行符
+# print(&#39;\\n&#39;)
+# print\\n(&#39;C:\\next&#39;)
+# print(r&#39;C:\next&#39;)
+# &#39;\\\\n&#39; &#39;\\n&#39;
+# 结论
+# r&#39;\\n&#39; r&#39;\n&#39;  在python中</code></pre>
+<h3 id="四-re模块"><a href="#四-re模块" class="headerlink" title="四.re模块"></a>四.re模块</h3><p>​    1.匹配</p>
+<p>​    findall 和 search match</p>
+<pre><code>import re
+
+# findall
+# print(re.findall(&#39;\d&#39;, &#39;asdf23&#39;))
+# 参数 返回值类型(列表),返回值个数(1) 返回值内容:所有匹配上的内容
+
+# search
+ret = re.search(&#39;\d+&#39;, &quot;afasdf1231adf212&quot;)  # 返回值类型: 正则匹配结果的对象  返回值个数:1 如果匹配上了就返回对象
+print(ret.group())  # 返回的对象是通过group 来获取匹配到的第一个结果
+如果没有匹配上,结果就是None
+
+# match
+ret1 = re.match(&#39;\d+&#39;, &#39;*&amp;1231afasdf1231adf212&#39;)  # 只匹配前面出现的,不然会报错
+print(ret1.group())</code></pre>
+<p>​    2.替换</p>
+<p>​    sub 和 subn</p>
+<pre><code># sub 和 replace是一样的
+print(re.sub(&#39;\d+&#39;, &#39;H&#39;, &#39;123FSDF52FSF1&#39;))
+
+# subn  会打印你替换了的次数
+print(re.subn(&#39;\d+&#39;, &#39;H&#39;, &#39;123FSDF52FSF1&#39;))
+结果:(&#39;HFSDFHFSFH&#39;, 3)</code></pre>
+<pre><code> 3.切割</code></pre>
+<p>​    split</p>
+<pre><code>print(re.split(&#39;\d+&#39;, &#39;123faaf23&#39;))
+# 会把数字不打印
+# 结果是个列表 [&#39;&#39;, &#39;faaf&#39;, &#39;&#39;]</code></pre>
+<p>​    4.进阶方法</p>
+<p>​    compile(时间效率) 和 finditer(空间效率)</p>
+<pre><code># compile 起到一个预编译的作用,只有多次使用某一个相同的正则表达式的时候,compile才会提高我们程序的效率
+ret = re.compile(&#39;-0\.\d+|-[1-9]+(\.\d+)?&#39;)
+res = ret.search(&#39;asdf-0.01-99&#39;)
+print(res.group())
+
+# finditer
+ret = re.finditer(&#39;\d&#39;, &#39;adfad12fasdf123&#39;)  # 返回的是一个迭代器
+print(ret)
+for i in ret:
+    print(i.group())</code></pre>
+<p>​    5.python中的正则表达式</p>
+<p>​        1.findall 会优先显示分组中的内容,要想取消分组优先,(?:正则表达式)</p>
+<p>​        2.split 遇到分组 会保留分组内被切掉的内容</p>
+<p>​        3.search 如果search中有分组的话,通过group(n)就能够拿到group中的匹配的内容</p>
+<pre><code>ret = re.findall(&#39;-0\.\d+|-[1-9]\d*(?:\.\d+)?&#39;, &#39;-1asdada-200&#39;)
+print(ret)
+
+ret = re.split(&#39;(\d+)&#39;,&#39;alex83egon20taibai40&#39;)
+print(ret)
+
+# 分组遇见search
+ret = re.search(&#39;\d+(.\d+)(.\d+)(.\d+)?&#39;,&#39;1.2.3.4-2*(60+(-40.35/5)-(-4*3))&#39;)
+print(ret.group())
+print(ret.group(1))
+print(ret.group(2))
+print(ret.group(3))</code></pre>
+<pre><code> 6. 分组命名
+      1. (?P&lt; name &gt; 正则表达式)  表示给分组起名字
+      2. (?P=name) 表示使用这个分组,这里匹配到的内容应该和分组中的内容完全相同
+7. 通过索引使用分组
+        1. \1 表示使用第一组, 匹配到的内容和分组中的内容完全相同</code></pre>
+<pre><code>import re
+# ret=re.findall(r&quot;\d+(?:\.\d+)?&quot;,&quot;1-2*(60+(-40.35/5)-(-4*3))&quot;)
+# print(ret)
+
+# ret=re.findall(r&quot;\d+(?:\.\d+)|(\d+)&quot;,&quot;1-2*(60+(-40.35/5)-(-4*3))&quot;)
+# print(ret)
+# ret.remove(&#39;&#39;)
+# print(ret)
+
+import re
+# ret = re.findall(&#39;&gt;(\w+)&lt;&#39;,r&#39;&lt;a&gt;wahaha&lt;\a&gt;&#39;)
+# print(ret)
+
+# ret = re.search(r&#39;&lt;(\w+)&gt;(\w+)&lt;/(\w+)&gt;&#39;,r&#39;&lt;a&gt;wahaha&lt;/b&gt;&#39;)
+# print(ret.group())
+# print(ret.group(1))
+# print(ret.group(2))
+
+
+
+分组命名
+ret = re.search(&quot;&lt;(?P&lt;name&gt;\w+)&gt;\w+&lt;/(?P=name)&gt;&quot;,&quot;&lt;h1&gt;hello&lt;/h1&gt;&quot;)
+print(ret.group(&#39;name&#39;))  #结果 ：h1
+# print(ret.group())  #结果 ：&lt;h1&gt;hello&lt;/h1&gt;
+
+ret = re.search(r&quot;&lt;(\w+)&gt;\w+&lt;/\1&gt;&quot;,&quot;&lt;h1&gt;hello&lt;/h1&gt;&quot;)
+print(ret.group(1))
+# print(ret.group())  #结果 ：&lt;h1&gt;hello&lt;/h1&gt;
+
+ret = re.search(r&#39;&lt;(?P&lt;tag&gt;\w+)&gt;(?P&lt;c&gt;\w+)&lt;/(\w+)&gt;&#39;,r&#39;&lt;a&gt;wahaha&lt;/b&gt;&#39;)
+print(ret.group())
+print(ret.group(&#39;tag&#39;))
+print(ret.group(&#39;c&#39;))</code></pre>
+<h4 id="五-爬虫练习"><a href="#五-爬虫练习" class="headerlink" title="五.爬虫练习"></a>五.爬虫练习</h4><pre><code>import re
+from urllib.request import urlopen
+
+
+# 内置的包,来获取网页的源代码 字符串
+
+def getPage(url):
+    reponse = urlopen(url)
+    return reponse.read().decode(&#39;utf-8&#39;)
+
+
+def parsePage(s):
+    ret = com.finditer(s)
+    for i in ret:
+        ret = &#123;
+            &quot;id&quot;: i.group(&quot;id&quot;),
+            &quot;title&quot;: i.group(&quot;title&quot;),
+            &quot;rating_num&quot;: i.group(&quot;rating_num&quot;),
+            &quot;comment_num&quot;: i.group(&quot;comment_num&quot;)
+        &#125;
+        yield ret
+
+
+def main(num):
+    url = &#39;https://movie.douban.com/top250?start=%s&amp;filter=&#39; % num
+    reponse_html = getPage(url)
+    ret = parsePage(reponse_html)
+    print(ret)
+    f = open(&#39;info1&#39;,encoding=&#39;utf-8&#39;)
+    for obj in ret:
+        print(obj)
+        data = str(obj)
+        f.write(data, &#39;\n&#39;)
+
+    f.close()
+
+com = re.compile(
+    &#39;&lt;div class=&quot;item&quot;&gt;.*?&lt;div class=&quot;pic&quot;&gt;.*?&lt;em .*?&gt;(?P&lt;id&gt;\d+).*?&lt;span class=&quot;title&quot;&gt;(?P&lt;title&gt;.*?)&lt;/span&gt;&#39;
+    &#39;.*?&lt;span class=&quot;rating_num&quot; .*?&gt;(?P&lt;rating_num&gt;.*?)&lt;/span&gt;.*?&lt;span&gt;(?P&lt;comment_num&gt;.*?)评价&lt;/span&gt;&#39;, re.S)
+
+count = 0
+for i in range(10):
+    main(count)
+    count += 25</code></pre>
+<h3 id="六-验证码代码"><a href="#六-验证码代码" class="headerlink" title="六.验证码代码"></a>六.验证码代码</h3><pre><code># 验证码
+import random
+
+
+def rand_code(n=6, flag=True):
+    code = &#39;&#39;
+    for i in range(n):
+        rand_num = str(random.randint(0, 9))
+        if flag == True:
+            rand_alph = chr(random.randint(97, 122))  # 是根据ASCLL 表 获取小写字母,97-127(a-z)
+            rand_alph_upper = chr(random.randint(65, 90))  # 是根据ASCLL表 获取大写字母 65-90(A-Z)
+            rand_num = random.choice([rand_num, rand_alph, rand_alph_upper])
+        code += rand_num
+    return code
+
+
+ret = rand_code(flag=False)
+print(ret)
+</code></pre>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">二哈君</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://zxc-fubug.github.io/2020/11/11/python%E6%A8%A1%E5%9D%97/">http://zxc-fubug.github.io/2020/11/11/python%E6%A8%A1%E5%9D%97/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">二哈君</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%A8%A1%E5%9D%97/">
+                                    <span class="chip bg-color">模块</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2020/11/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="网络编程">
+                        
+                        <span class="card-title">网络编程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一.网络基础​    1.网络基础相关的知识
+​        (1) 架构
+​            a. C/S 架构 : client 客户端 和  server 服务器端
+​                优势: 能充分发挥PC机的
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            二哈君
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">网络编程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/11/07/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%95%B4%E7%90%86/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Python">
+                        
+                        <span class="card-title">Python</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一.面向对象1.写代码的时候,什么时候用面向对象
+代码量大,功能多的时候
+处理比较复杂的角色之间的关系(面试可以这么说)
+qq 好友 陌生人 群 组
+复杂的电商程序
+公司/学校的人事管理/功能的系统
+
+
+面向对象的好处
+代码的清晰度更高了
+
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            二哈君
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">Python面向对象的总结</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5135448718"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.8'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">二哈君</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:jupeng_666@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=845726666" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 845726666" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-haruto"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>

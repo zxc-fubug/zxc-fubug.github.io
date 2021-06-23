@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>zxc-fubug</title>
+  
+  <subtitle>Autism</subtitle>
+  <link href="http://zxc-fubug.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://zxc-fubug.github.io/"/>
+  <updated>2021-06-23T05:23:38.134Z</updated>
+  <id>http://zxc-fubug.github.io/</id>
+  
+  <author>
+    <name>二哈君</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>bootstrap</title>
+    <link href="http://zxc-fubug.github.io/2021/06/23/bootstrap/"/>
+    <id>http://zxc-fubug.github.io/2021/06/23/bootstrap/</id>
+    <published>2021-06-23T05:19:30.000Z</published>
+    <updated>2021-06-23T05:23:38.134Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;Bootstrap&lt;ul&gt;
+&lt;li&gt;弹出插件SweetAlert：&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="boostrap插件" scheme="http://zxc-fubug.github.io/tags/boostrap%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端jQuery</title>
+    <link href="http://zxc-fubug.github.io/2021/06/19/%E5%89%8D%E7%AB%AFjQuery/"/>
+    <id>http://zxc-fubug.github.io/2021/06/19/%E5%89%8D%E7%AB%AFjQuery/</id>
+    <published>2021-06-19T07:22:32.000Z</published>
+    <updated>2021-06-21T08:35:07.841Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;jQuery&quot;&gt;&lt;a href=&quot;#jQuery&quot; class=&quot;headerlink&quot; title=&quot;jQuery&quot;&gt;&lt;/a&gt;jQuery&lt;/h1&gt;&lt;h2 id=&quot;jQuery介绍&quot;&gt;&lt;a href=&quot;#jQuery介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="jQuery" scheme="http://zxc-fubug.github.io/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端JavaScript</title>
+    <link href="http://zxc-fubug.github.io/2021/05/20/%E5%89%8D%E7%AB%AFJavaScript-1/"/>
+    <id>http://zxc-fubug.github.io/2021/05/20/%E5%89%8D%E7%AB%AFJavaScript-1/</id>
+    <published>2021-05-20T02:22:07.000Z</published>
+    <updated>2021-05-20T04:16:56.346Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前戏&quot;&gt;&lt;a href=&quot;#前戏&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端基础之BOM和BOM" scheme="http://zxc-fubug.github.io/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E4%B9%8BBOM%E5%92%8CBOM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端JavaScript</title>
+    <link href="http://zxc-fubug.github.io/2021/05/08/%E5%89%8D%E7%AB%AFJavaScript/"/>
+    <id>http://zxc-fubug.github.io/2021/05/08/%E5%89%8D%E7%AB%AFJavaScript/</id>
+    <published>2021-05-08T02:18:20.000Z</published>
+    <updated>2021-05-18T06:40:45.285Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;JavaScript概述&quot;&gt;&lt;a href=&quot;#JavaScript概述&quot; class=&quot;headerlink&quot; title=&quot;JavaScript概述&quot;&gt;&lt;/a&gt;JavaScript概述&lt;/h3&gt;&lt;h4</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaScript基础知识" scheme="http://zxc-fubug.github.io/tags/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端HTML</title>
+    <link href="http://zxc-fubug.github.io/2021/03/22/%E5%89%8D%E7%AB%AFHTML/"/>
+    <id>http://zxc-fubug.github.io/2021/03/22/%E5%89%8D%E7%AB%AFHTML/</id>
+    <published>2021-03-22T10:38:21.000Z</published>
+    <updated>2021-03-22T10:46:11.548Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一-Web服务本质&quot;&gt;&lt;a href=&quot;#一-Web服务本质&quot; class=&quot;headerlink&quot; title=&quot;一.Web服务本质&quot;&gt;&lt;/a&gt;一.Web服务本质&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;import socket
+
+
+sk =</summary>
+        
+      
+    
+    
+    
+    
+    <category term="HTML" scheme="http://zxc-fubug.github.io/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络编程_进程</title>
+    <link href="http://zxc-fubug.github.io/2021/03/13/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-%E8%BF%9B%E7%A8%8B/"/>
+    <id>http://zxc-fubug.github.io/2021/03/13/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-%E8%BF%9B%E7%A8%8B/</id>
+    <published>2021-03-13T03:14:40.000Z</published>
+    <updated>2021-03-13T03:14:40.995Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>网络编程_并发编程</title>
+    <link href="http://zxc-fubug.github.io/2021/02/05/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    <id>http://zxc-fubug.github.io/2021/02/05/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</id>
+    <published>2021-02-05T04:11:37.000Z</published>
+    <updated>2021-03-16T13:45:52.815Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一-操作系统理论&quot;&gt;&lt;a href=&quot;#一-操作系统理论&quot; class=&quot;headerlink&quot; title=&quot;一.操作系统理论&quot;&gt;&lt;/a&gt;一.操作系统理论&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;计算机的硬件组成&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主板    固化(寄存器,</summary>
+        
+      
+    
+    
+    
+    
+    <category term="并发编程" scheme="http://zxc-fubug.github.io/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试总结</title>
+    <link href="http://zxc-fubug.github.io/2020/12/01/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/"/>
+    <id>http://zxc-fubug.github.io/2020/12/01/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/</id>
+    <published>2020-12-01T09:19:54.000Z</published>
+    <updated>2021-06-19T07:37:02.692Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-遍历字典&quot;&gt;&lt;a href=&quot;#1-遍历字典&quot; class=&quot;headerlink&quot; title=&quot;1.遍历字典&quot;&gt;&lt;/a&gt;1.遍历字典&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;for k,v in dic.items()&lt;/code&gt;&lt;/pre&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试题" scheme="http://zxc-fubug.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络编程</title>
+    <link href="http://zxc-fubug.github.io/2020/11/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <id>http://zxc-fubug.github.io/2020/11/25/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</id>
+    <published>2020-11-25T15:21:15.000Z</published>
+    <updated>2020-12-01T09:18:44.138Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一-网络基础&quot;&gt;&lt;a href=&quot;#一-网络基础&quot; class=&quot;headerlink&quot; title=&quot;一.网络基础&quot;&gt;&lt;/a&gt;一.网络基础&lt;/h3&gt;&lt;p&gt;​    1.网络基础相关的知识&lt;/p&gt;
+&lt;p&gt;​        (1) 架构&lt;/p&gt;
+&lt;p&gt;​     </summary>
+        
+      
+    
+    
+    
+    
+    <category term="网络编程" scheme="http://zxc-fubug.github.io/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python模块</title>
+    <link href="http://zxc-fubug.github.io/2020/11/11/python%E6%A8%A1%E5%9D%97/"/>
+    <id>http://zxc-fubug.github.io/2020/11/11/python%E6%A8%A1%E5%9D%97/</id>
+    <published>2020-11-11T02:54:41.000Z</published>
+    <updated>2020-11-20T03:12:18.055Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一-模块初识&quot;&gt;&lt;a href=&quot;#一-模块初识&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="模块" scheme="http://zxc-fubug.github.io/tags/%E6%A8%A1%E5%9D%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python</title>
+    <link href="http://zxc-fubug.github.io/2020/11/07/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%95%B4%E7%90%86/"/>
+    <id>http://zxc-fubug.github.io/2020/11/07/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%95%B4%E7%90%86/</id>
+    <published>2020-11-07T08:03:32.000Z</published>
+    <updated>2020-11-09T02:29:41.832Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一-面向对象&quot;&gt;&lt;a href=&quot;#一-面向对象&quot; class=&quot;headerlink&quot; title=&quot;一.面向对象&quot;&gt;&lt;/a&gt;一.面向对象&lt;/h3&gt;&lt;h6 id=&quot;1-写代码的时候-什么时候用面向对象&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python面向对象的总结" scheme="http://zxc-fubug.github.io/tags/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python</title>
+    <link href="http://zxc-fubug.github.io/2020/10/13/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://zxc-fubug.github.io/2020/10/13/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <published>2020-10-13T06:44:04.000Z</published>
+    <updated>2020-11-11T02:53:10.484Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一-面向对象的初始&quot;&gt;&lt;a href=&quot;#一-面向对象的初始&quot; class=&quot;headerlink&quot; title=&quot;一.面向对象的初始&quot;&gt;&lt;/a&gt;一.面向对象的初始&lt;/h3&gt;&lt;p&gt;​    1.类 : 具有相同属性和技能的一类事物&lt;/p&gt;
+&lt;p&gt;​   </summary>
+        
+      
+    
+    
+    
+    
+    <category term="面向对象初始" scheme="http://zxc-fubug.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%9D%E5%A7%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python</title>
+    <link href="http://zxc-fubug.github.io/2020/10/03/Python%E7%94%9F%E6%88%90%E5%99%A8,%E9%97%AD%E5%8C%85/"/>
+    <id>http://zxc-fubug.github.io/2020/10/03/Python%E7%94%9F%E6%88%90%E5%99%A8,%E9%97%AD%E5%8C%85/</id>
+    <published>2020-10-03T03:15:29.000Z</published>
+    <updated>2020-10-13T08:10:24.201Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一-函数名的运用&quot;&gt;&lt;a href=&quot;#一-函数名的运用&quot; class=&quot;headerlink&quot; title=&quot;一. 函数名的运用&quot;&gt;&lt;/a&gt;一. 函数名的运用&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;函数名的内存地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;def</summary>
+        
+      
+    
+    
+    
+    
+    <category term="生成器·闭包 和各种推导式" scheme="http://zxc-fubug.github.io/tags/%E7%94%9F%E6%88%90%E5%99%A8%C2%B7%E9%97%AD%E5%8C%85-%E5%92%8C%E5%90%84%E7%A7%8D%E6%8E%A8%E5%AF%BC%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python</title>
+    <link href="http://zxc-fubug.github.io/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/"/>
+    <id>http://zxc-fubug.github.io/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/</id>
+    <published>2020-09-25T05:30:09.000Z</published>
+    <updated>2020-11-11T03:11:39.443Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一-冒泡排序&quot;&gt;&lt;a href=&quot;#一-冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;一.冒泡排序&quot;&gt;&lt;/a&gt;一.冒泡排序&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;# 冒泡排序
+lst = [11, 22, 35, 6, 2]
+for i in</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python中的重要总结" scheme="http://zxc-fubug.github.io/tags/Python%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python</title>
+    <link href="http://zxc-fubug.github.io/2020/09/22/Python%E5%87%BD%E6%95%B0/"/>
+    <id>http://zxc-fubug.github.io/2020/09/22/Python%E5%87%BD%E6%95%B0/</id>
+    <published>2020-09-22T02:14:33.000Z</published>
+    <updated>2020-09-27T15:03:19.570Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;一、函数的定义&quot;&gt;&lt;a href=&quot;#一、函数的定义&quot; class=&quot;headerlink&quot; title=&quot;一、函数的定义&quot;&gt;&lt;/a&gt;一、函数的定义&lt;/h4&gt;&lt;p&gt;​    对代码块和功能的封装和定义&lt;/p&gt;
+&lt;h3 id=&quot;二、函数的定义语法&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python函数" scheme="http://zxc-fubug.github.io/tags/Python%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python文件操作</title>
+    <link href="http://zxc-fubug.github.io/2020/09/20/Python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/"/>
+    <id>http://zxc-fubug.github.io/2020/09/20/Python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</id>
+    <published>2020-09-20T01:57:32.000Z</published>
+    <updated>2020-09-20T04:31:39.844Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;文件操作&lt;/p&gt;
+&lt;p&gt;1.初始文件操作&lt;/p&gt;
+&lt;p&gt;2.只读(r,rb)&lt;/p&gt;
+&lt;p&gt;3.只写(w,wb)&lt;/p&gt;
+&lt;p&gt;4.追加(a,ab)&lt;/p&gt;
+&lt;p&gt;5.r+读写&lt;/p&gt;
+&lt;p&gt;6.w+写读&lt;/p&gt;
+&lt;p&gt;7.a+写读(追加读写)&lt;/p&gt;
+&lt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="文件各种操作" scheme="http://zxc-fubug.github.io/tags/%E6%96%87%E4%BB%B6%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python</title>
+    <link href="http://zxc-fubug.github.io/2020/08/31/Python%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://zxc-fubug.github.io/2020/08/31/Python%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/</id>
+    <published>2020-08-31T15:06:30.000Z</published>
+    <updated>2020-09-15T15:10:49.502Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;循环&quot;&gt;&lt;a href=&quot;#循环&quot; class=&quot;headerlink&quot; title=&quot;循环&quot;&gt;&lt;/a&gt;循环&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;while循环&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;count = 1
+while count &amp;lt; 8:
+   </summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python基本数据类型" scheme="http://zxc-fubug.github.io/tags/Python%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python</title>
+    <link href="http://zxc-fubug.github.io/2020/08/31/Python/"/>
+    <id>http://zxc-fubug.github.io/2020/08/31/Python/</id>
+    <published>2020-08-31T14:40:08.000Z</published>
+    <updated>2020-09-06T08:44:45.950Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre&gt;&lt;code&gt; 1. 计算机是什么
+          基本组成:
+              主板+cpu+内存
+              cpu: 主频, 核数（16） 
+              内存：大小(8G, 16G, 32G) 型号: DDR3,</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Python介绍" scheme="http://zxc-fubug.github.io/tags/Python%E4%BB%8B%E7%BB%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://zxc-fubug.github.io/2020/08/30/hello-world/"/>
+    <id>http://zxc-fubug.github.io/2020/08/30/hello-world/</id>
+    <published>2020-08-30T05:58:02.670Z</published>
+    <updated>2020-08-30T05:58:02.670Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

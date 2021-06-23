@@ -1,0 +1,1964 @@
+<!DOCTYPE HTML>
+<html lang="cn">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="前端JavaScript, zxc-fubug">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>前端JavaScript | zxc-fubug</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="zxc-fubug" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">zxc-fubug</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">zxc-fubug</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">前端JavaScript</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                                <span class="chip bg-color">JavaScript基础知识</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2021-05-08
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="JavaScript概述"><a href="#JavaScript概述" class="headerlink" title="JavaScript概述"></a>JavaScript概述</h3><h4 id="一-ECMAScript和JavaScript的关系"><a href="#一-ECMAScript和JavaScript的关系" class="headerlink" title="一.ECMAScript和JavaScript的关系"></a>一.ECMAScript和JavaScript的关系</h4><ul>
+<li><p>1996年11月，JavaScript的创造者–Netscape公司，决定将JavaScript提交给国际标准化组织ECMA，希望这门语言能够成为国际标准。次年，ECMA发布262号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为ECMAScript，这个版本就是1.0版。</p>
+<p>该标准一开始就是针对JavaScript语言制定的，但是没有称其为JavaScript，有两个方面的原因。一是商标，JavaScript本身已被Netscape注册为商标。二是想体现这门语言的制定者是ECMA，而不是Netscape，这样有利于保证这门语言的开发性和中立性。</p>
+<p>因此ECMAScript和JavaScript的关系是，前者是后者的规格，后者是前者的一种实现</p>
+</li>
+</ul>
+<h4 id="二-ECMAScript的历史"><a href="#二-ECMAScript的历史" class="headerlink" title="二.ECMAScript的历史"></a>二.ECMAScript的历史</h4><ul>
+<li><table>
+<thead>
+<tr>
+<th>年份</th>
+<th align="left">名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1997</td>
+<td align="left">ECMAScript 1</td>
+<td>第一个版本</td>
+</tr>
+<tr>
+<td>1998</td>
+<td align="left">ECMAScript 2</td>
+<td>版本变更</td>
+</tr>
+<tr>
+<td>1999</td>
+<td align="left">ECMAScript 3</td>
+<td>添加正则表达式添加try/catch</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">ECMAScript 4</td>
+<td>没有发布</td>
+</tr>
+<tr>
+<td>2009</td>
+<td align="left">ECMAScript 5</td>
+<td>添加”strict mode”严格模式添加JSON支持</td>
+</tr>
+<tr>
+<td>2011</td>
+<td align="left">ECMAScript 5.1</td>
+<td>版本变更</td>
+</tr>
+<tr>
+<td>2015</td>
+<td align="left">ECMAScript 6</td>
+<td>添加类和模块</td>
+</tr>
+<tr>
+<td>2016</td>
+<td align="left">ECMAScript 7</td>
+<td>增加指数运算符（**）增加Array.prototype.includes</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>注: ES6就是指ECMAScript6</p>
+</li>
+<li><p>尽管 ECMAScript 是一个重要的标准，但它并不是 JavaScript 唯一的部分，当然，也不是唯一被标准化的部分。实际上，一个完整的 JavaScript 实现是由以下 3 个不同部分组成的： </p>
+<ul>
+<li>核心 (ECMAScript)</li>
+<li>文档对象模型(DOM)  Document object model  (整合js, css, html)</li>
+<li>浏览器对象模型(BOM) Broswer object model  (整合js 和浏览器)</li>
+</ul>
+<p>简单地说，ECMAScript 描述了JavaScript语言本身的相关内容。</p>
+<p>JavaScript 是脚本语言<br>JavaScript 是一种轻量级的编程语言。</p>
+<p>JavaScript 是可插入 HTML 页面的编程代码。</p>
+<p>JavaScript 插入 HTML 页面后，可由所有的现代浏览器执行。</p>
+<p>JavaScript 很容易学习。</p>
+</li>
+</ul>
+<h4 id="三-JavaScript引入方式"><a href="#三-JavaScript引入方式" class="headerlink" title="三.JavaScript引入方式"></a>三.JavaScript引入方式</h4><p>1.Script标签内写代码</p>
+<pre><code>&lt;script&gt;
+  //这里写代码
+ &lt;/script&gt;</code></pre>
+<p>2.引入额外的JS文件</p>
+<pre><code>&lt;script src=&quot;文件名.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>3.JavaScript语言规范</p>
+<pre><code>//  这是单行注释
+/*
+这是多行注释
+*/
+JavaScript中的语句要以分号为结束符</code></pre>
+<h4 id="四-JavaScript语言基础"><a href="#四-JavaScript语言基础" class="headerlink" title="四.JavaScript语言基础"></a>四.JavaScript语言基础</h4><ul>
+<li><h6 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h6><ul>
+<li>JavaScript的变量名可以使用_，数字，字母，$组成，不能以数字开头。</li>
+<li>声明变量使用 var 变量名; 的格式来进行声明</li>
+</ul>
+<pre><code>var name = &quot;Alex&quot;;
+var age = 18;</code></pre>
+<p>注意: 变量名是区分大小写的。推荐使用驼峰式命名规则。保留字不能用做变量名。</p>
+<p>补充:  <em>ES6新增了let命令，用于声明变量。其用法类似于var，但是所声明的变量只在let命令所在的代码块内有效。例如：for循环的计数器就很适合使用let命令。</em> </p>
+<pre><code>for (let i=0;i&lt;arr.length;i++)&#123;...&#125;</code></pre>
+<p> <em>ES6新增const用来声明常量。一旦声明，其</em> 值就不能改变</p>
+<pre><code>const PI = 3.1415;
+PI // 3.1415
+
+PI = 3
+// TypeError: &quot;PI&quot; is read-only</code></pre>
+</li>
+</ul>
+<h4 id="五-JavaScript数据类型"><a href="#五-JavaScript数据类型" class="headerlink" title="五.JavaScript数据类型"></a>五.JavaScript数据类型</h4><ul>
+<li><h6 id="JavaScript拥有动态类型"><a href="#JavaScript拥有动态类型" class="headerlink" title="JavaScript拥有动态类型"></a>JavaScript拥有动态类型</h6><pre><code>var x;  // 此时x是undefined
+var x = 1;  // 此时x是数字
+var x = &quot;Alex&quot;  // 此时x是字符串</code></pre>
+</li>
+<li><h6 id="数值-Number"><a href="#数值-Number" class="headerlink" title="数值(Number)"></a>数值(Number)</h6><p> JavaScript不区分整型和浮点型，就只有一种数字类型</p>
+<pre><code>var a = 12.34;
+var b = 20;
+var c = 123e5;  // 12300000
+var d = 123e-5;  // 0.00123</code></pre>
+<p> 还有一种NaN，表示不是一个数字 (Not a Number)</p>
+<pre><code>parseInt(&quot;123&quot;)  // 返回123
+parseInt(&quot;ABC&quot;)  // 返回NaN,NaN属性是代表非数字值的特殊值。该属性用于指示某个值不是数字。
+parseFloat(&quot;123.456&quot;)  // 返回123.456</code></pre>
+</li>
+<li><h6 id="字符串-String"><a href="#字符串-String" class="headerlink" title="字符串(String)"></a>字符串(String)</h6><pre><code>var a = &quot;Hello&quot;
+var b = &quot;world;
+var c = a + b; 
+console.log(c);  // 得到Helloworld</code></pre>
+</li>
+<li><h6 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h6><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.length</td>
+<td>返回长度</td>
+</tr>
+<tr>
+<td>.trim()</td>
+<td>移除空白</td>
+</tr>
+<tr>
+<td>.trimLeft()</td>
+<td>移除左边的空白</td>
+</tr>
+<tr>
+<td>.trimRight()</td>
+<td>移除右边的空白</td>
+</tr>
+<tr>
+<td>.charAt(n)</td>
+<td>返回第n个字符</td>
+</tr>
+<tr>
+<td>.concat(value, …)</td>
+<td>拼接</td>
+</tr>
+<tr>
+<td>.indexOf(substring, start)</td>
+<td>子序列位置</td>
+</tr>
+<tr>
+<td>.substring(from, to)</td>
+<td>根据索引获取子序列</td>
+</tr>
+<tr>
+<td>.slice(start, end)</td>
+<td>切片</td>
+</tr>
+<tr>
+<td>.toLowerCase()</td>
+<td>小写</td>
+</tr>
+<tr>
+<td>.toUpperCase()</td>
+<td>大写</td>
+</tr>
+<tr>
+<td>.split(delimiter, limit)</td>
+<td>分割</td>
+</tr>
+</tbody></table>
+</li>
+<li><h6 id="拼接字符串一般使用“-”"><a href="#拼接字符串一般使用“-”" class="headerlink" title="拼接字符串一般使用“+”"></a>拼接字符串一般使用“+”</h6><pre><code>string.slice(start, stop)和string.substring(start, stop)：
+
+两者的相同点：
+如果start等于end，返回空字符串
+如果stop参数省略，则取到字符串末
+如果某个参数超过string的长度，这个参数会被替换为string的长度
+
+substirng()的特点：
+如果 start &gt; stop ，start和stop将被交换
+如果参数是负数或者不是数字，将会被0替换
+
+silce()的特点：
+如果 start &gt; stop 不会交换两者
+如果start小于0，则切割从字符串末尾往前数的第abs(start)个的字符开始(包括该位置的字符)
+如果stop小于0，则切割在从字符串末尾往前数的第abs(stop)个字符结束(不包含该位置字符)</code></pre>
+</li>
+<li><h6 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h6><p><em>ES6中引入了模板字符串。模板字符串（template string）是增强版的字符串，用反引号（`）标识。它可以当做普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。</em></p>
+<pre><code>// 普通字符串
+`这是普通字符串！`
+// 多行文本
+`这是多行的
+文本`
+// 字符串中嵌入变量
+var name = &quot;q1mi&quot;, time = &quot;today&quot;;
+`Hello $&#123;name&#125;, how are you $&#123;time&#125;?`</code></pre>
+</li>
+<li><h6 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h6><p>如果模板字符串中需要使用反引号，则在其前面要用反斜杠转义。</p>
+<p>JSHint启用ES6语法支持:/* jshint esversion: 6*/</p>
+</li>
+<li><h6 id="布尔值-Boolean"><a href="#布尔值-Boolean" class="headerlink" title="布尔值(Boolean)"></a>布尔值(Boolean)</h6><p>区别于Python，true和false都是小写。</p>
+<pre><code>var a = true;
+var b = false;</code></pre>
+<h5 id="“”-空字符串-、0、null、undefined、NaN都是-false"><a href="#“”-空字符串-、0、null、undefined、NaN都是-false" class="headerlink" title="“”(空字符串)、0、null、undefined、NaN都是 false"></a>“”(空字符串)、0、null、undefined、NaN都是 false</h5></li>
+<li><h6 id="null和undefined"><a href="#null和undefined" class="headerlink" title="null和undefined"></a>null和undefined</h6><ul>
+<li>null表示值是空，一般在需要指定或清空一个变量时才会使用，如 name=null;</li>
+<li>undefined表示当声明一个变量但未初始化时，该变量的默认值是undefined。还有就是函数无明确的返回值时，返回的也是undefined。</li>
+</ul>
+<p>null表示变量的值是空，undefined则表示只声明了变量, 单还没有赋值</p>
+</li>
+<li><h6 id="对象-Object"><a href="#对象-Object" class="headerlink" title="对象(Object)"></a>对象(Object)</h6><p>JavaScript 中的所有事物都是对象：字符串、数值、数组、函数…此外，JavaScript 允许自定义对象。</p>
+<p>JavaScript 提供多个内建对象，比如 String、Date、Array 等等。</p>
+<p>对象只是带有属性和方法的特殊数据类型。</p>
+</li>
+<li><h6 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h6><ul>
+<li>数组对象的作用是：使用单独的变量名来存储一系列的值。类似于Python中的列表。 </li>
+</ul>
+<pre><code>var a = [123, &quot;ABC&quot;];
+console.log(a[1]);  // 输出&quot;ABC&quot;</code></pre>
+<ul>
+<li>常用方法</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.length</td>
+<td>数组的大小</td>
+</tr>
+<tr>
+<td>.push(ele)</td>
+<td>尾部追加元素</td>
+</tr>
+<tr>
+<td>.pop()</td>
+<td>获取尾部的元素</td>
+</tr>
+<tr>
+<td>.unshift(ele)</td>
+<td>头部插入元素</td>
+</tr>
+<tr>
+<td>.shift()</td>
+<td>头部移除元素</td>
+</tr>
+<tr>
+<td>.slice(start, end)</td>
+<td>切片</td>
+</tr>
+<tr>
+<td>.reverse()</td>
+<td>反转</td>
+</tr>
+<tr>
+<td>.join(seq)</td>
+<td>将数组元素连接成字符串</td>
+</tr>
+<tr>
+<td>.concat(val, …)</td>
+<td>连接数组</td>
+</tr>
+<tr>
+<td>.sort()</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>.forEach()</td>
+<td>将数组的每个元素传递给回调函数</td>
+</tr>
+<tr>
+<td>.splice()</td>
+<td>删除元素，并向数组添加新元素。</td>
+</tr>
+<tr>
+<td>.map()</td>
+<td>返回一个数组元素调用函数处理 后的的值得新数组</td>
+</tr>
+</tbody></table>
+<h6 id="关于sort-需要注意："><a href="#关于sort-需要注意：" class="headerlink" title="关于sort()需要注意："></a>关于sort()需要注意：</h6><p>如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。</p>
+<p>如果想按照其他标准进行排序，就需要提供比较函数，该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：</p>
+<p>若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。<br>若 a 等于 b，则返回 0。<br>若 a 大于 b，则返回一个大于 0 的值。</p>
+</li>
+</ul>
+<pre><code>function sortNumber(a,b)&#123;
+    return a - b
+&#125;
+var arr1 = [11, 100, 22, 55, 33, 44]
+arr1.sort(sortNumber)</code></pre>
+<p> 关于遍历数组中的元素，可以使用下面的方式:</p>
+<pre><code>var a = [10, 20, 30, 40];
+for (var i=0;i&lt;a.length;i++) &#123;
+  console.log(a[i]);
+&#125;</code></pre>
+<ul>
+<li><h6 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h6><ul>
+<li>forEach(function(currentValue, index, arr), thisValue</li>
+</ul>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>function(currentValue, index, arr)</em></td>
+<td>必需。 数组中每个元素需要调用的函数。 函数参数:  参数描述<em>currentValue</em> 必需。当前元素                                                                      <em>index</em>   可选。当前元素的索引值。                                                                   arr 可选。当前元素所属的数组对象。</td>
+</tr>
+<tr>
+<td><em>thisValue</em></td>
+<td>可选。传递给函数的值一般用 “this” 值。 如果这个参数为空，”undefined”会传递给”this”值</td>
+</tr>
+</tbody></table>
+</li>
+<li><h6 id="splice"><a href="#splice" class="headerlink" title="splice()"></a>splice()</h6><ul>
+<li>splice(index,howmany,item 1,……,itemX)</li>
+</ul>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>index</em></td>
+<td>必需。规定从何处添加/删除元素。 该参数是开始插入和（或）删除的数组元素的下标，必须是数字。</td>
+</tr>
+<tr>
+<td><em>howmany</em></td>
+<td>必需。规定应该删除多少元素。必须是数字，但可以是 “0”。 如果未规定此参数，则删除从 index 开始到原数组结尾的所有元素。</td>
+</tr>
+<tr>
+<td><em>item1</em>, …, <em>itemX</em></td>
+<td>可选。要添加到数组的新元素</td>
+</tr>
+</tbody></table>
+</li>
+<li><h6 id="map"><a href="#map" class="headerlink" title="map"></a>map</h6><ul>
+<li>map(function(currentValue,index,arr), thisValue)</li>
+</ul>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>function(currentValue, index,arr)</em></td>
+<td>必须。函数，数组中的每个元素都会执行这个函数                                        函数参数:                                                                                                            参数描述                                                                                                 <em>currentValue</em>必须。当前元素的值                                                                     <em>index</em>可选。当前元素的索引值                                                                               <em>arr</em>可选。当前元素属于的数组对象</td>
+</tr>
+<tr>
+<td><em>thisValue</em></td>
+<td>可选。对象作为该执行回调时使用，传递给函数，用作 “this” 的值。<br/>如果省略了 thisValue,  “this” 的值为”undefined”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>补充</p>
+<ul>
+<li><em>ES6新引入了一种新的原始数据类型（Symbol），表示独一无二的值。它是JavaScript语言的第7种数据类型。</em> </li>
+</ul>
+</li>
+</ul>
+<h3 id="六-类型查询"><a href="#六-类型查询" class="headerlink" title="六.类型查询"></a>六.类型查询</h3><pre><code>typeof &quot;abc&quot;  // &quot;string&quot;
+typeof null  // &quot;object&quot;
+typeof true  // &quot;boolean&quot;
+typeof 123 // &quot;number&quot;</code></pre>
+<p>​    typeof是一个一元运算符（就像++，–，！，- 等一元运算符），不是一个函数，也不是一个语句。</p>
+<p>对变量或值调用 typeof 运算符将返回下列值之一:</p>
+<ul>
+<li>undefined - 如果变量是 Undefined 类型的</li>
+<li>boolean - 如果变量是 Boolean 类型的</li>
+<li>number - 如果变量是 Number 类型的</li>
+<li>string - 如果变量是 String 类型的</li>
+<li>object - 如果变量是一种引用类型或 Null 类型的</li>
+</ul>
+<h3 id="七-运算符"><a href="#七-运算符" class="headerlink" title="七.运算符"></a>七.运算符</h3><h5 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h5><pre><code>+ - * / % ++ --</code></pre>
+<h5 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a><strong>比较运算符</strong></h5><pre><code>&gt; &gt;= &lt; &lt;= != == === !==</code></pre>
+<p>注意：</p>
+<pre><code>1 == “1”  // true
+1 === &quot;1&quot;  // false</code></pre>
+<h5 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a><strong>逻辑运算符</strong></h5><pre><code>&amp;&amp; || !</code></pre>
+<h5 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a><strong>赋值运算符</strong></h5><pre><code>= += -= *= /=</code></pre>
+<h5 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a><strong>流程控制</strong></h5><h3 id="if-else"><a href="#if-else" class="headerlink" title="if-else"></a>if-else</h3><pre><code>var a = 10;
+if (a &gt; 5)&#123;
+  console.log(&quot;yes&quot;);
+&#125;else &#123;
+  console.log(&quot;no&quot;);
+&#125;</code></pre>
+<h3 id="if-else-if-else"><a href="#if-else-if-else" class="headerlink" title="if-else if-else"></a>if-else if-else</h3><pre><code>var a = 10;
+if (a &gt; 5)&#123;
+  console.log(&quot;a &gt; 5&quot;);
+&#125;else if (a &lt; 5) &#123;
+  console.log(&quot;a &lt; 5&quot;);
+&#125;else &#123;
+  console.log(&quot;a = 5&quot;);
+&#125;</code></pre>
+<h3 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h3><pre><code>var day = new Date().getDay();
+switch (day) &#123;
+  case 0:
+  console.log(&quot;Sunday&quot;);
+  break;
+  case 1:
+  console.log(&quot;Monday&quot;);
+  break;
+default:
+  console.log(&quot;...&quot;)
+&#125;</code></pre>
+<p>switch中的case子句通常都会加break语句，否则程序会继续执行后续case中的语句。</p>
+<h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><pre><code>for (var i=0;i&lt;10;i++) &#123;
+  console.log(i);
+&#125;</code></pre>
+<h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><pre><code>var i = 0;
+while (i &lt; 10) &#123;
+  console.log(i);
+  i++;
+&#125;</code></pre>
+<h3 id="三元运算"><a href="#三元运算" class="headerlink" title="三元运算"></a>三元运算</h3><pre><code>var a = 1;
+var b = 2;
+var c = a &gt; b ? a : b</code></pre>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><p>JavaScript中的函数和Python中的非常类似，只是定义方式有点区别。</p>
+<pre><code>// 普通函数定义
+function f1() &#123;
+  console.log(&quot;Hello world!&quot;);
+&#125;
+
+// 带参数的函数
+function f2(a, b) &#123;
+  console.log(arguments);  // 内置的arguments对象
+  console.log(arguments.length);
+  console.log(a, b);
+&#125;
+
+// 带返回值的函数
+function sum(a, b)&#123;
+  return a + b;
+&#125;
+sum(1, 2);  // 调用函数
+
+// 匿名函数方式
+var sum = function(a, b)&#123;
+  return a + b;
+&#125;
+sum(1, 2);
+
+// 立即执行函数
+(function(a, b)&#123;
+  return a + b;
+&#125;)(1, 2);</code></pre>
+<p><em>补充：</em></p>
+<p>ES6中允许使用“箭头”（=&gt;）定义函数。</p>
+<pre><code>var f = v =&gt; v;
+// 等同于
+var f = function(v)&#123;
+  return v;
+&#125;</code></pre>
+<p>如果箭头函数不需要参数或需要多个参数，就是用圆括号代表参数部分：</p>
+<pre><code>var f = () =&gt; 5;
+// 等同于
+var f = function()&#123;return 5&#125;;
+
+var sum = (num1, num2) =&gt; num1 + num2;
+// 等同于
+var sum = function(num1, num2)&#123;
+  return num1 + num2;
+&#125;</code></pre>
+<h3 id="函数中的arguments参数"><a href="#函数中的arguments参数" class="headerlink" title="函数中的arguments参数"></a>函数中的arguments参数</h3><pre><code>function add(a,b)&#123;
+  console.log(a+b);
+  console.log(arguments.length)
+&#125;
+
+add(1,2)</code></pre>
+<p>输出：</p>
+<pre><code>3
+2</code></pre>
+<p><em>注意：</em></p>
+<p>函数只能返回一个值，如果要返回多个值，只能将其放在数组或对象中返回。</p>
+<h3 id="函数的全局变量和局部变量"><a href="#函数的全局变量和局部变量" class="headerlink" title="函数的全局变量和局部变量"></a>函数的全局变量和局部变量</h3><p><strong>局部变量</strong>：</p>
+<p>在JavaScript函数内部声明的变量（使用 var）是局部变量，所以只能在函数内部访问它（该变量的作用域是函数内部）。只要函数运行完毕，本地变量就会被删除。</p>
+<p><strong>全局变量：</strong></p>
+<p>在函数外声明的变量是<em>全局</em>变量，网页上的所有脚本和函数都能访问它。</p>
+<p><strong>变量生存周期：</strong></p>
+<p>JavaScript变量的生命期从它们被声明的时间开始。</p>
+<p>局部变量会在函数运行以后被删除。</p>
+<p>全局变量会在页面关闭后被删除。</p>
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><p>首先在函数内部查找变量，找不到则到外层函数查找，逐步找到最外层。</p>
+<p><strong>几个例子：</strong></p>
+<p>1.</p>
+<pre><code>var city = &quot;BeiJing&quot;;
+function f() &#123;
+  var city = &quot;ShangHai&quot;;
+  function inner()&#123;
+    var city = &quot;ShenZhen&quot;;
+    console.log(city);
+  &#125;
+  inner();
+&#125;
+
+f();  //输出结果是？
+输出结果是:ShenZhen</code></pre>
+<p>2.</p>
+<pre><code>var city = &quot;BeiJing&quot;;
+function Bar() &#123;
+  console.log(city);
+&#125;
+function f() &#123;
+  var city = &quot;ShangHai&quot;;
+  return Bar;
+&#125;
+var ret = f();
+ret();  // 打印结果是？
+输出结果是:BeiJing</code></pre>
+<p>3.闭包</p>
+<pre><code>var city = &quot;BeiJing&quot;;
+function f()&#123;
+    var city = &quot;ShangHai&quot;;
+    function inner()&#123;
+        console.log(city);
+    &#125;
+    return inner;
+&#125;
+var ret = f();
+ret();
+输出结果是:ShanHai</code></pre>
+<h2 id="词法分析（尝试理解）"><a href="#词法分析（尝试理解）" class="headerlink" title="词法分析（尝试理解）"></a>词法分析（尝试理解）</h2><p>JavaScript中在调用函数的那一瞬间，会先进行词法分析。</p>
+<p><strong>词法分析的过程：</strong></p>
+<p>当函数调用的前一瞬间，会先形成一个激活对象：Avtive Object（AO），并会分析以下3个方面：</p>
+<p>1:函数参数，如果有，则将此参数赋值给AO，且值为undefined。如果没有，则不做任何操作。<br>2:函数局部变量，如果AO上有同名的值，则不做任何操作。如果没有，则将此变量赋值给AO，并且值为undefined。<br>3:函数声明，如果AO上有，则会将AO上的对象覆盖。如果没有，则不做任何操作。</p>
+<p>函数内部无论是使用参数还是使用局部变量都到AO上找。</p>
+<p>看两个例子：</p>
+<pre><code>var age = 18;
+function foo()&#123;
+  console.log(age);
+  var age = 22;
+  console.log(age);
+&#125;
+foo();  // 问：执行foo()之后的结果是？</code></pre>
+<p>第二题：</p>
+<pre><code>var age = 18;
+function foo()&#123;
+  console.log(age);
+  var age = 22;
+  console.log(age);
+  function age()&#123;
+    console.log(&quot;呵呵&quot;);
+  &#125;
+  console.log(age);
+&#125;
+foo();  // 执行后的结果是？</code></pre>
+<p> 答案解析</p>
+<pre><code>词法分析过程：
+1、分析参数，有一个参数，形成一个 AO.age=undefine;
+2、分析变量声明，有一个 var age, 发现 AO 上面已经有一个 AO.age，因此不做任何处理
+3、分析函数声明，有一个 function age()&#123;...&#125; 声明， 则把原有的 age 覆盖成 AO.age=function()&#123;...&#125;;
+
+最终，AO上的属性只有一个age，并且值为一个函数声明
+
+执行过程：
+注意：执行过程中所有的值都是从AO对象上去寻找
+
+1、执行第一个 console.log(age) 时，此时的 AO.age 是一个函数，所以第一个输出的一个函数
+2、这句 var age=22; 是对 AO.age 的属性赋值， 此时AO.age=22 ，所以在第二个输出的是 2
+3、同理第三个输出的还是22, 因为中间再没有改变age值得语句了</code></pre>
+<h2 id="内置对象和方法"><a href="#内置对象和方法" class="headerlink" title="内置对象和方法"></a>内置对象和方法</h2><p>JavaScript中的所有事物都是对象：字符串、数字、数组、日期，等等。在JavaScript中，对象是拥有属性和方法的数据。</p>
+<p>我们在学习基本数据类型的时候已经带大家了解了，JavaScript中的Number对象、String对象、Array对象等。</p>
+<p>注意var s1 = “abc”和var s2 = new String(“abc”)的区别：typeof s1 –&gt; string而 typeof s2 –&gt; Object</p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">内置对象</th>
+<th align="center">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">数据类型(3个)</td>
+<td align="center">Number</td>
+<td align="center">数字对象</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">String</td>
+<td align="center">字符串对象</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">Boolean</td>
+<td align="center">布尔值对象</td>
+</tr>
+<tr>
+<td align="center">组合对象(3个)</td>
+<td align="center">Array</td>
+<td align="center">数组对象</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">Math</td>
+<td align="center">数学对象</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">Date</td>
+<td align="center">日期对象</td>
+</tr>
+<tr>
+<td align="center">高级对象(5个)</td>
+<td align="center">Object</td>
+<td align="center">自定义对象</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">Error</td>
+<td align="center">错误对象</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">Runction</td>
+<td align="center">函数对象</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">RegExp</td>
+<td align="center">正则表达式对象</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">Global</td>
+<td align="center">全局对象</td>
+</tr>
+</tbody></table>
+<h3 id="自定义对象"><a href="#自定义对象" class="headerlink" title="自定义对象"></a>自定义对象</h3><p>JavaScript的对象（Object）本质上是键值对的集合（Hash结构），但是只能用字符串作为键。</p>
+<pre><code>var a = &#123;&quot;name&quot;: &quot;Alex&quot;, &quot;age&quot;: 18&#125;;
+console.log(a.name);
+console.log(a[&quot;age&quot;]);</code></pre>
+<p>遍历对象中的内容：</p>
+<pre><code>var a = &#123;&quot;name&quot;: &quot;Alex&quot;, &quot;age&quot;: 18&#125;;
+for (var i in a)&#123;
+  console.log(i, a[i]);
+&#125;</code></pre>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/684672/how-do-i-loop-through-or-enumerate-a-javascript-object">事情并没有那么简单…</a></p>
+<p><strong>创建对象：</strong></p>
+<pre><code>var person=new Object();  // 创建一个person对象
+person.name=&quot;Alex&quot;;  // person对象的name属性
+person.age=18;  // person对象的age属性</code></pre>
+<p><em>注意：</em></p>
+<p><em>ES6中提供了Map数据结构。它类似于对象，也是键值对的集合，但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当做键。</em></p>
+<p><em>也就是说，Object结构提供了“字符串–值”的对应，Map结构提供了“值–值”的对应，是一种更完善的Hash结构实现。</em></p>
+<p> <strong>扩展：</strong></p>
+<pre><code>// 父类构造函数
+var Car = function (loc) &#123;
+  this.loc = loc;
+&#125;;
+
+// 父类方法
+Car.prototype.move = function () &#123;
+  this.loc ++;
+&#125;;
+
+// 子类构造函数
+var Van = function (loc) &#123;
+  Car.call(this, loc);
+&#125;;
+
+// 继承父类的方法
+Van.prototype = Object.create(Car.prototype);
+// 修复 constructor
+Van.prototype.constructor = Van;
+// 扩展方法
+Van.prototype.grab = function () &#123;
+  /* ... */
+&#125;;</code></pre>
+<h3 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h3><h4 id="constructor-属性返回对创建此对象的-Date-函数的引用。"><a href="#constructor-属性返回对创建此对象的-Date-函数的引用。" class="headerlink" title="constructor 属性返回对创建此对象的 Date 函数的引用。"></a>constructor 属性返回对创建此对象的 Date 函数的引用。</h4><p>语法如下</p>
+<pre><code>object.constructor</code></pre>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var test=new Date();
+
+if (test.constructor==Array)
+&#123;
+document.write(&quot;This is an Array&quot;);
+&#125;
+if (test.constructor==Boolean)
+&#123;
+document.write(&quot;This is a Boolean&quot;);
+&#125;
+if (test.constructor==Date)
+&#123;
+document.write(&quot;This is a Date&quot;);
+&#125;
+if (test.constructor==String)
+&#123;
+document.write(&quot;This is a String&quot;);
+&#125;
+
+&lt;/script&gt;
+
+输出结果是: This is a Date</code></pre>
+<h4 id="prototype-使你有能力向对象中添加属性"><a href="#prototype-使你有能力向对象中添加属性" class="headerlink" title="prototype  使你有能力向对象中添加属性"></a>prototype  使你有能力向对象中添加属性</h4><p>语法如下</p>
+<pre><code>object.prototype.name=value</code></pre>
+<pre><code>function employee(name,job,born)&#123;
+    this.name = name;
+    this.job = job;
+    this.born = born;
+&#125;
+var bill=new employee(&quot;alex&quot;,&quot;Engineer&quot;,1997);
+employee.prototype.salary=null;
+bill.salary=5000;
+document.write(bill.salary);</code></pre>
+<p><strong>创建Date对象</strong></p>
+<pre><code>//方法1：不指定参数
+var d1 = new Date();
+console.log(d1.toLocaleString());
+//方法2：参数为日期字符串
+var d2 = new Date(&quot;2004/3/20 11:12&quot;);
+console.log(d2.toLocaleString());
+var d3 = new Date(&quot;04/03/20 11:12&quot;);
+console.log(d3.toLocaleString());
+//方法3：参数为毫秒数
+var d3 = new Date(5000);
+console.log(d3.toLocaleString());
+console.log(d3.toUTCString());
+
+//方法4：参数为年月日小时分钟秒毫秒
+var d4 = new Date(2004,2,20,11,12,0,300);
+console.log(d4.toLocaleString());  //毫秒并不直接显示</code></pre>
+<p><strong>Date对象的方法：</strong></p>
+<pre><code>var d = new Date(); 
+//getDate()                 获取日
+//getDay ()                 获取星期
+//getMonth ()               获取月（0-11）
+//getFullYear ()            获取完整年份
+//getHours ()               获取小时
+//getMinutes ()             获取分钟
+//getSeconds ()             获取秒
+//getMilliseconds ()        获取毫秒
+//getTime ()                返回累计毫秒数(从1970/1/1午夜)</code></pre>
+<h3 id="JSON对象"><a href="#JSON对象" class="headerlink" title="JSON对象"></a>JSON对象</h3><pre><code>var str1 = &#39;&#123;&quot;name&quot;: &quot;Alex&quot;, &quot;age&quot;: 18&#125;&#39;;
+var obj1 = &#123;&quot;name&quot;: &quot;Alex&quot;, &quot;age&quot;: 18&#125;;
+// JSON字符串转换成对象
+var obj = JSON.parse(str1); 
+// 对象转换成JSON字符串
+var str = JSON.stringify(obj1);</code></pre>
+<p>[<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test]">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test]</a>: </p>
+<h3 id="RegExp对象"><a href="#RegExp对象" class="headerlink" title="RegExp对象"></a>RegExp对象</h3><pre><code>//RegExp对象
+
+//创建正则对象方式1
+// 参数1 正则表达式(不能有空格)
+// 参数2 匹配模式：常用g(全局匹配;找到所有匹配，而不是在第一个匹配后停止)和i(忽略大小写)
+
+// 用户名只能是英文字母、数字和_，并且首字母必须是英文字母。长度最短不能少于6位 最长不能超过12位。
+
+// 创建RegExp对象方式（逗号后面不要加空格）
+var reg1 = new RegExp(&quot;^[a-zA-Z][a-zA-Z0-9_]&#123;5,11&#125;$&quot;);
+
+// 匹配响应的字符串
+var s1 = &quot;bc123&quot;;
+
+//RegExp对象的test方法，测试一个字符串是否符合对应的正则规则，返回值是true或false。
+reg1.test(s1);  // true
+
+// 创建方式2
+// /填写正则表达式/匹配模式（逗号后面不要加空格）
+var reg2 = /^[a-zA-Z][a-zA-Z0-9_]&#123;5,11&#125;$/;
+
+reg2.test(s1);  // true
+
+
+// String对象与正则结合的4个方法
+var s2 = &quot;hello world&quot;;
+
+s2.match(/o/g);         // [&quot;o&quot;, &quot;o&quot;]             查找字符串中 符合正则 的内容
+s2.search(/h/g);        // 0                      查找字符串中符合正则表达式的内容位置
+s2.split(/o/g);         // [&quot;hell&quot;, &quot; w&quot;, &quot;rld&quot;]  按照正则表达式对字符串进行切割
+s2.replace(/o/g, &quot;s&quot;);  // &quot;hells wsrld&quot;          对字符串按照正则进行替换
+
+// 关于匹配模式：g和i的简单示例
+var s1 = &quot;name:Alex age:18&quot;;
+
+s1.replace(/a/, &quot;哈哈哈&quot;);      // &quot;n哈哈哈me:Alex age:18&quot;
+s1.replace(/a/g, &quot;哈哈哈&quot;);     // &quot;n哈哈哈me:Alex 哈哈哈ge:18&quot;      全局匹配
+s1.replace(/a/gi, &quot;哈哈哈&quot;);    // &quot;n哈哈哈me:哈哈哈lex 哈哈哈ge:18&quot;  不区分大小写
+
+
+// 注意事项1：
+// 如果regExpObject带有全局标志g，test()函数不是从字符串的开头开始查找，而是从属性regExpObject.lastIndex所指定的索引处开始查找。
+// 该属性值默认为0，所以第一次仍然是从字符串的开头查找。
+// 当找到一个匹配时，test()函数会将regExpObject.lastIndex的值改为字符串中本次匹配内容的最后一个字符的下一个索引位置。
+// 当再次执行test()函数时，将会从该索引位置处开始查找，从而找到下一个匹配。
+// 因此，当我们使用test()函数执行了一次匹配之后，如果想要重新使用test()函数从头开始查找，则需要手动将regExpObject.lastIndex的值重置为 0。
+// 如果test()函数再也找不到可以匹配的文本时，该函数会自动把regExpObject.lastIndex属性重置为 0。
+
+var reg3 = /foo/g;
+// 此时 regex.lastIndex=0
+reg3.test(&#39;foo&#39;); // 返回true
+// 此时 regex.lastIndex=3
+reg3.test(&#39;xxxfoo&#39;); // 还是返回true
+// 所以我们在使用test()方法校验一个字符串是否完全匹配时，一定要加上^和$符号。
+
+// 注意事项2(说出来你可能不信系列)：
+// 当我们不加参数调用RegExpObj.test()方法时, 相当于执行RegExpObj.test(&quot;undefined&quot;), 并且/undefined/.test()默认返回true。
+var reg4 = /^undefined$/;
+reg4.test(); // 返回true
+reg4.test(undefined); // 返回true
+reg4.test(&quot;undefined&quot;); // 返回true</code></pre>
+<h3 id="Math对象"><a href="#Math对象" class="headerlink" title="Math对象"></a>Math对象</h3><pre><code>abs(x)      返回数的绝对值。
+exp(x)      返回 e 的指数。
+floor(x)    对数进行下舍入。
+log(x)      返回数的自然对数（底为e）。
+max(x,y)    返回 x 和 y 中的最高值。
+min(x,y)    返回 x 和 y 中的最低值。
+pow(x,y)    返回 x 的 y 次幂。
+random()    返回 0 ~ 1 之间的随机数。
+round(x)    把数四舍五入为最接近的整数。
+sin(x)      返回数的正弦。
+sqrt(x)     返回数的平方根。
+tan(x)      返回角的正切。</code></pre>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">二哈君</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://zxc-fubug.github.io/2021/05/08/%E5%89%8D%E7%AB%AFJavaScript/">http://zxc-fubug.github.io/2021/05/08/%E5%89%8D%E7%AB%AFJavaScript/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">二哈君</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                                    <span class="chip bg-color">JavaScript基础知识</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2021/05/20/%E5%89%8D%E7%AB%AFJavaScript-1/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="前端JavaScript">
+                        
+                        <span class="card-title">前端JavaScript</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前戏到目前为止，我们已经学过了JavaScript的一些简单的语法。但是这些简单的语法，并没有和浏览器有任何交互。
+也就是我们还不能制作一些我们经常看到的网页的一些交互，我们需要继续学习BOM和DOM相关知识。
+JavaScript分为 E
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-20
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            二哈君
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E4%B9%8BBOM%E5%92%8CBOM/">
+                        <span class="chip bg-color">前端基础之BOM和BOM</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/22/%E5%89%8D%E7%AB%AFHTML/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="前端HTML">
+                        
+                        <span class="card-title">前端HTML</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一.Web服务本质import socket
+
+
+sk = socket.socket()
+sk.bind(&quot;127.0.0.1&quot; , 8888)
+sk.listen(5)
+
+
+while 1:
+    conn, ad
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            二哈君
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/HTML/">
+                        <span class="chip bg-color">HTML</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5135448718"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.8'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">二哈君</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:jupeng_666@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=845726666" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 845726666" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-haruto"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>

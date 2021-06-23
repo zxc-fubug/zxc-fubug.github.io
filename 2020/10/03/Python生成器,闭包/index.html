@@ -1,0 +1,1425 @@
+<!DOCTYPE HTML>
+<html lang="cn">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Python, zxc-fubug">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Python | zxc-fubug</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="zxc-fubug" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">zxc-fubug</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">zxc-fubug</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Python</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%94%9F%E6%88%90%E5%99%A8%C2%B7%E9%97%AD%E5%8C%85-%E5%92%8C%E5%90%84%E7%A7%8D%E6%8E%A8%E5%AF%BC%E5%BC%8F/">
+                                <span class="chip bg-color">生成器·闭包 和各种推导式</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2020-10-03
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="一-函数名的运用"><a href="#一-函数名的运用" class="headerlink" title="一. 函数名的运用"></a>一. 函数名的运用</h3><ul>
+<li>函数名的内存地址</li>
+</ul>
+<pre><code>def func():
+    print(&quot;呵呵&quot;)
+print(func)
+
+结果:
+&lt;function func at 0x1101e4ea0&gt;
+</code></pre>
+<p>1.函数名可以赋值给其他变量</p>
+<pre><code>def func():
+    print(&quot;123&quot;)
+print(func)
+a = func    #把函数当成一个变量赋值给另一个变量
+a() # 函数调用func()</code></pre>
+<p>2.函数名可以当做容器类的元素(列表 lst)</p>
+<pre><code>def func1():
+    print(&quot;hehe&quot;)
+def func2():
+    print(&quot;hehe&quot;)
+def func3():
+    print(&quot;hehe&quot;)
+
+lst = [func1,func2,func3]
+for i in lst:
+    i()</code></pre>
+<p>3.函数名可以当做函数的参数</p>
+<pre><code>def func():
+    print(&quot;123&quot;)
+
+def func1(fn):
+    print(&quot;我是func2&quot;)
+    fn()    #执行传递过来的fn
+    print(&quot;这里是函数1&quot;)
+func2(func) #把函数func当成参数传递func2的参数fn</code></pre>
+<p>4.函数名可以作为函数的返回值</p>
+<pre><code>def func_1():
+    print(&quot;这⾥是函数1&quot;)
+    def func_2():
+    print(&quot;这⾥是函数2&quot;)
+    print(&quot;这⾥是函数1&quot;)
+    return func_2
+
+fn = func_1() # 执⾏函数1. 函数1返回的是函数2, 这时fn指向的就是上⾯函数2
+fn() </code></pre>
+<h3 id="二-闭包"><a href="#二-闭包" class="headerlink" title="二. 闭包"></a>二. 闭包</h3><ul>
+<li>闭包就是内层函数对外层函数 (非全局) 的变量的引用</li>
+<li>内部函数访问外部函数的局部变量</li>
+<li>我们可以使用<strong>closure__来检测函数是否是闭包,使用函数名__closure</strong> 返回cell 就是闭包,返回None就不是闭包</li>
+</ul>
+<pre><code>def func1():
+    name = &quot;alex&quot;     #常驻内存,防止其他程序改变这个变量
+    def func2():
+        print(name)    #在内层函数中调用了外层函数的变量,叫闭包,可以让局部变量常驻内存
+    return func2
+ret= func1()
+ret() #执行的就是func2
+结果:
+alex</code></pre>
+<ul>
+<li><p>闭包的好处</p>
+<p>1.安全</p>
+<p>2.常驻内存,提高效率</p>
+</li>
+</ul>
+<pre><code>from urllib.request import urlopen
+
+
+def but():
+    content = urlopen(&quot;http://www.h3c.com/cn/&quot;).read()
+
+    def inner():
+        return content  # 再函数内部使用了外部的变量.闭包
+    #print(inner.__closure__) #查看inner是否是闭包,有东西就是闭包,返回None 就不是闭包
+    return inner
+
+
+fn = but()
+content = fn() #获取内容
+print(content)
+content1 = fn() #重新获取内容
+print(content1)</code></pre>
+<h3 id="三-迭代器"><a href="#三-迭代器" class="headerlink" title="三. 迭代器"></a>三. 迭代器</h3><p>​    1.可迭代对象(Iterable): 内部包含<strong>iter</strong> () 方法</p>
+<p>​    2.迭代器(Iterator): 内部包含<strong>iter</strong>() <strong>next</strong>()</p>
+<p>​    3.可迭代对象: str list tuple set f文件句柄 dict</p>
+<p>​    4.可以使用dir函数来查看类中定义好的方法</p>
+<pre><code>s = &quot;哈哈哈&quot;
+print(dir(s)) #可以打印对象中的方法和函数
+print(dir(str)) #也可以打印类中声明的方法和函数
+
+打印结果中如果有__iter__()函数 则表示是可迭代对象</code></pre>
+<pre><code># 模拟for 循环
+
+lst = [&quot;as&quot;, &quot;aa&quot;, &quot;bb&quot;]
+
+it = lst.__iter__()  # 拿到迭代器
+
+while 1:
+    try:
+        name = it.__next__()  # 拿元素
+        print(name)
+    except StopIteration:  # 拿完了
+        break</code></pre>
+<pre><code>lst = [1,2,3]
+
+from collections.abc import Iterable #可迭代的 #记得加abc 不然会有warning
+from collections.abc import Iterator #迭代器
+
+#isintance (对象,类型) 判断xx对象是否是xx类型的
+print(isinstance(lst,Iterable))
+print(isinstance(lst,Iterator))
+
+it = lst.__iter__() #获取迭代器
+print(isinstance(it,Iterable)) #判断是否可迭代的,迭代器一定是可迭代的
+print(isinstance(it,Iterator)) #迭代器里面一定有 __iter__() 和 __next__()
+
+print(&quot;__iter__&quot;in dir(lst)) #确定是一个可迭代的
+print(&quot;__next__&quot; in dir(lst)) #确定不是一个迭代器
+
+f = open(&quot;今日内容大纲&quot;,mode=&quot;r&quot;,encoding=&quot;utf-8&quot;) # 文件句柄 是可迭代的也是一个迭代器
+
+print(isinstance(f,Iterable))
+print(isinstance(f,Iterator))</code></pre>
+<ul>
+<li>用isintance(对象,类型) 来判断对象是否是什么类型</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h4><p>​    iterable : 可迭代对象,内部包含<strong>iter</strong>()函数</p>
+<p>​    iterator : 迭代器 内部包含<strong>iter</strong>() 和<strong>next</strong>() 函数</p>
+<ul>
+<li><p>迭代器的特点:</p>
+<p>1.节省内存</p>
+<p>​    2.惰性机制</p>
+<p>​        3.不能反复,只能向下执行</p>
+</li>
+</ul>
+<h3 id="四-生成器和生成器表达式"><a href="#四-生成器和生成器表达式" class="headerlink" title="四.生成器和生成器表达式"></a>四.生成器和生成器表达式</h3><p>​    1.生成器</p>
+<p>​        生成器的本质就是迭代器</p>
+<p>​        在Python中有三种方式来获取生成器:1.通过生成器函数 2.通过各种推导式来实现生成器 3.通过数据的转换也可以获取生成器</p>
+<ul>
+<li>简单的example</li>
+</ul>
+<pre><code>def func():
+    print(&quot;我是:&quot;)
+    yield &quot;99&quot; #当函数中有了yield 就不是普通的函数了,是生成器函数
+    print(&quot;你是?&quot;)
+    yield &quot;88&quot;
+    print(&quot;它是?&quot;)
+    yield &quot;77&quot;
+    print(&quot;6666?&quot;) #最后一个yield之后如果还执行__next__() 就会报错
+g = func() # 拿到的是生成器.生成器的本质是迭代器,迭代器可以被迭代,生成器直接可以 for 循环 
+print(g.__next__())</code></pre>
+<p>​    return 直接返回结果,结束函数的调用</p>
+<p>​    yield 返回结果, 可以让函数分段执行</p>
+<pre><code>def func():
+    yield 11
+    yield 13
+    yield 12
+
+g = func() # 拿到的是生成器. 生成器的本质是迭代器. 迭代器可以被迭代 生成器可以直接for循环.
+
+for i in g:
+    print(i)  # 本质上执行的是 __next__()
+
+it = g.__iter__()
+while 1:
+    try:
+        print(it.__next__())
+    except StopIteration:
+        break</code></pre>
+<p>​    send() 方法</p>
+<pre><code>def eat():
+    print(&quot;我吃什么啊&quot;)
+    a = yield &quot;馒头&quot;
+    print(&quot;a=&quot;,a)
+    b = yield &quot;⼤饼&quot;
+    print(&quot;b=&quot;,b)
+    c = yield &quot;⾲菜盒⼦&quot;
+    print(&quot;c=&quot;,c)
+    yield &quot;GAME OVER&quot;
+
+gen = eat() # 获取⽣成器
+ret1 = gen.__next__()
+print(ret1)
+ret2 = gen.send(&quot;胡辣汤&quot;)
+print(ret2)
+ret3 = gen.send(&quot;狗粮&quot;)
+print(ret3)
+ret4 = gen.send(&quot;猫粮&quot;)
+print(ret4)</code></pre>
+<p>send() 和 <strong>next</strong>()的区别:</p>
+<pre><code>1. send 和 next() 都是让生成器向下走一次
+ 2. send 可以给上一个yield的位置传递参数, 不能给最后一个yield发送值,在第一次执行生成器的时候不能使用send()</code></pre>
+<p>​    4.生成器表达式</p>
+<p>​        生成器表达式和列表推导式差不多 只是把[] 替换成()</p>
+<pre><code>gen = (i for i in range(18))
+print(gen)
+
+结果: &lt;generator object &lt;genexpr&gt; at 0x106768f10&gt;</code></pre>
+<p>​        打印的结果就是一个生成器, 我们可以使用 for 循环 来循环这个生成器:</p>
+<pre><code>gen = (&quot;麻花藤我第%s次爱你&quot; % i for i in range(10))
+for i in gen:
+    print(i)</code></pre>
+<p>​        生成器表达式可以进行筛选:</p>
+<p>​    </p>
+<pre><code># 获取1-100内能被3整除的数
+gen = (i for i in range(1,100) if i % 3 == 0)
+for num in gen:
+     print(num)
+
+# 100以内能被3整除的数的平⽅
+gen = (i * i for i in range(100) if i % 3 == 0)
+for num in gen:
+     print(num)
+
+# 寻找名字中带有两个e的⼈的名字
+names = [[&#39;Tom&#39;, &#39;Billy&#39;, &#39;Jefferson&#39;, &#39;Andrew&#39;, &#39;Wesley&#39;, &#39;Steven&#39;,
+&#39;Joe&#39;],
+         [&#39;Alice&#39;, &#39;Jill&#39;, &#39;Ana&#39;, &#39;Wendy&#39;, &#39;Jennifer&#39;, &#39;Sherry&#39;, &#39;Eva&#39;]]
+
+# 不⽤推导式和表达式
+result = []
+for first in names:
+     for name in first:
+         if name.count(&quot;e&quot;) &gt;= 2:
+             result.append(name)
+print(result)
+
+# 推导式
+gen = (name for first in names for name in first if name.count(&quot;e&quot;) &gt;= 2)
+for name in gen:
+     print(name)</code></pre>
+<p>​        生成器表达式和列表推导式的区别:</p>
+<p>​            1. 列表推导式比较耗内存,一次性加载, 生成器表达式几乎不占用内存, 使用的时候才分配和使用内存</p>
+<p>​            2. 得到的值不一样, 列表推导式得到的一个列表 , 生成器表达式获取的是一个生成器</p>
+<p>​        生成器的惰性的机制: 生成器只有在访问的时候才取值, 说白了 , 你找他要他才给值, 不找他,他不执行</p>
+<pre><code>def func():
+     print(111)
+     yield 222
+g = func() # ⽣成器g
+g1 = (i for i in g) # ⽣成器g1. 但是g1的数据来源于g
+g2 = (i for i in g1) # ⽣成器g2. 来源g1
+
+print(list(g)) # 获取g中的数据. 这时func()才会被执⾏. 打印111.获取到222. g完毕.
+print(list(g1)) # 获取g1中的数据. g1的数据来源是g. 但是g已经取完了. g1 也就没有数据
+了
+print(list(g2)) # 和g1同理</code></pre>
+<h2 id="深坑-gt-⽣成器-要值得时候才拿值"><a href="#深坑-gt-⽣成器-要值得时候才拿值" class="headerlink" title="深坑==&gt; ⽣成器. 要值得时候才拿值."></a>深坑==&gt; ⽣成器. 要值得时候才拿值.</h2><h3 id="五-推导式"><a href="#五-推导式" class="headerlink" title="五. 推导式"></a>五. 推导式</h3><p>​    1. 列表推导式</p>
+<p>​        列表推导式的常用写法</p>
+<p>​        [结果 for 变量 in 可迭代对象]</p>
+<p>​        例. 从Python1 期到Python 141期 写入列表lst:</p>
+<pre><code>lst = [&#39;python%s&#39; %i for i in rang(1,15)]
+print(lst)</code></pre>
+<pre><code>lst = []
+for i in range(1,15):
+    lst.append(i)
+pirnt(lst)
+
+替换成列表推导式
+lst = [i for i in rang(1,15)]
+print(lst)</code></pre>
+<p>​        列表推导式是通过一行来构建你要的列表, 列表推导式看起来代码简单,但出错后很难排查</p>
+<p>​    2. 字典推导式(推导出来的字典)</p>
+<pre><code># 把字典中的key和value互换
+dic = &#123;&#39;a&#39;: 1, &#39;b&#39;: &#39;2&#39;&#125;
+new_dic = &#123;dic[key]: key for key in dic&#125;
+print(new_dic)
+
+# 在以下list中. 从lst1中获取的数据和lst2中相对应的位置的数据组成⼀个新字典
+lst1 = [&#39;jay&#39;, &#39;jj&#39;, &#39;sylar&#39;]
+lst2 = [&#39;周杰伦&#39;, &#39;林俊杰&#39;, &#39;邱彦涛&#39;]
+dic = &#123;lst1[i]: lst2[i] for i in range(len(lst1))&#125;
+print(dic)</code></pre>
+<p>​    </p>
+<pre><code> 3. 集合推导式
+      1. 集合推导式可以帮我们直接生成一个集合, 集合的特点: 无序,不重复. 所以集合推导式自带去重功能</code></pre>
+<pre><code>lst = [1, -1, 8, -8, 12]
+# 绝对值去重
+s = &#123;abs(i) for i in lst&#125;
+print(s)</code></pre>
+<h3 id="总结-推导式-有-列表推导式-字典推导式-集合推导式-没有元组推导式"><a href="#总结-推导式-有-列表推导式-字典推导式-集合推导式-没有元组推导式" class="headerlink" title="总结: 推导式 有, 列表推导式,字典推导式, 集合推导式,没有元组推导式"></a>总结: 推导式 有, 列表推导式,字典推导式, 集合推导式,没有元组推导式</h3><p>​    生成器表达式: (结果 for 变量 in 可迭代对象 if 条件筛选)</p>
+<p>​    生成器表达式可以直接获取生成器对象, 生成器对象可以直接进行 for 循环 生成器具有惰性机制</p>
+<h3 id="六-难度系数很高的面试题"><a href="#六-难度系数很高的面试题" class="headerlink" title="六. 难度系数很高的面试题"></a>六. 难度系数很高的面试题</h3><pre><code>def add(a, b):
+    return a + b
+
+def gen():
+    for r_i in range(4):
+         yield r_i
+
+g = gen()
+
+for n in [2, 10]:
+    g = (add(n, i) for i in g)
+print(list(g))</code></pre>
+<p> 友情提⽰: 惰性机制, 不到最后不会拿值 </p>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">二哈君</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://zxc-fubug.github.io/2020/10/03/Python%E7%94%9F%E6%88%90%E5%99%A8,%E9%97%AD%E5%8C%85/">http://zxc-fubug.github.io/2020/10/03/Python%E7%94%9F%E6%88%90%E5%99%A8,%E9%97%AD%E5%8C%85/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">二哈君</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%94%9F%E6%88%90%E5%99%A8%C2%B7%E9%97%AD%E5%8C%85-%E5%92%8C%E5%90%84%E7%A7%8D%E6%8E%A8%E5%AF%BC%E5%BC%8F/">
+                                    <span class="chip bg-color">生成器·闭包 和各种推导式</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2020/10/13/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Python">
+                        
+                        <span class="card-title">Python</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一.面向对象的初始​    1.类 : 具有相同属性和技能的一类事物
+​    2.对象 : 具体类的表现, 具体的实实在在的一个实例
+​    
+class Person:
+    &#39;&#39;&#39; 类体:两部分: 变量部分
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-13
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            二哈君
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%9D%E5%A7%8B/">
+                        <span class="chip bg-color">面向对象初始</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/09/25/Python%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Python">
+                        
+                        <span class="card-title">Python</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一.冒泡排序# 冒泡排序
+lst = [11, 22, 35, 6, 2]
+for i in range(len(lst)):
+    i = 0
+    while i &lt; len(lst) - 1:
+        if lst[
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            二哈君
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">Python中的重要总结</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5135448718"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.8'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">二哈君</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:jupeng_666@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=845726666" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 845726666" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-haruto"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>

@@ -1,0 +1,1417 @@
+<!DOCTYPE HTML>
+<html lang="cn">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="网络编程_并发编程, zxc-fubug">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>网络编程_并发编程 | zxc-fubug</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="zxc-fubug" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">zxc-fubug</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">zxc-fubug</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">网络编程_并发编程</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">并发编程</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2021-02-05
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="一-操作系统理论"><a href="#一-操作系统理论" class="headerlink" title="一.操作系统理论"></a>一.操作系统理论</h3><ul>
+<li><p>计算机的硬件组成</p>
+<ul>
+<li>主板    固化(寄存器, 是直接和cpu进行交互的一个硬件)</li>
+<li>cpu     中央处理器: 计算  (数字计算和逻辑计算) 和控制 (控制所有硬件协调工作)</li>
+<li>存储    硬盘, 内存</li>
+<li>输入设备  键盘, 鼠标, 话筒</li>
+<li>输出设备  显示器, 音箱, 打印机<ul>
+<li>早期的计算机是以计算为核心的</li>
+<li>现在的计算机是以存储为核心的</li>
+</ul>
+</li>
+<li>第一代计算机:  电子管计算机, 及其耗电, 体积庞大, 散热量特别高</li>
+<li>第二代计算机:  晶体管计算机</li>
+<li>第三代计算机:  白色大头计算机, 集成电路计算机. 一个板子固化几十到上百个小硬件</li>
+<li>第四代计算机:  大型集成电路计算机, 一个板子可以达到固化十万个硬件</li>
+<li>第五代计算机: 甚大型集成电路计算机</li>
+</ul>
+</li>
+<li><p>计算机的操作系统</p>
+<ul>
+<li>操作系统是一个软件, 是一个能直接操纵硬件的一个软件,微软研发的windows系统</li>
+<li>人工时代: 穿孔卡带, 每个人都能在一段时间内独享计算机所有资源</li>
+<li>脱机时代:  完全将人和及其隔离开来</li>
+<li>单道批处理系统:  内存中允许存放一道作业</li>
+<li>多道批处理系统:  内存中允许存放多道作业</li>
+<li>分时系统:  将cpu和执行划分时间片, 每个程序以时间片为单位去执行</li>
+<li>实时系统:  一般比较少见, 主要用于军事和工业生产上</li>
+<li>操作系统的目的: 让用户用起来更加轻松, 高可用, 低耦合</li>
+</ul>
+</li>
+<li><p>语言的发展史</p>
+<ul>
+<li>计算机识别的二进制, 机器语言, 由0 和  1  组成代码<ul>
+<li>汇编语言, add ,n,m</li>
+<li>高级语言:  面向过程(C)    面向对象语言(C++, java, python, php)</li>
+</ul>
+</li>
+<li>os(操作系统)<ul>
+<li>dos系统    纯编程系统    单用户单任务</li>
+<li>windows系统      单用户多任务(早期的windows)</li>
+<li>unix系统    多用户多任务</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>操作系统的作用</p>
+<ul>
+<li>封装所有硬件接口, 让各种用户使用电脑更加轻松</li>
+<li>是对计算机内所有资源进行合理的调度和分配</li>
+</ul>
+</li>
+</ul>
+<h2 id="二-进程"><a href="#二-进程" class="headerlink" title="二.进程"></a>二.进程</h2><ul>
+<li>进程的理论<ul>
+<li>.sh  shell脚本文件</li>
+<li>.out linux系统中的可执行文件</li>
+<li>.bat 批处理脚本文件</li>
+<li>.lib  库文件</li>
+<li>.dll 库文件</li>
+<li>.exe 可执行文件, 双击能直接运行的文件</li>
+</ul>
+</li>
+<li>进程<ul>
+<li>是指正在执行的程序,是程序执行过程中的一次 指令, 数据集等的集合</li>
+<li>也可以叫做程序的一次执行过程</li>
+<li>进程是一个动态的概念</li>
+</ul>
+</li>
+<li>进程由三大部分组成:  代码段,  数据段,  PCB:  进程管理控制</li>
+<li>进程的三大基本状态:<ul>
+<li>就绪状态:  已经获得运行需要的所有资源, 处理cpu</li>
+<li>执行状态:  已经获得了所有的资源包括cpu, 处于正在运行</li>
+<li>阻塞状态:  因为各种原因, 进程放弃了cpu, 导致进程无法继续执行,此时进程处于内存中,继续等待获取cpu</li>
+</ul>
+</li>
+<li>进程的一个特殊状态<ul>
+<li>挂起状态:  是指因为各种原因,进程放弃了cpu, 导致进程无法继续执行,此时进程被踢出内存</li>
+</ul>
+</li>
+<li>multiprocessing 内置模块, 是python提供, 主要用于多线程编程</li>
+</ul>
+<h2 id="三-多进程"><a href="#三-多进程" class="headerlink" title="三.多进程"></a>三.多进程</h2><h5 id="1-名词解释"><a href="#1-名词解释" class="headerlink" title="1.名词解释"></a>1.名词解释</h5><ul>
+<li><h6 id="同步和异步关注的是消息通信机制"><a href="#同步和异步关注的是消息通信机制" class="headerlink" title="同步和异步关注的是消息通信机制"></a>同步和异步关注的是消息通信机制</h6></li>
+<li><p>并行: 并行是指两者同时执行, 比如有两条车道,在某一时间点, 两条车道上都有车在跑(资源够用,比如三个线程, 四核的CPU) 指两件或多件事在同一时间点执行</p>
+</li>
+<li><p>并发: 指两件或多件事在同一时间间隔同时执行</p>
+<ul>
+<li><p>区别: 并行是从微观上,也就是在一个精确的时间片刻,有不同的程序在执行, 这就要求必须有多个处理器</p>
+<p>并发是从宏观上,在一个时间段上可以看出是同时执行的, 比如一个服务器同时处理多个session</p>
+</li>
+<li><p>早起单核CPU时候, 对于进程也是微观上串行(站在cpu角度看), 宏观上并行(站在人的角度看就是同时有很多程序执行)</p>
+</li>
+</ul>
+</li>
+<li><h6 id="同步-所谓同步就是一个任务的完成需要依赖另外一个任务时-只有等待被依赖的任务完成时-依赖的任务才能算完成-这是一种可靠的任务序列-要么都成功-要么都失败-两个任务的状态可以保持一致"><a href="#同步-所谓同步就是一个任务的完成需要依赖另外一个任务时-只有等待被依赖的任务完成时-依赖的任务才能算完成-这是一种可靠的任务序列-要么都成功-要么都失败-两个任务的状态可以保持一致" class="headerlink" title="同步: 所谓同步就是一个任务的完成需要依赖另外一个任务时, 只有等待被依赖的任务完成时,依赖的任务才能算完成,这是一种可靠的任务序列.要么都成功. 要么都失败, 两个任务的状态可以保持一致"></a>同步: 所谓同步就是一个任务的完成需要依赖另外一个任务时, 只有等待被依赖的任务完成时,依赖的任务才能算完成,这是一种可靠的任务序列.要么都成功. 要么都失败, 两个任务的状态可以保持一致</h6></li>
+<li><h6 id="异步-所谓异步是不需要等待依赖的任务完成-只是通知被依赖的任务要完成什么工作-依赖的任务也立即执行-只要自己完成了整个任务就算完成了-至于被依赖的任务最重是否真正完成-依赖它的任务无法确定-所以它是不可靠任务序列"><a href="#异步-所谓异步是不需要等待依赖的任务完成-只是通知被依赖的任务要完成什么工作-依赖的任务也立即执行-只要自己完成了整个任务就算完成了-至于被依赖的任务最重是否真正完成-依赖它的任务无法确定-所以它是不可靠任务序列" class="headerlink" title="异步: 所谓异步是不需要等待依赖的任务完成, 只是通知被依赖的任务要完成什么工作, 依赖的任务也立即执行, 只要自己完成了整个任务就算完成了, 至于被依赖的任务最重是否真正完成, 依赖它的任务无法确定, 所以它是不可靠任务序列"></a>异步: 所谓异步是不需要等待依赖的任务完成, 只是通知被依赖的任务要完成什么工作, 依赖的任务也立即执行, 只要自己完成了整个任务就算完成了, 至于被依赖的任务最重是否真正完成, 依赖它的任务无法确定, 所以它是不可靠任务序列</h6></li>
+<li><p>阻塞: 阻塞是当请求不能满足的时候将进程挂起</p>
+</li>
+<li><p>非阻塞: 非阻塞是不会阻塞当前进程,非阻塞调用指在不能立刻得到结果之前也会立刻返回，同时该函数不会阻塞当前线程。</p>
+</li>
+<li><h6 id="阻塞和非阻塞针对的是进程或线程"><a href="#阻塞和非阻塞针对的是进程或线程" class="headerlink" title="阻塞和非阻塞针对的是进程或线程"></a>阻塞和非阻塞针对的是进程或线程</h6></li>
+</ul>
+<h5 id="2-进程的两种开启方法"><a href="#2-进程的两种开启方法" class="headerlink" title="2.进程的两种开启方法"></a>2.进程的两种开启方法</h5><p>(1) p = Process(target = func, args (,))</p>
+<pre><code>from multiprocessing import Process
+import time
+import os
+
+
+def func(i):
+    time.sleep(1)
+    print(&#39;这里是%s儿子进程%s,父进程是%s&#39; % (i, os.getpid(), os.getppid()))
+
+
+if __name__ == &#39;__main__&#39;:
+
+    for i in range(2):
+        p = Process(target=func, args=(i,))
+        p.start()
+    print(&#39;这里是父亲进程%s&#39; % (os.getpid()))</code></pre>
+<p>(2)  自定义类, 继承Process类</p>
+<pre><code># 自定义类继承Process
+class MyProcess(Process):
+    def __init__(self):
+        self.name = name
+        super(MyProcess, self).__init__(name=self.name)  # 实现父类的__init__方法
+
+    def run(self):
+        print(&#39;这是以继承的方式开启子进程%s&#39; % self.name)
+
+
+if __name__ == &#39;__main__&#39;:
+    name = &#39;alex&#39;
+    p1 = MyProcess()
+    p1.start()  # 是指解释器告诉操作系统, 去帮我开启一个进程, 属于就绪状态
+    # p1.run()  # 告诉操作系统,现在马上执行这个子进程, 属于执行状态</code></pre>
+<h5 id="3-如何开启多个不同的子进程"><a href="#3-如何开启多个不同的子进程" class="headerlink" title="3.如何开启多个不同的子进程"></a>3.如何开启多个不同的子进程</h5><pre><code>#  开启多个子进程
+def func(i):
+    time.sleep(1)
+    print(&#39;这是第%s个子进程,进程id是%s&#39; % (i, os.getpid()))
+
+
+if __name__ == &#39;__main__&#39;:
+    for i in range(10):
+        p = Process(target=func, args=(i,))
+        p.start()
+    print(&#39;父进程的ID是%s&#39; % os.getpid())
+</code></pre>
+<h5 id="4-进程的常用方法-start-join-terminate-is-alive"><a href="#4-进程的常用方法-start-join-terminate-is-alive" class="headerlink" title="4.进程的常用方法(start. join,terminate, is_alive)"></a>4.进程的常用方法(start. join,terminate, is_alive)</h5><pre><code>from multiprocessing import Process
+import time
+
+
+def func():
+    for i in range(10):
+        time.sleep(0.1)
+        print(&#39;儿子在这里&#39;)
+
+
+if __name__ == &#39;__main__&#39;:
+    p = Process(target=func)
+    p.start()
+    p.join()  # 当程序执行到这一句话时, 主进程开始阻塞. 等待子进程执行完
+    for i in range(10):
+        time.sleep(0.1)
+        print(&#39;爸爸在这里&#39;)
+
+#  开启一个正常的子进程, 父进程会等待子进程结束后, 父进程也就是程序才结束
+#  p.join() 是主进程等待子进程执行完.  现象:  主进程执行到这句话时,主进程阻塞主,等待子进程执行
+
+
+def func():
+    time.sleep(1)
+    print(123)
+
+
+if __name__ == &#39;__main__&#39;:
+    p = Process(target=func)
+    p.start()
+    p.terminate()  #  杀死p进程, 让解释器告诉操作系统, 请杀死p进程
+    print(&#39;子进程是否活着?&#39;, p.is_alive())
+    print(&#39;父进程id%s&#39;% os.getpid())
+    time.sleep(0.01)
+    print(&#39;子进程是否活着?&#39;, p.is_alive())
+    #  返回一个bool值, 如果返回True. 代表进程还活着, 如果返回False, 代表子进程死了
+
+#  p.is_alive() 判断p进程是否还活着
+#  p.terminate() 杀死p进程</code></pre>
+<ul>
+<li>如何把父进程和子进程之间的关系变为同步或者异步?<ul>
+<li>父进程执行join, 就会变成同步, 不执行join. 父进程和子进程的关系就是异步的关系</li>
+<li>join必须放在start() 后边</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-多个子进程"><a href="#5-多个子进程" class="headerlink" title="5.多个子进程"></a>5.多个子进程</h5><pre><code>from multiprocessing import Process
+import time
+import random
+
+
+def func(i):
+    print(&#39;我是%s&#39; % i)
+
+
+if __name__ == &#39;__main__&#39;:
+    l = []
+    addr = [&#39;上海的&#39;, &#39;河南的&#39;, &#39;北京的&#39;]
+    for i in addr:
+        p = Process(target=func, args=(i,))
+        p.start()
+        l.append(p)
+    [p.join() for p in l]  # 列表推导式
+    time.sleep(1)
+    print(&#39;我选%s&#39; % (random.choice(addr)))</code></pre>
+<h5 id="6-进程的常用属性"><a href="#6-进程的常用属性" class="headerlink" title="6.进程的常用属性"></a>6.进程的常用属性</h5><ul>
+<li>p.name = 给p进程一个名字</li>
+<li>p.pid      返回p进程的pid</li>
+<li>p.daemon = True   将p进程蛇者为守护进程,(True为守护进程, False 为普通进程)<ul>
+<li>守护进程的两个特点:<ul>
+<li>守护进程会随着父进程的结束而结束</li>
+<li>守护进程不能再创建子进程</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="四-队列-管道-回调函数"><a href="#四-队列-管道-回调函数" class="headerlink" title="四.队列,管道,回调函数"></a>四.队列,管道,回调函数</h2><h5 id="1-生产者消费者模型"><a href="#1-生产者消费者模型" class="headerlink" title="1.生产者消费者模型"></a>1.生产者消费者模型</h5><ul>
+<li>主要是为了解耦</li>
+<li>借助队列来实现生产者消费者模型<ul>
+<li>栈:  先进后出(First In Last Out   简称 FILO)</li>
+<li>队列:  先进先出(First In First Out   简称FIFO)</li>
+</ul>
+</li>
+</ul>
+<pre><code>import queue # 不能进行多进程之间的数据传输
+(1) from multiprocessing import Queue  借助Queue来解决生产者消费者模型
+    队列是安全的
+    q = Queue(num) 实例化
+    num:  队列的最大长度
+    q.get()  # 阻塞等待获取数据,如果有数据直接获取, 如果没有数据,阻塞等待
+    q.put()  # 阻塞, 如果可以继续往队列中放数据,就直接放, 不能放就直接阻塞等待
+
+    q.get_nowait()  # 不阻塞,如果有数据直接获取, 没有数据直接就报错
+    q.put_nowait()  # 不阻塞,如果可以继续往队列中放数据, 就直接方放, 不能放就报错
+(2) from multiprocessing import joinableQueue # 可连接队列
+    joinableQueue 是继承Queue,
+    并且joinableQueue多了两个方法
+    q.join()  # 用于生产者 等待q.task_done的返回结果, 通过返回结果,生产者就能获取当前消费者消费了多少数据
+    q.task_done()  # 用于消费者, 是指每消费队列中一个数据, 九个join返回一个标识</code></pre>
+<ul>
+<li><h5 id="队列实现生产者消费者模型"><a href="#队列实现生产者消费者模型" class="headerlink" title="队列实现生产者消费者模型"></a>队列实现生产者消费者模型</h5><pre><code>from multiprocessing import Process, Queue
+import time
+
+</code></pre>
+</li>
+</ul>
+<p>  def consumer(q, name, color):<br>      while 1:<br>          info = q.get()<br>          if info:<br>              print(‘%s %s 拿走了%s \033[0m’ % (color, name, info))<br>          else:<br>              break</p>
+<p>  def producer(q, product):<br>      for i in range(20):<br>          q.put(product + ‘的娃娃%s’ % str(i))</p>
+<p>  if <strong>name</strong> == ‘<strong>main</strong>‘:<br>      q = Queue(10)<br>      p_con1 = Process(target=producer, args=(q, ‘贝贝’))<br>      p_con2 = Process(target=producer, args=(q, ‘吉吉’))<br>      p_con3 = Process(target=producer, args=(q, ‘果果’))<br>      p_pro1 = Process(target=consumer, args=(q, ‘alex’, ‘\033[31m’))<br>      p_pro2 = Process(target=consumer, args=(q, ‘wusir’, ‘\033[32m’))<br>      l = [p_con1, p_con2, p_con3, p_pro1, p_pro2]<br>      [p.start() for p in l]<br>      #  父进程如何感知生产者子进程不再生产数据了?<br>      p_con1.join()<br>      p_con2.join()<br>      p_con3.join()<br>      q.put(None)  # 几个消费者就要接受几个结束标识<br>      q.put(None)</p>
+<pre><code>
+
+
+- joinableQueue新模块
+</code></pre>
+<p>rom multiprocessing import Process, JoinableQueue, Queue</p>
+<p>def consumer(q, name, color):<br>    while 1:<br>        info = q.get()<br>        print(‘%s %s 拿走了%s’ % (color, name, info))<br>        q.task_done()</p>
+<p>def producer(q, product):<br>    for i in range(20):<br>        q.put(product + ‘的娃娃%s号 \033[0m’ % str(i))<br>    q.join()</p>
+<p>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    q = JoinableQueue(10)<br>    p_con = Process(target=consumer, args=(q, ‘alex’, ‘\033[31m’))<br>    p_pro = Process(target=producer, args=(q, ‘果果’))<br>    p_con.daemon = True<br>    p_con.start()<br>    p_pro.start()<br>    p_pro.join()  # 主进程等待生产者进程结束<br>    # 程序有3个进程，主进程和生产者进程和消费者进程。  当主进程执行到35行代码时，主进程会等待生产进程结束<br>    # 而生产进程中（第26行）会等待消费者进程把所有数据消费完，生产者进程才结束。<br>    # 现在的状态就是  主进程等待生产者进程结束，生产者进程等待消费者消费完所有数据<br>    # 所以，把消费者设置为守护进程。  当主进程执行完，就代表生产进程已经结束，也就代表消费者进程已经把队列中数据消费完<br>    # 此时，主进程一旦结束，守护进程也就是消费者进程也就跟着结束。    整个程序也就能正常结束了。</p>
+<pre><code>
+- Manger
+</code></pre>
+<p>from multiprocessing import Process, Manager</p>
+<p>def func(num):<br>    num[0] -= 1<br>    print(‘子进程找中的num值是’, num)</p>
+<p>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    m = Manager()<br>    num = m.list([1,2,3])<br>    p = Process(target=func, args=(num,))<br>    p.start()<br>    p.join()<br>    print(‘父进程中的num值是’, num)</p>
+<pre><code>
+- 管道使用
+</code></pre>
+<h1 id="单进程管道的使用"><a href="#单进程管道的使用" class="headerlink" title="单进程管道的使用"></a>单进程管道的使用</h1><p>from multiprocessing import Pipe</p>
+<p>con1, con2 = Pipe()</p>
+<p>con1.send(‘123’)<br>print(con2.recv())<br>con2.send(‘abd’)<br>print(con1.recv())</p>
+<h1 id="多进程管道的使用"><a href="#多进程管道的使用" class="headerlink" title="多进程管道的使用"></a>多进程管道的使用</h1><p>from multiprocessing import Process, Pipe</p>
+<p>def func(con):<br>    con1, con2 = con<br>    con1.close()<br>    while 1:<br>        try:</p>
+<pre><code>        print(con2.recv())
+    except EOFError:
+        con2.close()
+        break</code></pre>
+<p>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    con1, con2 = Pipe()<br>    p = Process(target=func, args=((con1, con2),))<br>    p.start()<br>    con2.close()  # 在父进程中, 使用con1 和 子进程通信, 所以不需要con2<br>    for i in range(10):  # 生产数据<br>        con1.send(i)  # 给子进程con2发送数据<br>    con1.close()  # 生产完数据, 关闭父进程这一端的管道</p>
+<pre><code>
+- 进程池和多进程效率对比
+</code></pre>
+<p>from multiprocessing import Pool, Process<br>import os<br>import time</p>
+<p>def func(num):<br>    num += 1<br>    print(num)</p>
+<p>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    p = Pool(os.cpu_count() + 1)<br>    start = time.time()<br>    p.map(func, [i for i in range(100)])<br>    p.close()  # 值不允许向进程池中添加任务<br>    p.join()  # 等待进程池中所有进程执行完任务<br>    print(‘进程池做任务的效率’, time.time() - start)</p>
+<pre><code>start = time.time()
+p_l = []
+for i in range(100):
+    p1 = Process(target=func, args=(i,))
+    p1.start()
+    p_l.append(p1)
+[p1.join() for p1 in p_l]
+print(&#39;多进程做任务的效率&#39;, time.time() - start)</code></pre>
+<pre><code></code></pre>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">二哈君</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://zxc-fubug.github.io/2021/02/05/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/">http://zxc-fubug.github.io/2021/02/05/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">二哈君</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">并发编程</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2021/03/13/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-%E8%BF%9B%E7%A8%8B/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="网络编程_进程">
+                        
+                        <span class="card-title">网络编程_进程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-13
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            二哈君
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/12/01/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="面试总结">
+                        
+                        <span class="card-title">面试总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1.遍历字典for k,v in dic.items()
+2.什么叫闭包?函数内部调用函数外部(局部)的变量
+3.在调用一个函数中,如何结束本程序?quit() sys.exit() exit() 让函数抛出异常
+4.交换机和路由器的区别?
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            二哈君
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="chip bg-color">面试题</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5135448718"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.8'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">二哈君</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:jupeng_666@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=845726666" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 845726666" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-haruto"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
